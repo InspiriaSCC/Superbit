@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit: Bli kjent med BBC Micro:Bit - Del 1: Grunnleggende funksjoner
+# Superbit: Bli kjent med BBC Micro:Bits grunnleggende funksjoner
 ## Introduksjon
 ### Introduksjon @unplugged
 
@@ -9,7 +9,7 @@ Første skritt i ethvert programmeringskurs pleier å være at man lærer seg å
 Tradisjonelt skriver man "Hello world" og får programmet til å vise denne strengen på en skjerm eller i et display. 
 Nå kan du selvsagt skrive akkurat hva du vil, her kommer i alle fall det du trenger for å vise tekst i displayet til Micro:Biten ved hjelp av MakeCode-blokker som første steg.
 
-### Steg 1: Vise tekst i displayet til Micro:Biten del 1
+### Steg 1
 
 I menyen midt på skjermen ser du en kolonne med fargede kategorier. Å vise tekst er en ``||Basic.Basic||`` funksjon i MakeCode. Klikk på ``||Basic.Basic||`` for å åpne ``||Basic.Basic||``-menyen og hent ut blokken ``||Basic.show string||``.
 Plasser blokken i ``||Basic.forever||``-blokken på arbeidsbordet. Nå kan du endre teksten inni blokken til hva du vil.
@@ -23,7 +23,7 @@ loops.forever(function () {
 })
 ```
 
-### Steg 2:Vise tekst i displayet til Micro:Biten del 2
+### Steg 2
 
 Når du legger blokker til et program inne i ``||Basic.forever||``-blokken vil programmet gjentas så lenge Micro:Biten er tilkoblet strøm.
 Som du sikkert la merke til ligger det en blokk til på arbeidsbordet når man starter MakeCode. ``||Basic.on start||``-blokken vil bare kjøre koden som ligger der en gang, og så stoppe.
