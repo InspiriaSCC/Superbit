@@ -53,6 +53,7 @@ basic.showNumber(8)
 
 ### Steg 5: Vise ikoner
 Du kan også vise ferdige ikoner i displayet. Til det bruker du ``||basic.vis ikon||`` fra ``||basic.Basis||``-menyen.
+Klikk på den lille hvite pilen til høyre for hjerteikonet for å velge ikon.
 
 ```blocks
 basic.showIcon(IconNames.Heart)
