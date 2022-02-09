@@ -19,7 +19,7 @@ Nå skal teksten din vises i displayet. Siden displayet bare er 5x5 pixler, må 
 
 ```blocks
 
-loops.forever(function () {
+basic.forever(function () {
     basic.showString("Hello!")
 })
 ```
