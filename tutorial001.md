@@ -9,15 +9,7 @@ Første skritt i ethvert programmeringskurs pleier å være at man lærer seg å
 Tradisjonelt skriver man "Hello world" og får programmet til å vise denne strengen på en skjerm eller i et display. 
 Nå kan du selvsagt skrive akkurat hva du vil, her kommer i alle fall det du trenger for å vise tekst i displayet til Micro:Biten ved hjelp av MakeCode-blokker som første steg.
 
-## Kontroll av Bit:Bot
-
-### Kjør fremover
-Vi kontrollerer fart og retning med hvor mye strøm som sendes til motoren. Forenklet så kalles dette _fart_ i blokkene i MakeCode og vi kan velge en prosentvis verdi fra 0 - 100.
-
-Vi kan kontrollere bevegelse fremover og bakover med to ulike blokker. 
-``||bitbot:Kjør fremover med fart||`` som kun angir fart. (Her kan du tenke at bit:bot vil kjøre, helt til du gir en ny kommando i programmet.) 
-
-``||bitbot:Kjør fremover med fart i millisekunder||``   angir både fart og varigheten av kjøringen i antall millisekunder.
+## La oss starte enkelt
 
 ### Steg 1
 I menyen midt på skjermen ser du en kolonne med fargede kategorier. Å vise tekst er en ``||Basic.Basic||`` funksjon i MakeCode. Klikk på ``||Basic.Basic||`` for å åpne ``||Basic.Basic||``-menyen og hent ut blokken ``||Basic.show string||``.
