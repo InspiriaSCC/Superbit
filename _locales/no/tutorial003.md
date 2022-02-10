@@ -12,7 +12,7 @@ Du kan teste ut dette i løpet av denne økten.
 ### Registrering av inndata krever en variabel @unplugged
 
 For å kunne registrere inndata trenger du en variabel som kan lagre inndatahendelser.
-I dette eksempelet vil hendelsene være hopp eller skritt, og variabelen skal lagre antall hendelser.
+I dette eksempelet vil en hendelse være ett hopp eller ett skritt, og variabelen skal lagre antall hendelser.
 For å lage en skritt- eller hoppeteller må du i tillegg lage en løkke som sjekker variabelen med jevne mellomrom og viser verdien i displayet.
 
 ### Steg 1: Lag en variabel og definer den i koden
@@ -66,7 +66,7 @@ Det kan hende at ``||input.når ristes||`` ikke alltid registrerer skritt like g
 Da kan det lønne seg å prøve en av de andre mulighetene for inndata fra akselerometeret.
 En som gjerne fungerer fint til skrittellere er ``||input.3 G||``.
 ``||input.3 G||`` er gjemt i samme blokk som ``||input.når ristes||``.
-Klikk på den lille pilen til høyre for ``||input.når ristes||`` i ``||input.når ristes||``-blokken.
+Klikk på den lille pilen til høyre for ``||input.ristes||`` i ``||input.når ristes||``-blokken.
 Velg ``||input.3 G||`` fra menyen som dukker opp.
 Som du ser finnes det mange mulige akselerometerinndata.
 Et eksempel kan være om du bygger Micro:Biten inn i en ball, godt polstret så den ikke blir ødelagt.
@@ -89,4 +89,3 @@ Nå har du lært noen triks du kan gjøre med akselerometeret i Micro:Bit.
 Om du bruker fantasien, kan du sikkert finne mange andre spennende måter å bruke akselerometeret på.
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
-
