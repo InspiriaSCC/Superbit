@@ -78,3 +78,6 @@ basic.showLeds(`
 ### Det var det!
 Godt jobba! Nå har du lært de mest grunnleggende blokkene som brukes til å vise tall, tekst og bilder på displayet.
 I neste runde skal vi se nærmere på hvordan vi kan bruke det du har lært til å lage en elektronisk terning.
+
+* for PXT/microbit
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>

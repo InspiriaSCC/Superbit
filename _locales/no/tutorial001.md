@@ -6,7 +6,9 @@
 MakeCode-miljøet består av tre deler: Til venstre på skjermen ser du en Micro:Bit-simulator som viser hva koden din gjør med Micro:Biten.
 I menyen midt på skjermen ser du en kolonne med fargede kategorier. Her finner du alle blokkene du trenger for å bygge koden din.
 Den store flaten til høyre på skjermen er arbeidsbordet ditt. Her plasserer du blokker fra menyen i midten for å bygge et program som kan kjøres av Micro:Biten.
-La oss lage litt enkel kode til å begynne med.
+Når du flytter en blokk i arbeidsområdet, følger alle blokkene som er festet under blokken også med.
+***Du kan flytte en enkeltblokk ved å holde inn Ctrl-knappen mens du klikker og drar.***
+La oss varme opp litt lett kode til å begynne med.
 
 ### La oss starte enkelt @unplugged
 
@@ -76,3 +78,6 @@ basic.showLeds(`
 ### Det var det!
 Godt jobba! Nå har du lært de mest grunnleggende blokkene som brukes til å vise tall, tekst og bilder på displayet.
 I neste runde skal vi se nærmere på hvordan vi kan bruke det du har lært til å lage en elektronisk terning.
+
+* for PXT/microbit
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
