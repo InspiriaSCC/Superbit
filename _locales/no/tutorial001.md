@@ -75,6 +75,95 @@ basic.showLeds(`
     `)
 ```
 
+### Animasjoner @unplugged
+
+Om du vil lage animasjoner på displayet, kan du bruke det du har lært til nå.
+Det eneste du trenger i tillegg er blokken ``||pause (ms)||`` fra ``||basic.Basis||``-menyen.
+Denne blokken brukes for at man skal rekke å oppfatte et bilde i displayet før programmet går videre.
+
+### Steg 7: Animasjoner
+
+Fjern koden din fra arbeidsområdet.
+Hent en ny ``||Basic.gjenta for alltid||``-blokk fra ``||basic.Basis||``-menyen.
+Hent en ny ``||basic.vis skjerm||``-blokk fra ``||basic.Basis||``-menyen og tegn det første bildet i animasjonen din.
+I eksemplet lager vi et bankende hjerte.
+
+```blocks
+basic.forever(function () {
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        # # # # #
+        . # # # .
+        . . # . .
+        `)
+})
+```
+
+### Steg 8: Animasjoner
+
+Før vi setter inn neste bilde i animasjonen trenger vi å pause programmet lenge nok til at den som ser på animasjonen rekker å oppfatte bildet.
+Hent en ``||pause (ms)||``-blokk fra ``||basic.Basis||``-menyen og sett den inn under ``||basic.vis skjerm||``-blokken.
+
+```blocks
+basic.forever(function () {
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        # # # # #
+        . # # # .
+        . . # . .
+        `)
+    basic.pause(100)
+})
+```
+
+### Steg 9: Fullfør animasjonen
+
+Du kan lage animasjonen din så lang du vil, men i eksemplet bruker vi bare noen få bilder.
+Husk å sette en pauseblokk mellom hvert bilde og etter det siste bildet i ``||Basic.gjenta for alltid||``-blokken.
+Du kan kopiere en blokk ved å høyreklikke på den og velge **"Lag kopi"** fra rullegardinmenyen som dukker opp.
+Dette gjør det ofte enklere når du skal foreta små endringer mellom bildene i en animasjon.
+Juster tiden mellom blokkene slik at animasjonen vises slik du foretrekker.
+
+```blocks
+basic.forever(function () {
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        # # # # #
+        . # # # .
+        . . # . .
+        `)
+    basic.pause(100)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
+    basic.pause(100)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.pause(100)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
+    basic.pause(100)
+})
+```
+
+
 ### Det var det!
 Godt jobba! Nå har du lært de mest grunnleggende blokkene som brukes til å vise tall, tekst og bilder på displayet.
 I neste runde skal vi se nærmere på hvordan vi kan bruke det du har lært til å lage en elektronisk terning.
