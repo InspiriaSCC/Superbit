@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 2: Variabler, inndata og 
+# Superbit del 2: Variabler, inndata og logikkfunksjoner 
 ## Introduksjon
 ### Introduksjon @unplugged
 I denne delen lærer du hvordan du lager og bruker en variabel og hvordan du får Micro:Bit til å reagere på en handling, eller inndata, som det kalles på kodespråket.
@@ -39,7 +39,7 @@ basic.showNumber(minVariabel)
 
 ### Steg 4: Superenkel terning
 Når vi kan vise en tallvariabel i displayet, kan vi bruke det til å lage en elektronisk terning.
-En inndatafunksjon kan ta seg av hvert terningkast. Vi kan bruke det innebygde akselerometeret i Micro:Bit til terningkastene.
+En inndatafunksjon skal ta seg av hvert terningkast. Vi kan bruke det innebygde akselerometeret i Micro:Bit til terningkastene.
 Gå til ``||input.Inndata||``-menyen og hent blokken ``||input.når ristes||``.
 Plasser blokken hvor som helst i arbeidsområdet, denne blokkene er også en startblokk.
 Dra den gamle startblokken ut i papirkurven til venstre.
@@ -87,7 +87,7 @@ Blokken ``||variables.sett <variabelnavn> til||`` brukes for å definere en vari
 Først må du opprette den nye variabelen. Klikk på ``||variables.Variabler||``-menyen og velg **"Lag ny variabel..."**.
 Gi variabelen et navn som sier noe om hva den er for noe.
 Denne kan du kalle "terningkast".
-Det er en god vane å definere variabler øverst i koden, så hent en ``||variables.sett terningkast til||``-blokk fra ``||variables.Variabler||``-menyen og plasser den øverst i ``||input.når ristes||``-blokken.
+Det er en god vane å definere variabler øverst i koden, så hent en ``||variables.sett terningkast til||``-blokk fra ``||variables.Variabler||``-menyen og plasser den **øverst** i ``||input.når ristes||``-blokken.
 
 ```blocks
 let terningkast = 0
@@ -119,7 +119,7 @@ input.onGesture(Gesture.Shake, function () {
 Denne delen er litt lengre enn de forrige.
 Nå skal du bruke noen av de viktigste algoritmene i programmering til å lage et ordentlig program.
 Først må du fjerne blokken ``||basic.vis tall||``fra programmet ditt. Kast den i papirkurven.
-Nå trenger du en ``||logic.hvis sant så ellers||``-blokk fra ``||logic.Logikk||``-menyen.
+Nå trenger du en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen.
 Dra den inn i ``||input.når ristes||``-blokken og plasser den **under** ``||variables.sett terningkast til||``-blokken.
 
 ```blocks
@@ -147,7 +147,7 @@ Etter den femte gangen finnes det bare en mulighet igjen, siden "terningkast" ba
 
 ### Steg 9: Terning med øyne, del 2
 For å sammenlikne to tall eller variabler bruker du blokken ``||logic.0 = 0||`` fra ``||logic.Logikk||``-menyen.
-Hent blokken ``||logic.0 = 0||`` og plasser den i det øverste heksagonet i ``||logic.hvis sant så ellers||``-blokken.
+Hent blokken ``||logic.0 = 0||`` og plasser den i det øverste heksagonet i ``||logic.hvis sann så ellers||``-blokken.
 Hent den lille variabelblokken til ``||variables.terningkast||`` i ``||variables.Variabler||``-menyen og plasser den i det første hvite feltet i ``||logic.0 = 0||``-blokken.
 I det andre feltet skriver du tallet 1.
 
@@ -165,7 +165,7 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 ### Steg 10: Terning med øyne, del 3
-I det øverste gapet i ``||logic.hvis sant så ellers||``-blokken må du nå plassere blokken ``||basic.vis skjerm||`` fra ``||basic.Basis||``-menyen.
+I det øverste gapet i ``||logic.hvis sann så ellers||``-blokken må du nå plassere blokken ``||basic.vis skjerm||`` fra ``||basic.Basis||``-menyen.
 Tegn et terningøye på skjermen ved å klikke på ruten midt i ``||basic.vis skjerm||``-blokken.
 
 ```blocks
@@ -198,7 +198,7 @@ Dette er fort gjort å glemme, men nå er du advart.
 
 ### Steg 11: Terning med øyne, del 4
 
-Når du nå skal gjøre flere logiske sjekker i den samme ``||logic.hvis sant så ellers||``-blokken, legger du sikker merke til at det bare finnes et heksagon du kan legge en sånn sjekk inn i, og det er jo allerede opptatt.
+Når du nå skal gjøre flere logiske sjekker i den samme ``||logic.hvis sann så ellers||``-blokken, legger du sikker merke til at det bare finnes et heksagon du kan legge en sånn sjekk inn i, og det er jo allerede opptatt.
 For å utvide ``||logic.hvis sant så ellers||``-blokken må du trykke på det lille "+"-tegnet nederst i venstre hjørne av blokken.
 Da vil det dukke opp et nytt gap og et nytt heksagon.
 Du kan trykke flere ganger og få flere gap.
@@ -234,7 +234,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ### Steg 12: Terning med øyne, del 5
 
-Nå kan du kopiere den lille, heksagonale ``||logic.terningkast = 1||``-blokken fra  øverst i ``||logic.hvis sant så ellers||``-blokken og plassere den i det neste ledige heksagonet.
+Nå kan du kopiere den lille, heksagonale ``||logic.terningkast = 1||``-blokken fra  øverst i ``||logic.hvis sann så ellers||``-blokken og plassere den i det neste ledige heksagonet.
 Endre tallet 1 til 2.
 Kopier ``||basic.vis skjerm||``-blokken fra de øverste gapet og legg kopien i gap nummer to.
 Endre fra et øye til to ved å klikke en gang på ruten som er hvit og finn to andre ruter du kan bruke for at det skal se ut som to øyne på en terning.
@@ -275,7 +275,7 @@ input.onGesture(Gesture.Shake, function () {
 ### Steg 13: Terning med øyne, del 6
 
 Du må gjenta prosessen i Steg 12 for resultatene 3, 4 og 5 også.
-Kopier eller hent inn blokkene som trengs for å fylle de neste 3 heksagonene og gapene i ``||logic.hvis sant så ellers||``-blokken.
+Kopier eller hent inn blokkene som trengs for å fylle de neste 3 heksagonene og gapene i ``||logic.hvis sann så ellers||``-blokken.
 Husk å endre tallet det sjekkes for i ``||logic.heksagonene||`` og antall øyne på ``||basic.vis skjerm||``-blokkene.
 
 
