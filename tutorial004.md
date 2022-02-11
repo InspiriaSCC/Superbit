@@ -6,7 +6,7 @@
 
 Ved hjelp av displayet og inndata kan man lage forskjellige spill til Micro:Bit.
 Alle funksjoner som har med spill å gjøre finner du under **"Avansert"** i blokkemenyen.
-Denne gjennomgangen er ganske lang, den består av 21 småkompliserte steg, så sett av litt god tid.
+Denne gjennomgangen er ganske lang, den består av 23 småkompliserte steg, så sett av litt god tid.
 Du skal nå lære å programmere spillet som ligger på alle nye Micro:Bits når de startes første gang.
 Spillet kalles *"Chase the dot"* på engelsk. Fang brikken eller fang pixelen kan man kanskje kalle det på norsk?
 Spillet går ut på å styre en lysende spillebrikke som skal fange en annen brikke som blinker.
@@ -176,7 +176,7 @@ Det er fordi denne koden må kjøres hele tiden for å sjekke statusen til helni
 Hadde vi plassert denne koden i "ved start"-blokken, ville helningen på Micro:Biten blitt sjekket én gang, og aldri mer.
 I "ved start"-blokker legger man kode som skal kjøres i oppstarten av et program.
 For spillprogrammer vil dette være koden som setter opp startbetingelsene for spillet og definerer spillere, fiender og andre variabler som trengs i resten av koden.
-Kode som trengs for aktiviteter og hendelser i spillet, som bevegelsen til fiender, fornybare ressurser og så videre, kjøres i løkker som gjentas flere ganger ettersom spilleren endrer på ting i spillet.
+Kode som trengs for aktiviteter og hendelser i spillet, som bevegelsene til spillere og fiender, fornybare ressurser og så videre, kjøres i løkker som gjentas flere ganger ettersom spilleren endrer på ting i spillet.
 Da bruker man "gjenta for alltid", eller andre blokker med kode som utløses av hendelser i spillet.
 Alle disse blokkene vil være blokker som ikke kan settes inn i en startblokk, men som fungerer som egne, frittstående løkker i arbeidsområdet.
 
@@ -306,13 +306,13 @@ basic.forever(function () {
 ### Steg 14 Spillkontrolleren
 
 Om du ikke har et ledig heksagon over det siste gapet, kan du trykke på det lille **+**-tegnet nede til høyre i blokken og lage et ekstra gap.
-Det ekstra gapet fjerner du når du har fullført dette steget.
+Da får du et nytt heksagon på det nest siste gapet.
+Det ekstra gapet fjerner du etter at du har fullført dette steget.
 Kopier ``||input.er helning venstre bevegelse||``-blokken fra den øverste armen i ``||logic.hvis sann så ellers||``-blokken og plasser kopien i det siste ledige heksagonet.
 Endre ``||input.helning venstre||`` til ``||input.logo opp||``
 Kopier ``||game.jeger endre x med -1||``-blokken og plasser kopien i gapet under heksagonet du nettopp redigerte.
 Endre ``||game.x||`` til ``||game.y||`` og **-1** til **1**.
-Om du sitter igjen med et gap for mye i ``||logic.hvis sann så ellers||``-blokken, kan du fjerne det nå ved å trykke på det lille **-**-tegnet til venstre på armen over.
-
+Om du nå sitter igjen med et ekstra, tomt gap i ``||logic.hvis sann så ellers||``-blokken, kan du fjerne det nå ved å trykke på det lille **-**-tegnet til venstre på armen over.
 
 ```blocks
 let jeger: game.LedSprite = null
@@ -365,6 +365,28 @@ Dette er en ganske infløkt sjekk, så her gjelder det å holde tunga rett i mun
 
 Hent en ``||logic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen.
 Plasser den nye blokken nederst i ``||basic.gjenta for alltid||``-blokken din.
+
+```blocks
+let jeger: game.LedSprite = null
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+        jeger.change(LedSpriteProperty.X, -1)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        jeger.change(LedSpriteProperty.X, 1)
+    } else if (input.isGesture(Gesture.LogoDown)) {
+        jeger.change(LedSpriteProperty.Y, -1)
+    } else if (input.isGesture(Gesture.LogoUp)) {
+        jeger.change(LedSpriteProperty.Y, 1)
+    }
+    basic.pause(100)
+    // @highlight
+    if (true) {
+    	
+    }
+})
+```
+
+### Steg 17 Score poeng
 Hent en liten ``||logic.[heksagon] og [heksagon]||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i heksagonet på ``||logic.hvis sann så||``-blokken.
 Denne koden sjekker om ***to*** tilstander er sanne samtidig.
 
@@ -388,7 +410,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 17 Score poeng
+### Steg 18 Score poeng
 
 Hent et ``||logic.0 = 0||``-heksagon fra ``||logic.Logikk||``-menyen og plasser det i det første heksagonet i ``||logic.[heksagon] og [heksagon]||``-blokken du nettopp satte inn.
 Kopier ``||logic.0 = 0||``-heksagonet og plasser kopien i det andre heksagonet i ``||logic.[heksagon] og [heksagon]||``-blokken.
@@ -414,7 +436,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 18 Score poeng
+### Steg 19 Score poeng
 
 Nå trenger du blokker som beskriver x- og y- posisjonene til en brikke hver for seg.
 Finn en liten oval ``||variables.sprite||`` ``||game.x||`` i ``||game.Spill||``-menyen og sett den inn i det første hvite feltet i det første ``||logic.0 = 0||``-heksagonet.
@@ -444,7 +466,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 19 Score poeng
+### Steg 20 Score poeng
 
 Nå skal du endre de siste blokkene du plasserte sånn at det er jeger- og byttebrikkenes posisjoner som sjekkes mot hverandre.
 Endre den første ovale blokken der det står ``||variables.sprite||`` ``||game. x||`` til ``||variables.jeger||`` ``||game. x||`` ved å trykke på den lille pilen til høyre for ``||variables.sprite||`` og velge ``||variables.jeger||``.
@@ -456,7 +478,6 @@ let bytte: game.LedSprite = null
 let jeger: game.LedSprite = null
 let sprite: game.LedSprite = null
 basic.forever(function () {
-    let sprite: game.LedSprite = null
     if (input.isGesture(Gesture.TiltLeft)) {
         jeger.change(LedSpriteProperty.X, -1)
     } else if (input.isGesture(Gesture.TiltRight)) {
@@ -474,7 +495,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 20 Score poeng
+### Steg 21 Score poeng
 
 Nå skal du gjøre samme logiske sjekk for y-posisjonen til begge brikkene.
 Endre den nest siste ovale blokken der det står ``||variables.sprite||`` ``||game. x||`` til ``||variables.jeger||`` ``||game. y||`` ved å trykke på den lille pilen til høyre for ``||variables.sprite||`` og velge ``||variables.jeger||`` og så trykke på den lille pilen til høyre for ``||game.x||`` og velge ``||game.y||``.
@@ -502,7 +523,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 21 Score poeng
+### Steg 22 Score poeng
 
 Dersom den logiske sjekken finner ut at ``||variables.jeger||`` og ``||variables.bytte||`` har samme x- og y-verdi, skal spilleren få et poeng og en ny runde begynne.
 Hent en ``||game.endre poengsum med 1||``-blokk fra ``||game.Spill||``-menyen og plasser den i gapet på ``||logic.hvis sann så||``-blokken.
@@ -532,6 +553,6 @@ basic.forever(function () {
 })
 ```
 
-### Steg 22 Spillet er ferdig
+### Steg 23 Spillet er ferdig
 
 Det var det hele! Nå kan du laste spillet opp til Micro:Biten og teste spillet. Husk at byttet blinker, mens jegeren lyser svakt hele tiden.
