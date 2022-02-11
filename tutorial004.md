@@ -427,6 +427,7 @@ basic.forever(function () {
     }
     
     basic.pause(100)
+    // @highlight
     if (sprite.get(LedSpriteProperty.X) == sprite.get(LedSpriteProperty.X) && sprite.get(LedSpriteProperty.X) == sprite.get(LedSpriteProperty.X)) {
     	
     }
@@ -456,6 +457,7 @@ basic.forever(function () {
         jeger.change(LedSpriteProperty.Y, 1)
     }
     basic.pause(100)
+    // @highlight
     if (jeger.get(LedSpriteProperty.X) == bytte.get(LedSpriteProperty.X) && sprite.get(LedSpriteProperty.X) == sprite.get(LedSpriteProperty.X)) {
     	
     }
@@ -483,6 +485,7 @@ basic.forever(function () {
         jeger.change(LedSpriteProperty.Y, 1)
     }
     basic.pause(100)
+    // @highlight
     if (jeger.get(LedSpriteProperty.X) == bytte.get(LedSpriteProperty.X) && jeger.get(LedSpriteProperty.X) == bytte.get(LedSpriteProperty.X)) {
     	
     }
@@ -512,6 +515,7 @@ basic.forever(function () {
     }
     basic.pause(100)
     if (jeger.get(LedSpriteProperty.X) == bytte.get(LedSpriteProperty.X) && jeger.get(LedSpriteProperty.X) == bytte.get(LedSpriteProperty.X)) {
+        // @highlight
         game.addScore(1)
         NyRunde()
     }
