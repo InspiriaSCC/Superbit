@@ -60,6 +60,7 @@ Sett tallet bak ``||game.lysstyrke||`` til 5.
 ```blocks
 let bytte = game.createSprite(2, 2)
 let jeger = game.createSprite(0, 0)
+// @highlight
 bytte.set(LedSpriteProperty.Blink, 3)
 jeger.set(LedSpriteProperty.Brightness, 5)
 ```
@@ -96,3 +97,318 @@ Hent to nye ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menye
 Endre ``||game.x||`` til ``||game.y||`` i den **ene** av blokkene.
 Hent en ``||math.velg tilfeldig 0 til 10||``-blokk fra ``||math.Matematikk||``-menyen og plasser den i det hvite feltet etter ``||game.x||`` i den ene blokken.
 Endre 10-tallet til et 4-tall i ``||math.velg tilfeldig 0 til 10||``-blokken.
+Kopier ``||math.velg tilfeldig 0 til 4||``-blokken du nettopp redigerte over til den andre ``||game.sprite angir x til||``-blokken.
+
+```blocks
+let bytte: game.LedSprite = null
+function NyRunde () {
+    // @highlight
+    bytte.set(LedSpriteProperty.X, randint(0, 4))
+    bytte.set(LedSpriteProperty.Y, randint(0, 4))
+}
+```
+
+### Om tiltsensoren til Micro:Bit @unplugged
+
+Tiltsensoren til Micro:Bit kan være litt lite sensitiv, slik at man enten ikke får jegeren til å bevege på seg, eller så beveger den seg plutselig alt for fort.
+For å gjøre spillet enklere skal vi gjøre det sånn at byttet alltid dukker opp inntil kanten av displayet.
+Da blir det lettere for spilleren å fange byttet.
+For å få byttet til å dukke opp inntil kanten av displayet skal vi bruke en logisk løkke.
+Løkken sjekker om byttet er plassert inntil kanten av displayet.
+Om byttet ikke ligger inntil kanten, kjøres "NyRunde"-funksjonen på nytt, helt til byttet er plassert inntil kanten.
+
+### Steg 6 Begrens hvor byttet kan dukke opp
+
+Hent en ``||basic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.NyRunde||``-blokken under de forrige blokkene du la inn der.
+Hent en liten heksagonal ``||logic.ikke||`` blokk fra ``||logic.Logikk||``-menyen og plasser den i heksagonet på ``||basic.hvis sann så||``-blokken.
+Hent en heksagonal ``||game.berører kant?||``-blokk fra ``||game.Spill||``-menyen og plasser den inni ``||logic.ikke||`` blokken.
+Hent en ``||variables.bytte||`` variabel fra ``||variables.Variabler||``-menyen og plasser den i det hvite feltet på ``||game.berører kant?||``-blokken.
+Hent ``||functions.kjør NyRunde||``-blokken fra ``||functions.Funksjoner||``-menyen og plasser den i gapet på ``||basic.hvis sann så||``-blokken
+Nå er den logiske løkken klar.
+
+```blocks
+let bytte: game.LedSprite = null
+function NyRunde () {
+    bytte.set(LedSpriteProperty.X, randint(0, 4))
+    bytte.set(LedSpriteProperty.Y, randint(0, 4))
+    // @highlight
+    if (!(bytte.isTouchingEdge())) {
+        NyRunde()
+    }
+}
+```
+
+### Steg 7 Kall på funksjonen når spillet starter
+
+Nå må du tilbake til ``||basic.ved start||``-blokken for å kalle på funksjonen du nettopp lagde.
+Hent ``||functions.kjør NyRunde||``-blokken fra ``||functions.Funksjoner||``-menyen og plasser den nederst i koden i ``||basic.ved start||``-blokken.
+Den siste blokken du trenger i startkoden din er en nedtellingsblokk, slik at ikke spillet varer evig.
+Hent en ``||game.start nedtelling 10000 ms||``-blok fra ``||game.Spill||``-menyen og plasser den under ``||functions.kjør NyRunde||``-blokken i ``||basic.ved start||`.
+Nå har du plassert all koden du trenger i startblokken.
+Nå skal vi få jegeren til å bevege seg når Micro:Biten tiltes.
+
+```blocks
+function NyRunde () {
+    bytte.set(LedSpriteProperty.X, randint(0, 4))
+    bytte.set(LedSpriteProperty.Y, randint(0, 4))
+    if (!(bytte.isTouchingEdge())) {
+        NyRunde()
+    }
+}
+let bytte: game.LedSprite = null
+bytte = game.createSprite(2, 2)
+let jeger = game.createSprite(0, 0)
+bytte.set(LedSpriteProperty.Blink, 3)
+jeger.set(LedSpriteProperty.Brightness, 5)
+// @highlight
+NyRunde()
+game.startCountdown(10000)
+```
+
+### Forskjellen på "ved start" og "gjenta for alltid" @unplugged
+
+Kontrollene til jegeren legges i en "gjenta for alltid"-løkke.
+Det er fordi denne koden må kjøres hele tiden for å sjekke statusen til helningen på Micro:Biten.
+Hadde vi plassert denne koden i "ved start"-blokken, ville helningen på Micro:Biten blitt sjekket én gang, og aldri mer.
+I "ved start"-blokker legger man kode som skal kjøres i oppstarten av et program.
+For spillprogrammer vil dette være koden som setter opp startbetingelsene for spillet og definerer spillere, fiender og andre variabler som trengs i resten av koden.
+Kode som trengs for aktiviteter og hendelser i spillet, som bevegelsen til fiender, fornybare ressurser og så videre, kjøres i løkker som gjentas flere ganger ettersom spilleren endrer på ting i spillet.
+Da bruker man "gjenta for alltid", eller andre blokker med kode som utløses av hendelser i spillet.
+Alle disse blokkene vil være blokker som ikke kan klikkes inn i en startkode, men som fungerer som egen, frittstående løkker i arbeidsområdet.
+
+### Steg 8 Spillkontrolleren
+
+Hent en ``||basic.gjenta for alltid||``-blokk fra ``||basic.Basis||``-menyen.
+Plasser en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen i ``||basic.gjenta for alltid||``-blokken.
+
+```blocks
+basic.forever(function () {
+    if (true) {
+    	
+    } else {
+    	
+    }
+})
+```
+
+### Steg 9 Spillkontrolleren
+
+Hent en ``||input.er ristes bevegelse||`` fra ``||input.Inndata||``-menyen, plasser den i heksagonet øverst i ``||logic.hvis sann så ellers||``-blokken og endre ``||input.ristes||`` til ``||input.helning venstre||``.
+
+```blocks
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+    	
+    } else {
+    	
+    }
+})
+```
+### Steg 10 Spillkontrolleren
+
+Høyre/venstre er x-aksen på Micro:Bit-displayet, så tilt i disse retningene må føre til bevegelse i x-retning.
+Hent en ``||game.sprite endre x med 1||``-blokk fra ``||game.Spill||``-menyen og plasser den i gapet på ``||logic.hvis sann så ellers||``-blokken.
+Bevegelse mot venstre er bevegelse i negativ x-retning på displayet, så du må endre **1** til **-1**
+
+```blocks
+let jeger: game.LedSprite = null
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+        // @highlight
+        jeger.change(LedSpriteProperty.X, -1)
+    } else {
+    	
+    }
+})
+```
+
+### Steg 11 Spillkontrolleren
+
+Nå må du gjøre det samme for de gjenstående tre retningene.
+Utvid ``||logic.hvis sann så ellers||``-blokken tre ganger ved å trykke på det lille **+**-tegnet nederst til venstre på blokken.
+Om du skulle klikke for mange ganger, kan du trykke på **-**-tegnet til høyre på den nest nederste armen på blokken.
+
+```blocks
+let jeger: game.LedSprite = null
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+        // @highlight
+        jeger.change(LedSpriteProperty.X, -1)
+    } else if (false) {
+    	
+    } else if (false) {
+    	
+    } else if (false) {
+    	
+    }
+})
+```
+
+### Steg 12 Spillkontrolleren
+
+Kopier ``||input.er helning venstre bevegelse||``-blokken fra den øverste armen i ``||logic.hvis sann så ellers||``-blokken og plasser kopien i det neste ledige heksagonet.
+Endre ``||input.helning venstre||`` til ``||input.helning høyre||``
+Kopier ``||game.jeger endre x med -1||``-blokken og plasser kopien i gapet under heksagonet du nettopp redigerte.
+Endre **-1** til **1**
+
+```blocks
+let jeger: game.LedSprite = null
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+        jeger.change(LedSpriteProperty.X, -1)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        // @highlight
+        jeger.change(LedSpriteProperty.X, 1)
+    } else if (false) {
+    	
+    } else if (false) {
+    	
+    }
+})
+```
+
+### Steg 12 Spillkontrolleren
+
+Kopier ``||input.er helning venstre bevegelse||``-blokken fra den øverste armen i ``||logic.hvis sann så ellers||``-blokken og plasser kopien i det neste ledige heksagonet.
+Endre ``||input.helning venstre||`` til ``||input.logo ned||``
+Kopier ``||game.jeger endre x med -1||``-blokken og plasser kopien i gapet under heksagonet du nettopp redigerte.
+Endre ``||game.x||`` til ``||game.y||``
+Positiv y-retning er faktisk nedover på displayet, så når vi heller på Micro:biten så logoen står opp ned, vil jegeren bevege seg i negativ y-retning.
+Dette kan virke litt baklengs sammenliknet med det elevene lærer om kartesiske koordinatsystemer i mattetimene, men sånn er altså LED-matrisen definert.
+Her kan kanskje et læringspunkt være at koordinatsystemer kan defineres på flere måter.
+
+```blocks
+let jeger: game.LedSprite = null
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+        jeger.change(LedSpriteProperty.X, -1)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        jeger.change(LedSpriteProperty.X, 1)
+    } else if (input.isGesture(Gesture.LogoDown)) {
+        // @highlight
+        jeger.change(LedSpriteProperty.Y, -1)
+    } else if (false) {
+    	
+    }
+})
+```
+
+### Steg 13 Spillkontrolleren
+
+Kopier ``||input.er helning venstre bevegelse||``-blokken fra den øverste armen i ``||logic.hvis sann så ellers||``-blokken og plasser kopien i det neste ledige heksagonet.
+Endre ``||input.helning venstre||`` til ``||input.logo opp||``
+Kopier ``||game.jeger endre x med -1||``-blokken og plasser kopien i gapet under heksagonet du nettopp redigerte.
+Endre ``||game.x||`` til ``||game.y||`` og **-1** til **1**.
+Legg til en ``||basic.pause (ms) 100||`` blokk under ``||logic.hvis sann så ellers||``-blokken for at spillet skal kunne rekke å sjekke om spilleren har klart å fange byttet.
+Nå er spillkontrolleren komplett, men vi mangler en ting. Spilleren må kunne score poeng.
+
+```blocks
+let jeger: game.LedSprite = null
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+        jeger.change(LedSpriteProperty.X, -1)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        jeger.change(LedSpriteProperty.X, 1)
+    } else if (input.isGesture(Gesture.LogoDown)) {
+        jeger.change(LedSpriteProperty.Y, -1)
+    } else if (input.isGesture(Gesture.LogoUp)) {
+        jeger.change(LedSpriteProperty.Y, 1)
+    }
+    basic.pause(100)
+})
+```
+
+### Score poeng @unplugged
+
+Det siste som gjenstår er å legge til en måte å score poeng på.
+Spilleren skal få et poeng hver gang de fanger et bytte.
+For å fange byttet, må jegeren være på samme koordinat som byttet.
+Her må du bruke en logisk løkke som hele tiden sjekker om de to er på samme koordinatpunkt.
+Dette er en ganske infløkt sjekk, så her gjelder det å holde tunga rett i munnen.
+
+### Steg 13 Score poeng
+
+Hent en ``||logic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen.
+Plasser den nye blokken nederst i ``||basic.gjenta for alltid||``-blokken din.
+Hent en liten ``||logic.[heksagon] og [heksagon]||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i heksagonet på ``||logic.hvis sann så||``-blokken.
+Denne koden sjekker om ***to*** tilstander er sanne samtidig.
+
+```blocks
+let jeger: game.LedSprite = null
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+        jeger.change(LedSpriteProperty.X, -1)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        jeger.change(LedSpriteProperty.X, 1)
+    } else if (input.isGesture(Gesture.LogoDown)) {
+        jeger.change(LedSpriteProperty.Y, -1)
+    } else if (input.isGesture(Gesture.LogoUp)) {
+        jeger.change(LedSpriteProperty.Y, 1)
+    }
+    basic.pause(100)
+    // @highlight
+    if (false && false) {
+    	
+    }
+})
+```
+
+### Steg 13 Score poeng
+
+Hent et ``||logic.0 = 0||``-heksagon fra ``||logic.Logikk||``-menyen og plasser det i det første heksagonet i ``||logic.[heksagon] og [heksagon]||``-blokken du nettopp satte inn.
+Kopier ``||logic.0 = 0||``-heksagonet og plasser kopien i det andre heksagonet i ``||logic.[heksagon] og [heksagon]||``-blokken.
+Koden du har satt inn nå legger til enda et logisk lag og sjekker om ***to og to*** tilstander er sanne samtidig.
+
+```blocks
+let jeger: game.LedSprite = null
+basic.forever(function () {
+    if (input.isGesture(Gesture.TiltLeft)) {
+        jeger.change(LedSpriteProperty.X, -1)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        jeger.change(LedSpriteProperty.X, 1)
+    } else if (input.isGesture(Gesture.LogoDown)) {
+        jeger.change(LedSpriteProperty.Y, -1)
+    } else if (input.isGesture(Gesture.LogoUp)) {
+        jeger.change(LedSpriteProperty.Y, 1)
+    }
+    basic.pause(100)
+    // @highlight
+    if (0 == 0 && 0 == 0) {
+    	
+    }
+})
+```
+
+### Steg 14 Score poeng
+
+Nå trenger du blokker som beskriver x- og y- posisjonene til en brikke hver for seg.
+Finn en liten oval ``||game.sprite x||`` og sett den inn i det første hvite feltet i det første ``||logic.0 = 0||``-heksagonet.
+Kopier ``||game.sprite x||`` tre ganger og plasser en kopi i hvert hvite felt i de to ``||logic.0 = 0||``-heksagonene.
+Nå får du kanskje en feilmelding, siden ``||variables.sprite||`` ikke er en definert variabel i programmet ditt.
+Det gjør ingenting, for det retter du opp i neste steg.
+
+```blocks
+let jeger: game.LedSprite = null
+let sprite: game.LedSprite = null
+basic.forever(function () {
+    let sprite: game.LedSprite = null
+    if (input.isGesture(Gesture.TiltLeft)) {
+        jeger.change(LedSpriteProperty.X, -1)
+    } else if (input.isGesture(Gesture.TiltRight)) {
+        jeger.change(LedSpriteProperty.X, 1)
+    } else if (input.isGesture(Gesture.LogoDown)) {
+        jeger.change(LedSpriteProperty.Y, -1)
+    } else if (input.isGesture(Gesture.LogoUp)) {
+        jeger.change(LedSpriteProperty.Y, 1)
+    }
+    basic.pause(100)
+    if (sprite.get(LedSpriteProperty.X) == sprite.get(LedSpriteProperty.X) && sprite.get(LedSpriteProperty.X) == sprite.get(LedSpriteProperty.X)) {
+    	
+    }
+})
+```
+
+### Steg 15 Score poeng
+
+Nå skal du endre de siste blokkene du plasserte sånn at det er jeger- og byttebrikkenes posisjoner som sjekkes mot hverandre.
+Endre
