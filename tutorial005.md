@@ -111,4 +111,81 @@ Koble Micro:Biten til PCen ved hjelp av USB-ledningen. (Koble til en batteripakk
 
 ### Steg 5 Få 3 LED-pærer til å blinke 1
 
+Kopier den første ``||pins.skriv digital til p0 verdi 1||``-blokken to ganger, og legg begge kopiene rett under originalblokken.
+Endre ``||pins.p0||`` i ``||pins.skriv digital til p0 verdi 0||`` til ``||pins.p1||`` i den ene av kopiene, og til ``||pins.p2||`` i den andre.
 
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    basic.pause(500)
+})
+```
+
+### Steg 6 Få 3 LED-pærer til å blinke 2
+
+Kopier ``||pins.skriv digital til p0 verdi 1||``-blokken som ligger mellom de to pauseblokkene to ganger, legg kopiene inn mellom originalblokken og den siste ``||basic.pause||``-blokken.
+Endre ``||pins.p0||`` i ``||pins.skriv digital til p0 verdi 1||`` til ``||pins.p1||`` i den ene av kopiene, og til ``||pins.p2||`` i den andre, akkurat som i forrige steg.
+Last opp programmet til Micro:Biten og se hva som skjer.
+
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    pins.digitalWritePin(DigitalPin.P2, 1)
+    basic.pause(500)
+})
+```
+
+### Steg 7 Få 3 LED-pærer til å blinke 3
+
+Nå skal du forsøke å endre verdiene 1 og 0 i de hvite feltene slik at de to ytterste LED-pærene tennes samtidig, mens den midterste tennes alene annen hver gang.
+Klarer du det?
+Klikk på lyspæren ved siden av denne teksten for å se en mulig løsning.
+
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 1)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(500)
+})
+```
+
+### Steg 8 Få 3 LED-pærer til å blinke 4
+Klarer du å utvide koden så LED-pærene tennes én og én?
+Da trenger du nok flere ``||pins.skriv digital til p0/p1/p2 verdi 0||``, ``||pins.skriv digital til p0/p1/p2 verdi 1||`` og ``||basic.pause||``-blokker.
+Klikk på lyspæren om du vil se en mulig løsning 
+
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 1)
+    basic.pause(500)
+})
+```
+
+### Steg 9 Få 3 LED-pærer til å blinke 5
+
+Det var det hele.
+Nå har du lært hvordan du kan få Micro:Biten til å slå noe av og på ved hjelp av digitale utganger.
