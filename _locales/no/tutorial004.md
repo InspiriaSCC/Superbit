@@ -75,19 +75,19 @@ Funksjoner bruker vi når vi trenger å kjøre den samme koden flere forskjellig
 Det kan minne om løkker, men mens løkker kjører koden flere ganger rett etter hverandre, kan en funksjon kjøre koden en gang og la programmet gå videre.
 Neste gang programmet trenger funksjonen, kan du hente den inn igjen.
 Å hente inn en funksjon kalles vanligvis å *kalle* på den.
-Ofte gir man funksjoner navn med stor førstebokstav, for lettere å skille dem fra variabler som man også *kaller* på, men som gjerne har liten førstebokstav.
-Om en funksjon eller variabel er satt sammen av flere ord, bruker man gjerne stor førstebokstav i hvert ord (bortsett fra på det første ordet i et variabelnavn).
+Ofte gir man funksjoner, akkurat som variabler, liten førstebokstav.
+Om en funksjon eller variabel er satt sammen av flere ord, bruker man gjerne stor førstebokstav i hvert ord bortsett fra på det første ordet.
 
 ### Steg 4 Lag en funksjon
 
 Å lage en funksjon minner om å lage en variabel.
 Funksjonsmenyen ligger under **"Avansert"**.
 Klikk på ``||functions.Funksjoner||``-menyen og velg **"Lag en funksjon..."**
-Gi funksjonen navnet NyRunde ved å skrive inn det nye navnet der det står GjørNoe i blokken som dukker opp på skjermen.
+Gi funksjonen navnet nyRunde ved å skrive inn det nye navnet der det står gjørNoe i blokken som dukker opp på skjermen.
 Funksjonen legger seg automatisk i arbeidsområdet etter at du har laget den.
 
 ```blocks
-function NyRunde () {
+function nyRunde () {
 	
 }
 ```
@@ -104,7 +104,7 @@ Kopier ``||math.velg tilfeldig 0 til 4||``-blokken du nettopp redigerte over til
 
 ```blocks
 let bytte: game.LedSprite = null
-function NyRunde () {
+function nyRunde () {
     bytte.set(LedSpriteProperty.X, randint(0, 4))
     // @highlight
     bytte.set(LedSpriteProperty.Y, randint(0, 4))
@@ -113,30 +113,30 @@ function NyRunde () {
 
 ### Om tiltsensoren til Micro:Bit @unplugged
 
-Tiltsensoren til Micro:Bit kan være litt lite sensitiv, slik at man enten ikke får jegeren til å bevege på seg, eller så beveger den seg plutselig alt for fort.
+Tiltsensoren til Micro:Bit kan være litt varierende sensitiv, slik at man enten ikke får jegeren til å bevege på seg, eller så beveger den seg plutselig alt for fort.
 For å gjøre spillet enklere skal vi gjøre det sånn at byttet alltid dukker opp inntil kanten av displayet.
 Da blir det lettere for spilleren å fange byttet.
 For å få byttet til å dukke opp inntil kanten av displayet skal vi bruke en logisk løkke.
 Løkken sjekker om byttet er plassert inntil kanten av displayet.
-Om byttet ikke ligger inntil kanten, kjøres "NyRunde"-funksjonen på nytt, helt til byttet er plassert inntil kanten.
+Om byttet ikke ligger inntil kanten, kjøres "nyRunde"-funksjonen på nytt, helt til byttet er plassert inntil kanten.
 
 ### Steg 6 Begrens hvor byttet kan dukke opp
 
-Hent en ``||logic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.NyRunde||``-blokken under de forrige blokkene du la inn der.
+Hent en ``||logic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.nyRunde||``-blokken under de forrige blokkene du la inn der.
 Hent en liten heksagonal ``||logic.ikke||`` blokk fra ``||logic.Logikk||``-menyen og plasser den i heksagonet på ``||basic.hvis sann så||``-blokken.
 Hent en heksagonal ``||variables.sprite||`` ``||game.berører kant?||``-blokk fra ``||game.Spill||``-menyen og plasser den inni ``||logic.ikke||`` blokken.
 Klikk på den lille hvite pilen til høyre for ``||variables.sprite||`` og velg ``||variables.bytte||`` slik at det står ``||variables.bytte||`` ``||game.berører kant?||`` i blokken.
-Hent ``||functions.kjør NyRunde||``-blokken fra ``||functions.Funksjoner||``-menyen og plasser den i gapet på ``||basic.hvis sann så||``-blokken
+Hent ``||functions.kjør nyRunde||``-blokken fra ``||functions.Funksjoner||``-menyen og plasser den i gapet på ``||basic.hvis sann så||``-blokken
 Nå er den logiske løkken klar.
 
 ```blocks
 let bytte: game.LedSprite = null
-function NyRunde () {
+function nyRunde () {
     bytte.set(LedSpriteProperty.X, randint(0, 4))
     bytte.set(LedSpriteProperty.Y, randint(0, 4))
     // @highlight
     if (!(bytte.isTouchingEdge())) {
-        NyRunde()
+        nyRunde()
     }
 }
 ```
@@ -144,19 +144,19 @@ function NyRunde () {
 ### Steg 7 Kall på funksjonen når spillet starter
 
 Nå må du tilbake til ``||basic.ved start||``-blokken for å kalle på funksjonen du nettopp lagde.
-Hent ``||functions.kjør NyRunde||``-blokken fra ``||functions.Funksjoner||``-menyen og plasser den nederst i koden i ``||basic.ved start||``-blokken.
+Hent ``||functions.kjør nyRunde||``-blokken fra ``||functions.Funksjoner||``-menyen og plasser den nederst i koden i ``||basic.ved start||``-blokken.
 Den siste blokken du trenger i startkoden din er en nedtellingsblokk, slik at ikke spillet varer evig.
-Hent en ``||game.start nedtelling 10000 ms||``-blok fra ``||game.Spill||``-menyen og plasser den under ``||functions.kjør NyRunde||``-blokken i ``||basic.ved start||``.
+Hent en ``||game.start nedtelling 10000 ms||``-blok fra ``||game.Spill||``-menyen og plasser den under ``||functions.kjør nyRunde||``-blokken i ``||basic.ved start||``.
 Nedtellingsblokken legger automatisk til en animasjon i starten og en "GAME OVER - SCORE" tekst i slutten av spillet.
 Nå har du plassert all koden du trenger i startblokken.
 Nå skal vi få jegeren til å bevege seg når Micro:Biten tiltes.
 
 ```blocks
-function NyRunde () {
+function nyRunde () {
     bytte.set(LedSpriteProperty.X, randint(0, 4))
     bytte.set(LedSpriteProperty.Y, randint(0, 4))
     if (!(bytte.isTouchingEdge())) {
-        NyRunde()
+        nyRunde()
     }
 }
 let bytte: game.LedSprite = null
@@ -165,7 +165,7 @@ let jeger = game.createSprite(2, 2)
 bytte.set(LedSpriteProperty.Blink, 3)
 jeger.set(LedSpriteProperty.Brightness, 5)
 // @highlight
-NyRunde()
+nyRunde()
 game.startCountdown(10000)
 ```
 
@@ -529,11 +529,26 @@ Dersom den logiske sjekken finner ut at ``||variables.jeger||`` og ``||variables
 Hent en ``||game.endre poengsum med 1||``-blokk fra ``||game.Spill||``-menyen og plasser den i gapet på ``||logic.hvis sann så||``-blokken.
 Nå får spilleren et poeng hvergang byttet blir fanget.
 Hent funksjonen ``||functions.NyRunde||`` fra ``||functions.Funksjoner||``-menyen og legg den inn i ``||logic.hvis sann så||``-blokken under ``||game.endre poengsum med 1||``-blokken.
-Den siste blokken du satte inn i koden påkaller funksjonen ``||functions.NyRunde||`` som starter en ny spillrunde.
+Den siste blokken du satte inn i koden påkaller funksjonen ``||functions.nyRunde||`` som starter en ny spillrunde.
+Spillet fortsetter å kjøre nye runder til tiden løper ut.
 
 ```blocks
 let bytte: game.LedSprite = null
 let jeger: game.LedSprite = null
+function nyRunde () {
+    bytte.set(LedSpriteProperty.X, randint(0, 4))
+    bytte.set(LedSpriteProperty.Y, randint(0, 4))
+    if (!(bytte.isTouchingEdge())) {
+        nyRunde()
+    }
+}
+let bytte: game.LedSprite = null
+bytte = game.createSprite(0, 0)
+let jeger = game.createSprite(2, 2)
+bytte.set(LedSpriteProperty.Blink, 3)
+jeger.set(LedSpriteProperty.Brightness, 5)
+nyRunde()
+game.startCountdown(10000)
 basic.forever(function () {
     if (input.isGesture(Gesture.TiltLeft)) {
         jeger.change(LedSpriteProperty.X, -1)
@@ -545,10 +560,10 @@ basic.forever(function () {
         jeger.change(LedSpriteProperty.Y, 1)
     }
     basic.pause(100)
-    if (jeger.get(LedSpriteProperty.X) == bytte.get(LedSpriteProperty.X) && jeger.get(LedSpriteProperty.X) == bytte.get(LedSpriteProperty.X)) {
+    if (jeger.get(LedSpriteProperty.X) == bytte.get(LedSpriteProperty.X) && jeger.get(LedSpriteProperty.Y) == bytte.get(LedSpriteProperty.Y)) {
         // @highlight
         game.addScore(1)
-        NyRunde()
+        nyRunde()
     }
 })
 ```
