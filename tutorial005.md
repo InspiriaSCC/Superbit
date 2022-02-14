@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 5: Koble elektronikk til Micro:Biten
+# Superbit del 5: Koble elektronikk til Micro:Biten, del 1
 ## Introduksjon
 ### Introduksjon @unplugged
 
