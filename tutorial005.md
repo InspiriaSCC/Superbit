@@ -16,7 +16,7 @@ Stripene som er merket 0, 1 og 2 er inn- og utganger for elektronikk.
 3V er plusspolen for en 3V likespenningskilde (f.eks. 2 AA-batterier) og GND er minuspolen.
 Du skal nå bruke disse brede metallstripene og krokodilleklemmer for å koble til en LED-pære.
 
-### Steg 1
+### Steg 1 Få en LED til å blinke 1
 
 Du trenger 2 ledninger med krokodilleklemmer i hver ende, en LED-pære og en Micro:Bit m. USB-ledning (Evt. batteripakke om du bruker iPad eller Android-brett) til gjennomgangen.
 Før du starter kodingen:
@@ -29,6 +29,47 @@ Koble den andre enden av den siste ledningen til stripen der det står GND på M
 Koble Micro:Biten til PCen ved hjelp av USB-ledningen. (Koble til en batteripakke om du bruker iPad eller Android-brett)
 Nå er koblingene klare.
 
-### Steg 2
+### Steg 2 Få en LED til å blinke 2
+
+Om du ikke har en ``||basic.gjenta for alltid||``-blokk i arbeidsområdet, hent en fra ``||basic.Basis||``-menyen.
+``||pins.Tilkoblinger||`` finner du under **"Avansert"** i menyen. Hent en ``||pins.skriv digital til p0 verdi 0||``-blokk fra ``||pins.Tilkoblinger||``-menyen og dra den inn i ``||basic.gjenta for alltid||``-blokken.
+
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+})
+```
+
+### Steg 3 Få en LED til å blinke 3
+
+Hent en ``||basic.pause||``-blokk fra ``||basic.Basis||``-menyen og legg den inn i ``||basic.gjenta for alltid||``-blokken under ``||pins.skriv digital til p0 verdi 0||``-blokken.
+Endre tiden i ``||basic.pause||``-blokken til 500 ms.
+
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    basic.pause(500)
+})
+```
+
+### Steg 4 Få en LED til å blinke 4
+
+Kopier ``||pins.skriv digital til p0 verdi||``-blokken og legg kopien inn under ``||basic.pause||``-blokken.
+Endre verdien i det hvite feltet i ``||pins.skriv digital til p0 verdi 0||``-blokken fra 0 til 1.
+
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 1)
+})
+```
+
+### Steg 5 Få en LED til å blinke 5
+
+Kopier ``||basic.pause||``-blokken og legg kopien inn under den siste ``||pins.skriv digital til p0 verdi 1||``-blokken.
+Nå kan du laste opp programmet til Micro:Biten og se hva som skjer.
+Hva skjer om du endrer verdiene på tiden?
+Klarer du å lage et program som sender morsekoden for SOS? (Tre korte, tre lang, tre korte blink)
 
 
