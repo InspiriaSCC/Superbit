@@ -72,4 +72,13 @@ Nå kan du laste opp programmet til Micro:Biten og se hva som skjer.
 Hva skjer om du endrer verdiene på tiden?
 Klarer du å lage et program som sender morsekoden for SOS? (Tre korte, tre lang, tre korte blink)
 
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    basic.pause(500)
+})
+```
+
 
