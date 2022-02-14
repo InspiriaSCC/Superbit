@@ -19,7 +19,9 @@
         "tutorial004.md",
         "tutorial005.md",
         "_locales/no/tutorial004.md",
-        "_locales/no/tutorial005.md"
+        "_locales/no/tutorial005.md",
+        "tutorial006.md",
+        "_locales/no/tutorial006.md"
     ],
     "testFiles": [
         "test.ts"
