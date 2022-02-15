@@ -37,10 +37,14 @@ Når du har koblet opp neopixelstripen som forklart, går du videre.
 
 ### Steg 2 Bruke neopixel med krokodilleklemmer 2
 
-Til dette programmet trenger du aller først en ``||basic.gjenta for altid||``-blokk.
+Til dette programmet trenger du aller først en ``||basic.ved start||``-blokk.
 Fra ``||neopixel.NeoPixel||``-menyen trenger du en ``||variables.sett strip til||`` ``||neopixel.NeoPixel at p0 with 24 leds as RGB (GRB format)||``.
-Dra den inn i ``||basic.gjenta for altid||``-blokken og endre ``||neopixel.24||`` til ``||neopixel.20||``, eller det antall NeoPixler du har på din stripe.
+Dra den inn i ``||basic.ved start||``-blokken og endre ``||neopixel.24||`` til ``||neopixel.20||``, eller det antall NeoPixler du har på din stripe.
 Det er 20 NeoPixels på stripen som følger med Superbit.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+```
 
 ### Forskjellige typer NeoPixels
 
@@ -51,14 +55,7 @@ For at koden skal virke, må programmet vite hvor mange NeoPixler det er snakk o
 På stripen som følger med Superbit er NeoPixlene av et format som kalles GRB, men det finnes andre formater.
 Om du bruker en annen NeoPixelstripe og merker at fargene ikke stemmer, prøv å endre på NeoPixelformat-delen i denne blokken.
 
-```blocks
-let strip: neopixel.Strip = null
-basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
-})
-```
-
-### Stege 3 Bruke neopixel med krokodilleklemmer 3
+### Steg 3 Bruke neopixel med krokodilleklemmer 3
 
 Nå skal du få NeoPixlene til å lyse i en bestemt farge. Der er 9 farger å velge mellom, pluss svart (av).
 Til dette trenger du blokken ``||neopixel.strip show color red||`` fra ``||neopixel.NeoPixel||``-menyen.
@@ -67,13 +64,25 @@ Nå kan du laste programmet opp til Micro:Biten og se hva som skjer.
 Prøv å endre farge i ``||neopixel.strip show color red||``-blokken og se om fargen som lyser stemmer med den du har lagt inn når du laster opp programmet til Micro:Biten.
 
 ```blocks
-let strip: neopixel.Strip = null
-basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
-})
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Red))
 ```
 
+### Nullstille NeoPixler
+
+Hver NeoPixel har en liten chip som tar imot instruksjoner fra koden.
+Siden hver NeoPixel har sin egen adresse, leser den kun koden som gjelder sin adresse og ignorer resten.
+Akkurat nå er hver NeoPixel instruert til å lyse med den siste fargen du gav dem i forrige steg.
+I neste steg skal du få én NeoPixel på stripa til å lyse med én bestemt farge.
+For å få til dette må du først slukke alle NeoPixlene, slik at den du vil skal lyse er den eneste som lyser.
+En enkel måte å slukke en NeoPixel på er å be den vise fargen svart.
+En svart NeoPixel er en slukket NeoPixel.
+
+### Steg 4 Bruke neopixel med krokodilleklemmer 4
+
+Nå skal du slå på en bestemt NeoPixel med en bestemt farge.
+Du må aller først få NeoPixlene som ikke skal lyse til å slukke, ellers kommer de til å lyse med den fargen du sist programmerte dem med.
+Hent blokken 
 
 
 ```package
