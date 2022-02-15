@@ -5,12 +5,12 @@
 ### Introduksjon @unplugged
 I denne delen lærer du hvordan du lager og bruker en variabel og hvordan du får Micro:Bit til å reagere på en handling, eller inndata, som det kalles på kodespråket.
 Du lærer også hvordan du kan bruke en viktig logikkfunksjon: "Hvis ellers så", eller "if then else" som den oftest kalles.
-Du kan velge om du vil laste programmene opp til en Micro:Bit, eller spare tid ved å bruke simulatoren.
+Du kan velge om du vil laste ned programmene til en Micro:Bit, eller spare tid ved å bruke simulatoren.
 
 ### Steg 1: Variabler
 Første gangen du klikker på ``||variables.variabler||``-menyen vil den være nesten tom.
 Klikk på ``||variables.variabler||`` og velg "Lag en variabel". Gi variabelen navnet "minVariabel".
-Det er en god vane å bruke liten førstebokstav på variabelnavn for å skille variabler fra f.eks. funksjoner, som gjerne får stor førstebokstav.
+Det er en god vane å bruke liten førstebokstav på variabel- og funksjonsnavn fordi det stort sett er normen i alle skriftkodespråk.
 
 ### Steg 2: Definer en variabel
 Før du kan bruke variabelen du nettopp lagde, må den defineres i programmet ditt.
@@ -26,7 +26,8 @@ let minVariabel = 7
 ### Steg 3: Vis verdien av variabelen
 For å vise verdien av variabelen din, må du sende variabelen til displayet.
 Til det trenger du blokken ``||basic.vis tall||``.
-Hent den fra ``||basic.Basis||``-menyen og legg den inn i startblokken **under** ``||variables.sett minVariabel til||``-blokken. Det er viktig at den plasseres under den forrige blokken.
+Hent den fra ``||basic.Basis||``-menyen og legg den inn i startblokken **under** ``||variables.sett minVariabel til||``-blokken.
+Det er viktig at den plasseres under den forrige blokken.
 Variabler må alltid defineres før du kan bruke dem, derfor er det en god vane å plassere alle ``||variables.sett [variabelnavn] til||``-blokker øverst i koden din.
 Klikk på ``||variables.variabler||``-menyen, hent den lille variabelblokken ``||variables.minVariabel||`` og sett den inn der det står 0 i blokken ``||basic.vis tall||``.
 ``||variables.minVariabel||`` er, som du sikkert har skjønt, variabelen du lagde tidligere.
@@ -38,10 +39,11 @@ basic.showNumber(minVariabel)
 ```
 
 ### Steg 4: Superenkel terning
-Når vi kan vise en tallvariabel i displayet, kan vi bruke det til å lage en elektronisk terning.
-En inndatafunksjon skal ta seg av hvert terningkast. Vi kan bruke det innebygde akselerometeret i Micro:Bit til terningkastene.
+Når du har lært å vise en tallvariabel i displayet, kan du bruke det til å lage en elektronisk terning.
+En inndatafunksjon skal ta seg av hvert terningkast.
+Du kan bruke det innebygde akselerometeret i Micro:Bit til terningkastene.
 Gå til ``||input.Inndata||``-menyen og hent blokken ``||input.når ristes||``.
-Plasser blokken hvor som helst i arbeidsområdet, denne blokkene er også en startblokk.
+Plasser blokken hvor som helst i arbeidsområdet, denne blokkene er også en slags startblokk.
 Dra den gamle startblokken ut i papirkurven til venstre.
 
 ```blocks
@@ -52,10 +54,12 @@ input.onGesture(Gesture.Shake, function () {
 
 ### Inndata @unplugged
 
-Det finnes flere måter å gi inndata til Micro:Bit på. Micro:Bit har innebygde sensorer for lys og temperatur, digitalt kompass og akselerometer.
-Alle disse kan brukes som inndata. Det finnes også to knapper som kan brukes hver for seg eller sammen.
+Det finnes flere måter å gi inndata til Micro:Bit på.
+Micro:Bit har innebygde sensorer for lys og temperatur, digitalt kompass og akselerometer.
+Alle disse kan brukes som inndata.
+Det finnes også to knapper som kan brukes hver for seg eller sammen.
 I tillegg har den radio og en rekke kontakter som kan ta imot elektroniske signaler.
-Vi bruker ristefunksjonen her, fordi det passer for en terning.
+Vi bruker ristefunksjonen her fordi det passer for en terning.
 
 ### Steg 5: Terning uten å lagre variabel
 Fra ``||basic.Basis||``-menyen trenger du nå blokken ``||basic.vis tall||`` som du brukte tidligere.
@@ -76,7 +80,7 @@ input.onGesture(Gesture.Shake, function () {
 ### Terning med variabel @unplugged
 Ofte vil det være en fordel å legge data inn i en variabel i stedet for å vise dem direkte.
 Nå skal du utvide terningen med å legge resultatet inn i en variabel før du viser det.
-Senere skal vi bruke denne variabelen til å få terningen litt føles litt mer realistisk ut.
+Senere skal vi bruke denne variabelen til å få terningen litt virke litt mer realistisk.
 Bruk av variabler i MakeCode krever alltid to trinn.
 Først må variabelen opprettes og gis et navn.
 Det gjør at det lages en egen blokk for denne variabelen i ``||variables.Variabler||``-menyen.
@@ -102,8 +106,8 @@ input.onGesture(Gesture.Shake, function () {
 Dra den lille blokken ``||math.velg tilfeldig 1 til 6||`` fra ``||basic.vis tall||``-blokken til det hvite feltet i ``||variables.sett terningkast til||``.
 Nå vil variabelen ``||variables.terningkast||`` settes til et tilfeldig tall fra 1 til 6 hver gang noen rister på Micro:Biten.
 For å vise resultatet må variabelen være tallet som skal vises i displayet.
-Klikk på ``||variables.Variabler||``-menyen, hent den lille variabelblokken ``||variables.terningkast||`` og plasser den i det hvite feltet i ``||basic.vis tall||``
-Når du rister på Micro:Biten, skjer akkurat det samme som ved den forrige terningen du lagde, men siden du nå bruker en variabel, kan vi endre på dette i neste steg.
+Klikk på ``||variables.Variabler||``-menyen, hent den lille, ovale variabelblokken ``||variables.terningkast||`` og plasser den i det hvite feltet i ``||basic.vis tall||``
+Når du rister på Micro:Biten nå, skjer akkurat det samme som ved den forrige terningen du lagde, men siden du nå bruker en variabel, kan vi endre på dette i neste steg.
 
 ```blocks
 let terningkast = 0
@@ -165,7 +169,7 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 ### Steg 10: Terning med øyne, del 3
-I det øverste gapet i ``||logic.hvis sann så ellers||``-blokken må du nå plassere blokken ``||basic.vis skjerm||`` fra ``||basic.Basis||``-menyen.
+I det øverste gapet i ``||logic.hvis sann så ellers||``-blokken skal du nå plassere blokken ``||basic.vis skjerm||`` fra ``||basic.Basis||``-menyen.
 Tegn et terningøye på skjermen ved å klikke på ruten midt i ``||basic.vis skjerm||``-blokken.
 
 ```blocks
@@ -274,7 +278,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ### Steg 13: Terning med øyne, del 6
 
-Du må gjenta prosessen i Steg 12 for resultatene 3, 4 og 5 også.
+Du må gjenta prosessen i forrige steg for resultatene 3, 4 og 5 også.
 Kopier eller hent inn blokkene som trengs for å fylle de neste 3 heksagonene og gapene i ``||logic.hvis sann så ellers||``-blokken.
 Husk å endre tallet det sjekkes for i ``||logic.heksagonene||`` og antall øyne på ``||basic.vis skjerm||``-blokkene.
 
@@ -333,7 +337,7 @@ input.onGesture(Gesture.Shake, function () {
 Over det siste gapet trenger du ingen ``||logic.terningkast = 6||``-blokk, for 6 trenger du ikke sjekke for.
 Alle resultatene er sjekket, bortsett fra 6, så da er det jo bare en mulighet igjen.
 Alt du trenger å gjøre nå er å lage den siste ``||basic.vis skjerm||``-blokken i det siste gapet, og så er terningen klar.
-Vi anbefaler å laste programmet opp til Micro:Biten. Det er noe eget ved å riste på en digital terning man har laget selv.
+Vi anbefaler å laste ned programmet til Micro:Biten. Det er noe eget ved å riste på en digital terning man har laget selv.
 Det var det hele! Gratulerer! Du har nettopp programmert en kul elektronisk terning!
 
 ```blocks

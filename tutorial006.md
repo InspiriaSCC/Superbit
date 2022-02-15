@@ -45,6 +45,7 @@ Dra den inn i ``||basic.ved start||``-blokken og endre ``||neopixel.24||`` til `
 Det er 20 NeoPixels på stripen som følger med Superbit.
 
 ```blocks
+// @highlight
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 ```
 
@@ -67,6 +68,7 @@ Prøv å endre farge i ``||neopixel.strip show color red||``-blokken og se om fa
 
 ```blocks
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+// @highlight
 strip.showColor(neopixel.colors(NeoPixelColors.Red))
 ```
 
@@ -89,6 +91,7 @@ Nå har du slått av alle NeoPixlene i stripa.
 
 ```blocks
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+// @highlight
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
 ```
 
@@ -105,6 +108,7 @@ NeoPixel 4, som vist i eksempelkoden, er den femte NeoPixelen fra Micro:Biten.
 ```blocks
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
+// @highlight
 strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
 ```
 
@@ -126,6 +130,7 @@ Nå kan du laste opp programmet til Micro:Biten og se hvilken NeoPixel som lyser
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
 strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
+// @highlight
 strip.show()
 ```
 
@@ -137,6 +142,7 @@ Endre adressene til NeoPixlene du vil slå på ved å sette inn tall mellom 0 og
 ```blocks
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
+// @highlight
 strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
 strip.setPixelColor(9, neopixel.colors(NeoPixelColors.Yellow))
 strip.setPixelColor(14, neopixel.colors(NeoPixelColors.Violet))
@@ -161,6 +167,7 @@ strip.setPixelColor(9, neopixel.colors(NeoPixelColors.Yellow))
 strip.setPixelColor(14, neopixel.colors(NeoPixelColors.Violet))
 strip.setPixelColor(19, neopixel.colors(NeoPixelColors.Green))
 strip.show()
+// @highlight
 basic.forever(function () {
     strip.rotate(1)
     strip.show()
@@ -178,6 +185,33 @@ Om du setter inn et negativt tall i det hvite feltet, endrer animasjonen retning
 
 ### Steg 9 Bruke neopixel med krokodilleklemmer 9
 
+Du kan også lage dine helt egen fargekombinasjoner for hver enkelt NeoPixel.
+Hent den ovale blokken ``||neopixel.red 255 green 255 blue 255||`` fra nederst på ``||neopixel.NeoPixel/...mer||``-menyen.
+Erstatt fargene i ``||neopixel.set pixel color at 0 to [farge]||``-blokkene dine med ``||neopixel.red 255 green 255 blue 255||``-ovaler.
+Tallene 0-255 bestemmer hvor kraftig hver enkelt av de tre fargene LEDene i hver NeoPixel skal lyse.
+Kombinasjonen 255-0-0 vil gi rødt, 0-255-0 gir grønt, 0-0-255 gir blått. Kombinasjonen 100-248-39 gir... Øh... En eller annen farge.
+Det blir noe sånt som 16,8 millioner mulige farger man kan lage selv ved å blande fargene på denne måten.
+Når det står 255 i alle de tre feltene, vil pixelen lyse hvitt.
+Prøv litt forskjellige tallkombinasjoner i de forskjellige blokkene og test resultatet ved å laste opp koden til Micro:Biten.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Black))
+// @highlight
+strip.setPixelColor(4, neopixel.rgb(0, 255, 255))
+strip.setPixelColor(9, neopixel.rgb(255, 0, 255))
+strip.setPixelColor(14, neopixel.rgb(255, 255, 0))
+strip.setPixelColor(19, neopixel.rgb(0, 255, 0))
+strip.show()
+basic.forever(function () {
+    strip.rotate(1)
+    strip.show()
+    basic.pause(100)
+})
+```
+
+### Steg 10 Bruke neopixel med krokodilleklemmer 10
+
 Nå skal du bruke en av de ferdige fargefunksjonene som finnes for NeoPixel.
 I dette steget skal du animere en regnbue.
 Fjern alle ``||neopixel.set pixel color at 0 to [farge]||`` fra ``||basic.ved start||``-blokken din.
@@ -188,6 +222,7 @@ Last ned programmet til Micro:Biten og se på lysshowet.
 
 ```blocks
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+// @highlight
 strip.showRainbow(1, 360)
 strip.show()
 basic.forever(function () {
@@ -204,7 +239,7 @@ Blokken ``||neopixel.strip show rainbow from 0 to 360||`` viser alle fargene i r
 Om du velger andre tall, for eksempel ``||neopixel.strip show rainbow from 90 to 270||``, vil Micro:Biten bare vise en del av fargene i regnbuen.
 Eksemplet 90 til 270 viser fargene mellom grønt og fiolett.
 
-### Steg 10 Bruke neopixel med krokodilleklemmer 10
+### Steg 11 Bruke neopixel med krokodilleklemmer 11
 
 Nå skal du få regnbuen til å gå fram og tilbake på NeoPixelstripa.
 Til det trenger du en ``||loops.gjenta 4 ganger||``-blokk fra ``||loops.Løkker||``-menyen.
@@ -216,6 +251,7 @@ let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showRainbow(0, 360)
 strip.show()
 basic.forever(function () {
+    // @highlight
     for (let index = 0; index < 20; index++) {
     	
     }
@@ -226,7 +262,7 @@ basic.forever(function () {
 
 ```
 
-### Steg 11 Bruke neopixel med krokodilleklemmer 11
+### Steg 12 Bruke neopixel med krokodilleklemmer 12
 
 Flytt de andre kodeblokkene i ``||basic.gjenta for alltid||``-blokken inn i ``||loops.gjenta 20 ganger||``-blokken.
 
@@ -235,6 +271,7 @@ let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showRainbow(0, 360)
 strip.show()
 basic.forever(function () {
+    // @highlight
     for (let index = 0; index < 20; index++) {
         strip.rotate(1)
         strip.show()
@@ -243,11 +280,11 @@ basic.forever(function () {
 })
 ```
 
-### Steg 12 Bruke neopixel med krokodilleklemmer 12
+### Steg 13 Bruke neopixel med krokodilleklemmer 13
 
 Kopier hele ``||loops.gjenta 20 ganger||``-blokken.
 Endre ``||neopixel.strip rotate pixels by 1||`` til ``||neopixel.strip rotate pixels by -1||`` i den ene blokken.
-Nå har du en regnbuescanner som kjører regnbuen fram og tilbake.
+Nå har du en regnbuescanner som kjører regnbuen fram og tilbake. Last ned til Micro:Biten og test!
 
 ```blocks
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
@@ -259,6 +296,7 @@ basic.forever(function () {
         strip.show()
         basic.pause(100)
     }
+    // @highlight
     for (let index = 0; index < 20; index++) {
         strip.rotate(-1)
         strip.show()
@@ -267,10 +305,65 @@ basic.forever(function () {
 })
 ```
 
+### Steg 14 Bruke neopixel med krokodilleklemmer 14
+
+Nå skal du bruke akselerometeret som inndata for NeoPixelstripa.
+Da må du først fjerne kode til du bare har ``||basic.ved start||``, ``||variables.sett strip til||`` ``||neopixel.NeoPixel at p0 with 24 leds as RGB (GRB format)||`` og ``||basic.gjenta for alltid||`` igjen.
+
+```blocks
+// @highlight
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+basic.forever(function () {
+	
+})
+```
+
+### Steg 15 Bruke neopixel med krokodilleklemmer 15
+
+Hent en ``||neopixel.strip show bargraph of 0 up to 255||`` fra ``||neopixel.NeoPixel||``-menyen.
+Plasser den nye blokken i ``||basic.gjenta for alltid||``.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+basic.forever(function () {
+    // @highlight
+    strip.showBarGraph(0, 255)
+})
+```
+
+### Steg 16 Bruke neopixel med krokodilleklemmer 16
+
+Hent en oval ``||input.akselerasjon (mG) X||``-blokk fra ``||input.Inndata||``-menyen og plasser den i det hvite feltet der det står 0 i ``||input.akselerasjon (mG) X||``-blokken.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, input.acceleration(Dimension.X), NeoPixelMode.RGB)
+basic.forever(function () {
+    // @highlight
+    strip.showBarGraph(input.acceleration(Dimension.X), 255)
+})
+```
+
+### Steg 17 Bruke neopixel med krokodilleklemmer 17
+
+Endre tallet 255 i ``||neopixel.strip show bargraph of 0 up to 255||``-blokken til 1000.
+Dette tallet viser hvor mye tyngdekraften påvirker akselerometeret i X-retningen (Sidelengs).
+Når Micro:Biten står på høykant vil påvirkningen være 1000 mG, altså 1 G, derfor passer det å sette inn 1000 her.
+Så lenge Micro:Biten ikke står på høykant vil gravitasjonspåvirkningen være mindre enn 1 G i X-retningen av planet Micro:Biten utgjør.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, input.acceleration(Dimension.X), NeoPixelMode.RGB)
+basic.forever(function () {
+    // @highlight
+    strip.showBarGraph(input.acceleration(Dimension.X), 1000)
+})
+```
+
+
+
 ### Avrunding @unplugged
 
 Det var en kjapp gjennomgang av noen triks du kan gjøre med NeoPixels.
-Det finnes selvfølgelig mye mer du kan gjøre med dem som du kan utforske på egen hånd.
+Som du sikkert skjønner finnes mye mer du kan gjøre med dem som du kan utforske på egen hånd.
 
 
 
