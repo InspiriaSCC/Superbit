@@ -22,6 +22,7 @@ bitbot.select_model(BBModel.XL)
 // @highlight
 bitbot.goms(BBDirection.Forward, 60, 400)
 ```
+
 ### Steg 3
 
 Test programmet på BitBoten og følg med på hvor langt og fort den kjører. Du kan endre på farten ved å endre tallet der det står ``||Bitbot.speed||`` 60 ``||Bitbot.%||`` og hvor lenge den kjører ved å endre tallet der det står ``||Bitbot.for||`` 400 ``||Bitbot.ms||``.
