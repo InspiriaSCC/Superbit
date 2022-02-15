@@ -12,9 +12,6 @@ Aller først må du fortelle programmet hvilken versjon av BitBot du har.
 Hent en ``||Bitbot.select BitBot model||``-blokk fra ``||Bitbot.BitBot/BitBot model||`` menyen og dra den inn i gapet på ``||Basic.on start||``-blokka.
 Sjekk hvilken BitBot du har og velg riktig modell ved å klikke der det står ``||Bitbot.Classic||``.
 
-```blocks
-bitbot.select_model(BBModel.XL)
-```
 
 ### Steg 2 @unplugged
 
