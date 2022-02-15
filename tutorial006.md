@@ -35,7 +35,19 @@ Når du har koblet opp neopixelstripen som forklart, går du videre.
 
 ### Steg 3 Bruke neopixel med krokodilleklemmer 2
 
+Til dette programmet trenger du aller først en ``||basic.gjenta for altid||``-blokk.
 Fra ``||neopixel.NeoPixel||``-menyen trenger du en ``||variables.sett strip til||`` ``||neopixel.NeoPixel at p0 with 24 leds as RGB (GRB format)||``.
+Dra den inn i ``||basic.gjenta for altid||``-blokken og endre ``||neopixel.24||`` til ``||neopixel.20||``, eller det antall NeoPixler du har på din stripe.
+Det er 20 NeoPixels på stripen som følger med Superbit.
+
+```blocks
+let strip: neopixel.Strip = null
+basic.forever(function () {
+    strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+})
+```
+
+
 
 
 
