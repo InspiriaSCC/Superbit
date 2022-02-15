@@ -93,7 +93,8 @@ strip.showColor(neopixel.colors(NeoPixelColors.Black))
 ### Steg 5 Bruke neopixel med krokodilleklemmer 5
 
 Nå må du klikke på``||neopixel. ...Mer||`` under ``||neopixel.NeoPixel||``-menyen og hente blokken ``||neopixel.set pixel color at 0 to red||``.
-Sett denne blokken inn nederst i ``||basic.ved start||``-blokken.
+Sett denne blokken inn nederst i ``||basic.ved start||``-blokken og velg deg en farge.
+Rød er standardfargren når du henter blokka.
 Skriv inn et tall i det hvite feltet på blokka.
 Tallet kan være fra og med 0 til og med 19, til sammen 20 mulige valg.
 NeoPixelen nærmest Micro:Biten har adressen 0, den siste i stripa har adressen 19.
@@ -103,6 +104,7 @@ NeoPixel 4, som vist i eksempelkoden, er den femte NeoPixelen fra Micro:Biten.
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
 strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
+strip.show()
 ```
 
 ### Set color og show @unplugged
@@ -111,6 +113,7 @@ Om du laster opp koden slik den er nå, vil ingen av NeoPixlene lyse.
 Det er slik at det er forskjell på å sette fargen til en NeoPixel og å få den til å lyse i den angitte fargen.
 ``||neopixel.Set color||`` bestemmer fargen uten å slå på NeoPixler.
 ``||neopixel.Show||`` slår pixler på, og får dem til å lyse i den fargen de har fått angitt.
+Dersom en blokk inneholder ordet **"show"** er det ganske sikkert at blokken både setter farger og slår på NeoPixlene.
 
 ### Steg 6 Bruke neopixel med krokodilleklemmer 6
 
@@ -170,6 +173,103 @@ Du la kanskje merke til at det lå en animasjonsblokk til rett over ``||neopixel
 ``||neopixel.strip shift pixels by 1||`` gjør nesten det samme som ``||neopixel.strip rotate pixels by 1||``, men starter ikke på 0 igjen når bevegelsen når enden.
 Dermed slutter animasjonen når siste animerte pixel når enden av stripa.
 Denne animasjonen kan være kul i mange tilfeller, men passer ikke for animasjoner som skal gå for alltid.
+Om du setter inn et negativt tall i det hvite feltet, endrer animasjonen retning.
+
+### Steg 9 Bruke neopixel med krokodilleklemmer 9
+
+Nå skal du bruke en av de ferdige fargefunksjonene som finnes for NeoPixel.
+I dette steget skal du animere en regnbue.
+Fjern alle ``||neopixel.set pixel color at 0 to [farge]||`` fra ``||basic.ved start||``-blokken din.
+Fjern også ``||neopixel.set strip show color black||``-blokken.
+Hent blokken ``||neopixel.strip show rainbow from 0 to 360||`` fra ``||neopixel.NeoPixel||``-menyen og sett den inn mellom ``||variables.sett strip til||``-blokken og ``||neopixel.strip show||``-blokken.
+La ``||basic.gjenta for alltid||``-blokken være som den er.
+Last ned programmet til Micro:Biten og se på lysshowet.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showRainbow(1, 360)
+strip.show()
+basic.forever(function () {
+    strip.rotate(1)
+    strip.show()
+    basic.pause(100)
+})
+```
+
+### Mer om regnbuefunksjonen @unplugged
+
+NeoPixelregnbuen går fra 0 til 360, med jevn fargeendring mellom pixlene i 360 trinn.
+Blokken ``||neopixel.strip show rainbow from 0 to 360||`` viser alle fargene i regnbuen.
+Om du velger andre tall, for eksempel ``||neopixel.strip show rainbow from 90 to 270||``, vil Micro:Biten bare vise en del av fargene i regnbuen.
+Eksemplet 90 til 270 viser fargene mellom grønt og fiolett.
+
+### Steg 10 Bruke neopixel med krokodilleklemmer 10
+
+Nå skal du få regnbuen til å gå fram og tilbake på NeoPixelstripa.
+Til det trenger du en ``||loops.gjenta 4 ganger||``-blokk fra ``||loops.Løkker||``-menyen.
+Dra ``||loops.gjenta 4 ganger||``-blokken inn i ``||basic.gjenta for alltid||``-blokken.
+Endre ``||loops.gjenta 4 ganger||`` til ``||loops.gjenta 20 ganger||``
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showRainbow(0, 360)
+strip.show()
+basic.forever(function () {
+    for (let index = 0; index < 20; index++) {
+    	
+    }
+    strip.rotate(1)
+    strip.show()
+    basic.pause(100)
+})
+
+```
+
+### Steg 11 Bruke neopixel med krokodilleklemmer 11
+
+Flytt de andre kodeblokkene i ``||basic.gjenta for alltid||``-blokken inn i ``||loops.gjenta 20 ganger||``-blokken.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showRainbow(0, 360)
+strip.show()
+basic.forever(function () {
+    for (let index = 0; index < 20; index++) {
+        strip.rotate(1)
+        strip.show()
+        basic.pause(100)
+    }
+})
+```
+
+### Steg 12 Bruke neopixel med krokodilleklemmer 12
+
+Kopier hele ``||loops.gjenta 20 ganger||``-blokken.
+Endre ``||neopixel.strip rotate pixels by 1||`` til ``||neopixel.strip rotate pixels by -1||`` i den ene blokken.
+Nå har du en regnbuescanner som kjører regnbuen fram og tilbake.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showRainbow(0, 360)
+strip.show()
+basic.forever(function () {
+    for (let index = 0; index < 20; index++) {
+        strip.rotate(1)
+        strip.show()
+        basic.pause(100)
+    }
+    for (let index = 0; index < 20; index++) {
+        strip.rotate(-1)
+        strip.show()
+        basic.pause(100)
+    }
+})
+```
+
+### Avrunding @unplugged
+
+Det var en kjapp gjennomgang av noen triks du kan gjøre med NeoPixels.
+Det finnes selvfølgelig mye mer du kan gjøre med dem som du kan utforske på egen hånd.
 
 
 
