@@ -19,7 +19,7 @@ bitbot.select_model(BBModel.XL)
 ### Steg 2
 
 Nå skal du få bilen til å kjøre fremover.
-Hent en ``||Bitbot.kjør framover med fart 60 % i 400 ms||``-blokk fra ``||Bitbot.Bitbot/Kjøring||`` og plasser den under den forrige blokken din.
+Hent en ``||Bitbot.kjør framover med fart 60 % i 400 ms||``-blokk fra ``||Bitbot.Bitbot/Kjøring||`` og plasser den under ``||Bitbot.velg BitBot modell||``-blokken.
 
 ```blocks
 bitbot.select_model(BBModel.XL)
