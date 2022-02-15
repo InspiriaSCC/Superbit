@@ -15,7 +15,7 @@ Det første du skal lære her er å legge til utvidelsen for NeoPixel
 
 ### Legge til utvidelse @unplugged
 
-NoePixel-menyen du skal bruke i denne gjennomgangen er ikke en del av grunnmenyen i MakeCode, men en utvidelse dom må legges til manuelt.
+NeoPixel-menyen du skal bruke i denne gjennomgangen er ikke en del av grunnmenyen i MakeCode, men en utvidelse dom må legges til manuelt.
 Det går dessverre ikke an å legge til pakker i denne typen steg-for-steg gjennomgang, men her er en forklaring på hvordan det gjøres i alle fall:
 Utvidelser legges til fra blokkmenyen i midten av skjermen.
 Aller nederst i **"Avansert"**-menyen vil du kunne se en egen, lysegrå underkategori som heter **"Utvidelser"**.
@@ -46,7 +46,7 @@ Det er 20 NeoPixels på stripen som følger med Superbit.
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 ```
 
-### Forskjellige typer NeoPixels
+### Forskjellige typer NeoPixels @unplugged
 
 ``||variables.sett strip til...||`` definerer NeoPixelstripen som en variabel med navn "strip".
 Siden hver NeoPixelstripe er definert som en variabel kan man bruke mange NeoPixelstriper i samme program og få dem til å gjøre forskjellige ting.
@@ -82,7 +82,49 @@ En svart NeoPixel er en slukket NeoPixel.
 
 Nå skal du slå på en bestemt NeoPixel med en bestemt farge.
 Du må aller først få NeoPixlene som ikke skal lyse til å slukke, ellers kommer de til å lyse med den fargen du sist programmerte dem med.
-Hent blokken 
+Sett fargen til ``||neopixel.black||`` i ``||neopixel.strip show color||``-blokken som allerede ligger i ``||basic.ved start||``-blokken.
+Nå har du slått av alle NeoPixlene i stripa.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Black))
+```
+
+### Steg 5 Bruke neopixel med krokodilleklemmer 5
+
+Nå må du klikke på``||neopixel. ...Mer||`` under ``||neopixel.NeoPixel||``-menyen og hente blokken ``||neopixel.set pixel color at 0 to red||``.
+Sett denne blokken inn nederst i ``||basic.ved start||``-blokken.
+Skriv inn et tall i det hvite feltet på blokka.
+Tallet kan være fra og med 0 til og med 19, til sammen 20 mulige valg.
+NeoPixelen nærmest Micro:Biten har adressen 0, den siste i stripa har adressen 19.
+NeoPixel 4, som vist i eksempelkoden, er den femte NeoPixelen fra Micro:Biten.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Black))
+strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
+```
+
+### Set color og show @unplugged
+
+Om du laster opp koden slik den er nå, vil ingen av NeoPixlene lyse.
+Det er slik at det er forskjell på å sette fargen til en NeoPixel og å få den til å lyse i den angitte fargen.
+``||neopixel.Set color||`` bestemmer fargen uten å slå på NeoPixler.
+``||neopixel.Show||`` slår pixler på, og får dem til å lyse i den fargen de har fått angitt.
+
+### Steg 6 Bruke neopixel med krokodilleklemmer 6
+
+For å slå på NeoPixelen din, trenger du blokken ``||neopixel.strip show||``, som ikke må forveksles med ``||neopixel.strip show color||``.
+Dra blokken ``||neopixel.strip show||`` inn nederst i ``||basic.ved start||``-blokken.
+Nå kan du laste opp programmet til Micro:Biten og se hvilken NeoPixel som lyser.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Black))
+strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
+strip.show()
+```
+
 
 
 ```package
