@@ -6,7 +6,7 @@
 
 Micro:Biten kan fint brukes i forbindelse med fysisk aktivitet.
 I denne gjennomgangen lærer du å bruke Micro:Biten som skritteller eller hoppeteller.
-Akselerometeret i Micro:Biten kan brukes på flere måter, derfor kan kan lønne seg å teste ut hvilken akselerometerfunksjon som fungerer best som skritteller eller hoppeteller.
+Akselerometeret i Micro:Biten kan brukes på flere måter, derfor kan det lønne seg å teste ut akkurat hvilken akselerometerfunksjon som fungerer best som skritteller eller hoppeteller mer enn det vi gjør her..
 Du kan teste ut dette i løpet av denne økten.
 
 ### Registrering av inndata krever en variabel @unplugged
@@ -70,7 +70,7 @@ Klikk på den lille pilen til høyre for ``||input.ristes||`` i ``||input.når r
 Velg ``||input.3 G||`` fra menyen som dukker opp.
 Som du ser finnes det mange mulige akselerometerinndata.
 Et eksempel kan være om du bygger Micro:Biten inn i en ball, godt polstret så den ikke blir ødelagt.
-Da kan den registrere ballkast opp i luften dersom du bruker ``||input.fritt fall||``.
+Da kan den registrere antall ballkast opp i luften dersom du bruker ``||input.fritt fall||`` i stedet for ``||input.når ristes||``.
 
 ```blocks
 // @highlight
