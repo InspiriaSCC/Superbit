@@ -9,13 +9,13 @@ Om man kobler flere av dem sammen kan man lage et uendelig antall morsomme møns
 Hver NeoPixel består av en RGB LED og en liten chip som leser koden som sendes gjennom NeoPixelen.
 NeoPixler er såkalt adresserbare LEDs.
 Det betyr i prinsippet at koden du lager forteller første NeoPixel at den er nummer en, nummer to får vite at den er nummer to osv.
-Dette gjør at du kan bestemme farge, lysstyrke og om den skal være av eller på eller blinke for hver enkelt neopixel.
+Dette gjør at du kan bestemme farge, lysstyrke og om den skal være av eller på eller blinke for hver enkelt NeoPixel.
 NeoPixel har egne blokker som krever en egen utvidelse for MakeCode.
 Det første du skal lære her er å legge til utvidelsen for NeoPixel
 
 ### Legge til utvidelse @unplugged
 
-NeoPixel-menyen du skal bruke i denne gjennomgangen er ikke en del av grunnmenyen i MakeCode, men en utvidelse dom må legges til manuelt.
+NeoPixel-menyen du skal bruke i denne gjennomgangen er ikke en del av grunnmenyen i MakeCode, men en utvidelse som må legges til manuelt.
 Det går dessverre ikke an å legge til pakker i denne typen steg-for-steg gjennomgang, men her er en forklaring på hvordan det gjøres i alle fall:
 Utvidelser legges til fra blokkmenyen i midten av skjermen.
 Aller nederst i **"Avansert"**-menyen vil du kunne se en egen, lysegrå underkategori som heter **"Utvidelser"**.
@@ -70,7 +70,7 @@ let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Red))
 ```
 
-### Nullstille NeoPixler
+### Nullstille NeoPixler @unplugged
 
 Hver NeoPixel har en liten chip som tar imot instruksjoner fra koden.
 Siden hver NeoPixel har sin egen adresse, leser den kun koden som gjelder sin adresse og ignorer resten.
@@ -106,7 +106,6 @@ NeoPixel 4, som vist i eksempelkoden, er den femte NeoPixelen fra Micro:Biten.
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Black))
 strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
-strip.show()
 ```
 
 ### Set color og show @unplugged
