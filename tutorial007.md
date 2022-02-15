@@ -9,7 +9,7 @@ Lær hvordan du får BitBoten til å kjøre
 ### Steg 1
 
 Aller først må du fortelle programmet hvilken versjon av BitBot du har.
-Hent en ``||Bitbot.select BitBot model||``-blokk fra ``||Bitbot.BitBot/BitBot model||`` menyen og dra den inn i gapet på ``||Basic.on start||``-blokka.
+Hent en ``||Bitbot.velg BitBot modell||``-blokk fra ``||Bitbot.BitBot/BitBot modell||`` menyen og dra den inn i gapet på ``||Basic.on start||``-blokka.
 Sjekk hvilken BitBot du har og velg riktig modell ved å klikke der det står ``||Bitbot.Classic||``.
 
 ```blocks
@@ -19,7 +19,7 @@ bitbot.select_model(BBModel.XL)
 ### Steg 2
 
 Nå skal du få bilen til å kjøre fremover.
-Hent en ``||Bitbot.go forward at speed 60 % for 400 ms||``-blokk fra ``||Bitbot.Bitbot/Motors||`` og plasser den under den forrige blokken din.
+Hent en ``||Bitbot.kjør framover med fart 60 % i 400 ms||``-blokk fra ``||Bitbot.Bitbot/Kjøring||`` og plasser den under den forrige blokken din.
 
 ```blocks
 bitbot.select_model(BBModel.XL)
