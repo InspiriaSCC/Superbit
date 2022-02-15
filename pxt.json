@@ -22,7 +22,11 @@
         "_locales/no/tutorial005.md",
         "tutorial006.md",
         "_locales/no/tutorial006.md",
-        "static/null.md"
+        "static/null.md",
+        "tutorial007.md",
+        "_locales/no/tutorial007.md",
+        "tutorial008.md",
+        "_locales/no/tutorial008.md"
     ],
     "testFiles": [
         "test.ts"
