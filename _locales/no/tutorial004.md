@@ -18,7 +18,7 @@ Det første du må gjøre er å lage en variabel for hver brikke.
 Gå til ``||variables.Variabler||``-menyen og velg **"Lag en variabel..."**.
 Lag to variabler, en som du kaller ``||variables.jeger||`` og en som du kaller ``||variables.bytte||``.
 Hent to ``||variables.sett bytte til||``-blokker fra ``||variables.Variabler||``-menyen og dra dem inn i ``||basic.ved start||``-blokken.
-Endre den ene slik at det står ``||variables.sett bytte til||`` i en blokk og ``||variables.sett jeger til||`` i den andre.
+Endre en av blokkene slik at det står ``||variables.sett bytte til||`` i en blokk og ``||variables.sett jeger til||`` i den andre.
 
 ```blocks
 let bytte = 0
@@ -32,7 +32,7 @@ Klikk på **"Avansert"** nederst i blokkmenyen så menyen utvides.
 Klikk på ``||game.Spill||``-menyen som dukker opp og velg blokken ``||game.lag brikke på x: 2 y: 2||``.
 Plasser en slik blokk i det hvite feltet i ``||variables.sett bytte til||``-blokken og en i ``||variables.sett jeger til||``-blokken.
 Endre X og Y verdiene i "bytteblokken" så det står ``||variables.sett bytte til||`` ``||game.lag brikke på x: 0 y: 0||``.
-Jegerblokken kan du la være som ``||variables.sett jeger til||`` ``||game.lag brikke på x: 2 y: 2||``
+Jegerblokken kan du la stå som som ``||variables.sett jeger til||`` ``||game.lag brikke på x: 2 y: 2||``
 
 ```blocks
 // @highlight
@@ -72,7 +72,7 @@ jeger.set(LedSpriteProperty.Brightness, 5)
 I neste trinn skal du lage en funksjon.
 En funksjon er kode som kan hentes av programmet når programmet trenger den.
 Funksjoner bruker vi når vi trenger å kjøre den samme koden flere forskjellige steder i et program, så vi slipper å skrive den samme koden mange ganger.
-Det kan minne om løkker, men mens løkker kjører koden flere ganger rett etter hverandre, kan en funksjon kjøre koden en gang og la programmet gå videre.
+Funksjoner kan minne om løkker, men mens løkker kjører koden flere ganger rett etter hverandre, kan en funksjon kjøre koden en gang og la programmet gå videre.
 Neste gang programmet trenger funksjonen, kan du hente den inn igjen.
 Å hente inn en funksjon kalles vanligvis å *kalle* på den.
 Ofte gir man funksjoner, akkurat som variabler, liten førstebokstav.
@@ -125,7 +125,7 @@ Om byttet ikke ligger inntil kanten, kjøres "nyRunde"-funksjonen på nytt, helt
 Hent en ``||logic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.nyRunde||``-blokken under de forrige blokkene du la inn der.
 Hent en liten heksagonal ``||logic.ikke||`` blokk fra ``||logic.Logikk||``-menyen og plasser den i heksagonet på ``||basic.hvis sann så||``-blokken.
 Hent en heksagonal ``||variables.sprite||`` ``||game.berører kant?||``-blokk fra ``||game.Spill||``-menyen og plasser den inni ``||logic.ikke||`` blokken.
-Klikk på den lille hvite pilen til høyre for ``||variables.sprite||`` og velg ``||variables.bytte||`` slik at det står ``||variables.bytte||`` ``||game.berører kant?||`` i blokken.
+Klikk på den lille hvite pilen til høyre for ``||variables.sprite||`` og velg ``||variables.bytte||`` slik at det står``||logic.hvis ikke||`` ``||variables.bytte||`` ``||game.berører kant?||`` i blokken.
 Hent ``||functions.kjør nyRunde||``-blokken fra ``||functions.Funksjoner||``-menyen og plasser den i gapet på ``||basic.hvis sann så||``-blokken
 Nå er den logiske løkken klar.
 
