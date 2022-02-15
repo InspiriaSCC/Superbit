@@ -1,4 +1,4 @@
-## @activities true
+### @activities true
 
 # Superbit del 7: Bitbot
 ## Introduksjon
