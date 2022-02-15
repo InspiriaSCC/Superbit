@@ -16,7 +16,7 @@ Sjekk hvilken BitBot du har og velg riktig modell ved å klikke der det står ``
 bitbot.select_model(BBModel.XL)
 ```
 
-### Steg 2
+### Steg 2 @unplugged
 
 Nå skal du få bilen til å kjøre fremover.
 Hent en ``||Bitbot.go forward at speed 60 % for 400 ms||``-blokk fra ``||Bitbot.Bitbot/Motors||`` og plasser den under den forrige blokken din.
