@@ -115,7 +115,7 @@ Det er slik at det er forskjell på å sette fargen til en NeoPixel og å få de
 ### Steg 6 Bruke neopixel med krokodilleklemmer 6
 
 For å slå på NeoPixelen din, trenger du blokken ``||neopixel.strip show||``, som ikke må forveksles med ``||neopixel.strip show color||``.
-Dra blokken ``||neopixel.strip show||`` inn nederst i ``||basic.ved start||``-blokken.
+Dra blokken ``||neopixel.strip show||`` fra ``||neopixel.NeoPixel||``-menyen inn nederst i ``||basic.ved start||``-blokken.
 Nå kan du laste opp programmet til Micro:Biten og se hvilken NeoPixel som lyser.
 
 ```blocks
@@ -124,6 +124,52 @@ strip.showColor(neopixel.colors(NeoPixelColors.Black))
 strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
 strip.show()
 ```
+
+### Steg 7 Bruke neopixel med krokodilleklemmer 7
+
+Du kan nå kopiere blokken ``||neopixel.set pixel color at 0 to red||`` noen ganger og velge andre NeoPixler og farger.
+Endre adressene til NeoPixlene du vil slå på ved å sette inn tall mellom 0 og 19, i de hvite feltene og farger ved å velge fra rullegardinmenyen.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Black))
+strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
+strip.setPixelColor(9, neopixel.colors(NeoPixelColors.Yellow))
+strip.setPixelColor(14, neopixel.colors(NeoPixelColors.Violet))
+strip.setPixelColor(19, neopixel.colors(NeoPixelColors.Green))
+strip.show()
+```
+
+### Steg 8 Bruke neopixel med krokodilleklemmer 8
+
+Nå skal du animere NeoPixelstripen din.
+Animasjonen må kjøre i en ``||basic.gjenta for alltid||``-blokk.
+Nå trenger du blokken ``||neopixel.strip rotate pixels by 1||`` fra ``||neopixel.NeoPixel||``-menyen.
+Denne blokken forteller pixlene at de skal flytte fargen sin en adresse opp i stripa helt til de kommer til enden, og så skal de starte på 0 igjen.
+Endringene vises ikke før du kaller på ``||neopixel.strip show||`` igjen, så hent ``||neopixel.strip show||``-blokken fra ``||neopixel.NeoPixel||``-menyen.
+For at ikke animasjonen skal gå for fort må du legge inn en liten pause mellom hver rotasjon, så hent en ``||basic.pause 100 ms||`` fra ``||basic.Basis||``-menyen og sett den inn nederst i ``||basic.gjenta for alltid||``-blokken.
+
+```blocks
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Black))
+strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
+strip.setPixelColor(9, neopixel.colors(NeoPixelColors.Yellow))
+strip.setPixelColor(14, neopixel.colors(NeoPixelColors.Violet))
+strip.setPixelColor(19, neopixel.colors(NeoPixelColors.Green))
+strip.show()
+basic.forever(function () {
+    strip.rotate(1)
+    strip.show()
+    basic.pause(100)
+})
+```
+
+### Forskjellen på shift pixels og rotate pixels @unplugged
+
+Du la kanskje merke til at det lå en animasjonsblokk til rett over ``||neopixel.strip rotate pixels by 1||``?
+``||neopixel.strip shift pixels by 1||`` gjør nesten det samme som ``||neopixel.strip rotate pixels by 1||``, men starter ikke på 0 igjen når bevegelsen når enden.
+Dermed slutter animasjonen når siste animerte pixel når enden av stripa.
+Denne animasjonen kan være kul i mange tilfeller, men passer ikke for animasjoner som skal gå for alltid.
 
 
 
