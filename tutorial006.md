@@ -35,6 +35,8 @@ Plusspolen (rød ledning) kobles til 3V, minuspolen (svart ledning) kobles til G
 Vi kobler den hvite klemmen til utgang 2 i eksempelkoden, fordi det er den nærmest utgangen til 3V og GND.
 Når du har koblet opp neopixelstripen som forklart, går du videre.
 
+![NeoPixelkobling](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/NeoPixelkobling.jpg)
+
 ### Steg 2 Bruke neopixel med krokodilleklemmer 2
 
 Til dette programmet trenger du aller først en ``||basic.ved start||``-blokk.
