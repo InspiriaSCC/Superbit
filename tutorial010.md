@@ -81,7 +81,7 @@ basic.forever(function () {
 ### Kommunikasjonen mellom sender og mottager @unplugged
 
 Når Micro:Bit-senderen vippes forover, altså med logoen ned, skal den sende en kode til mottageren via radioen.
-Siden du bare trenger 4 retninger; Framover, bakover, høyre og venstre, kan du bruke tallen 1-4 som radiokoder.
+Siden du bare trenger 4 retninger; Framover, bakover, høyre og venstre, kan du bruke tallene 1-4 som radiokoder.
 
 ### Steg 5
 
