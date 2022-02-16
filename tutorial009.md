@@ -4,9 +4,9 @@
 ## Linjesensoren til Bitbot
 ### Introduksjon @unplugged
 
-På undersiden av Bitboten, på hver sin side rett bak stålkula framme i snuten, sitter det fire små, svarte vorter.
+På undersiden av Bitboten, på hver sin side rett bak stålkula framme i snuten, sitter det fire små, svarte knotter.
 Dette er linjesensoren til Bitboten.
-Linjesensoren leser kontraster i underlaget, og kan brukes til å få roboten til å følge en linje.
+Linjesensoren er en lyssensor som leser kontraster i underlaget, og kan brukes til å få roboten til å følge en linje.
 I denne gjennomgangen lærer du hvordan du bruker linjesensoren.
 
 

@@ -108,12 +108,31 @@ basic.forever(function () {
 })
 ```
 
+### Steg 7
+
+Dersom du opplever at Bitboten ikke helt klarer å unngå hindre slik koden er nå, kan et tips være å få den til å rygge litt når den støter på et hinder.
+Du kan bruke blokken ``||bitbot.kjør framover med fart 60 % i 400 ms||`` for å få bitboten til å rygge.
+Hent blokken ``||bitbot.kjør framover med fart 60 % i 400 ms||`` fra ``||bitbot.Bitbot/Kjøring||`` og sett den inn **over** ``||bitbot.snu til venstre med fart 60 %||``-blokken i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken.
+Endre ``||bitbot.framover||`` til ``||bitbot.bakover||`` og endre ``||bitbot.400 ms||`` til et tall du tror passer.
+Test den nye koden og se om roboten nå er blitt flinkere til å unngå hindre.
+
+```blocks
+basic.forever(function () {
+    if (bitbot.sonar(BBPingUnit.Centimeters) < 10) {
+        bitbot.rotate(BBRobotDirection.Left, 60)
+        bitbot.goms(BBDirection.Reverse, 60, 400)
+    } else {
+        bitbot.go(BBDirection.Forward, 60)
+    }
+})
+```
+
 ### Avslutning @unplugged
 
 Verre var det ikke.
 Det er ikke så mange linjer kode som skal til for å bruke avstandssensoren, men prøving og feiling for å få koden til å virke optimalt tar gjerne litt tid.
-Husk at oppladbare batterier ikke fungerer særlig godt med avstandssensoren.
-Bruk heller valige, ikke-oppladbare AA-batterier når du holder på med akkurat denne sensoren.
+**Husk at oppladbare batterier ikke fungerer særlig godt med avstandssensoren.
+Bruk heller valige, ikke-oppladbare AA-batterier når du holder på med akkurat denne sensoren.**
 
 ```package
 bitbot=github:4tronix/BitBot
