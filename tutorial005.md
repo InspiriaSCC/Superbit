@@ -15,18 +15,18 @@ De brede stripene med hull kan brukes med krokodilleklemmer.
 Stripene som er merket 0, 1 og 2 er inn- og utganger for elektronikk.
 3V er en plusspol som gir 3 volt til elektronikk man kobler til Micro:Biten og GND er minuspolen.
 Du skal nå bruke disse brede metallstripene og krokodilleklemmer for å koble til en LED-pære.
-Totalt for denne økten vil du trenge 6 ledninger med krokodilleklemmer og 3 LED-pærer i tillegg til Micro:Bit og evt. batteripakke om du bruker iPad eller Android, eller USB-kabelen om du bruker PC.
+Totalt for denne økten vil du trenge 6 ledninger med krokodilleklemmer og 3 LED-pærer (rød, gul, grønn) i tillegg til Micro:Bit og evt. batteripakke om du bruker iPad eller Android, eller USB-kabelen om du bruker PC.
 
 ### Få en LED til å blinke 1 @unplugged
 
-Du trenger 2 ledninger med krokodilleklemmer i hver ende, en LED-pære og en Micro:Bit m. USB-ledning (Evt. batteripakke om du bruker iPad eller Android-brett) til gjennomgangen.
+Du trenger 2 ledninger med krokodilleklemmer i hver ende, den røde LED-pæren og en Micro:Bit med USB-ledning (Evt. batteripakke om du bruker iPad eller Android-brett) til gjennomgangen.
 Før du starter kodingen:
 Koble en ledning med krokodilleklemme til stripen der det står "0" på Micro:Biten.
-Koble det lange benet til LED-pæren til andre enden av ledningen.
+Koble det lange benet til den røde LED-pæren til andre enden av ledningen.
 Koble det korte benet på LED-pæren til den andre ledningen med krokodilleklemme.
 LED-pærene som følger med i Superbitsettet har en innebygget motstand som beskytter dem mot for høy spenning fra Micro:Biten, derfor kan de kobles på direkte..
-Pass på at krorkodilleklemmene på bena til LED-pæra ikke er i kontakt med hverandre.
-Du kan bøye bena til LED-pæra forsiktig ut for å få større avstand mellom krokodilleklemmene.
+Pass på at krorkodilleklemmene på bena til LED-pæren ikke er i kontakt med hverandre.
+Du kan bøye bena til LED-pæren forsiktig ut for å få større avstand mellom krokodilleklemmene.
 Koble den andre enden av den siste ledningen til stripen der det står GND på Micro:Biten.
 Koble Micro:Biten til PCen ved hjelp av USB-ledningen. (Koble til en batteripakke om du bruker iPad eller Android-brett)
 Nå er koblingene klare.
@@ -97,14 +97,14 @@ basic.forever(function () {
 
 ### Få 3 LED-pærer til å blinke @unplugged
 
-Før du går videre trenger du 4 ledninger med krokodilleklemmer i hver ende og 2 LED-pærer i tillegg til de du allerede har brukt.
+Før du går videre trenger du 4 ledninger med krokodilleklemmer i hver ende og de to siste LED-pærene i tillegg til det du allerede har brukt.
 Før du starter kodingen:
 Koble en ledning med krokodilleklemme til stripen der det står "1" på Micro:Biten.
-Koble det lange benet til en LED-pære til andre enden av ledningen.
-Koble det korte benet på LED-pæren til den andre ledningen med krokodilleklemme.
+Koble det lange benet til den gule LED-pæren til andre enden av ledningen.
+Koble det korte benet på LED-pæren til den andre ledningen med krokodilleklemme. **Tips: Alle de korte bena til de 3 LED-pærene kan kobles sammen. De skal alle kobles til GND i alle fall.**
 Koble den andre enden av den siste ledningen til stripen der det står GND på Micro:Biten, eller til krokodilleklemmen som allerede er koblet til der etter forrige steg.
 Koble en ledning med krokodilleklemme til stripen der det står "2" på Micro:Biten.
-Koble det lange benet til en LED-pære til andre enden av ledningen.
+Koble det lange benet til den grønne LED-pæren til andre enden av ledningen.
 Koble det korte benet på LED-pæren til den andre ledningen med krokodilleklemme.
 Koble den andre enden av den siste ledningen til stripen der det står GND på Micro:Biten, eller til en av krokodilleklemmene som allerede er koblet på.
 Koble Micro:Biten til PCen ved hjelp av USB-ledningen. (Koble til en batteripakke om du bruker iPad eller Android-brett)
@@ -187,5 +187,35 @@ basic.forever(function () {
 
 ### Steg 9 Få 3 LED-pærer til å blinke 5
 
+Det du har lært nå kan brukes til å koble et trafikklys.
+Sekvensen for trafikklys er som regel rødt -> rødt + gult -> grønt -> gult -> rødt.
+Klarer du å endre koden din til å få til denne sekvensen?
+(I hintet er det forutsatt at rød LED er på P0, gul på P1 og grønn på P2.)
+
+```blocks
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(3000)
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
+    pins.digitalWritePin(DigitalPin.P2, 1)
+    basic.pause(3000)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 1)
+    pins.digitalWritePin(DigitalPin.P2, 0)
+    basic.pause(1000)
+})
+```
+
+### Avslutning @unplugged
 Det var det hele.
-Nå har du lært hvordan du kan få Micro:Biten til å slå noe av og på ved hjelp av digitale utganger.
+Nå har du lært hvordan du kan få Micro:Biten til å slå noe av og på ved hjelp av digitale utganger, og du har lært å kode et trafikklys.
+
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+

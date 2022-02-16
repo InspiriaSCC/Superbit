@@ -571,3 +571,5 @@ basic.forever(function () {
 ### Steg 23 Spillet er ferdig
 
 Det var det hele! Nå kan du laste spillet opp til Micro:Biten og teste spillet. Husk at byttet blinker, mens jegeren lyser svakt hele tiden.
+
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
