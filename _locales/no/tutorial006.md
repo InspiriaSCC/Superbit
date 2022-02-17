@@ -1,6 +1,6 @@
-### @activities true
+#### @activities true
 
-# Superbit del 6: Neopixel
+# Superbit del 6: Koble elektronikk til Micro:Biten, del 2 Neopixel
 ## Introduksjon
 ### Introduksjon @unplugged
 
