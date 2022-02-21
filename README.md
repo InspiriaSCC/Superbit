@@ -1,14 +1,22 @@
 
 > Open this page at [https://yngel72.github.io/superbit/](https://yngel72.github.io/superbit/)
 
-## Use as Extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/yngel72/superbit** and import
+## Tutorial links:
+* [Øvelse 1 - Bli kjent med BBC Micro:Bit](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial001)
+* [Øvelse 2 - Variabler, inndata og logikkfunksjoner](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial002)
+* [Øvelse 3 - Lag en hopp-teller](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial003)
+* [Øvelse 4 - Lag et spill (avansert)](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial004)
+* [Øvelse 5 - Koble elektronikk til Micro:Bit - Del 1- LEDs](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial005)
+* [Øvelse 6 - Koble elektronikk til Micro:Bit - Del 2 NeoPixel](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial006)
+* [Øvelse 7 - Hvordan kjøre Bitbot](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial007)
+* [Øvelse 8 - Bitbot med avstandssensor](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial008)
+* [Øvelse 9 - Bitbot med linjesensor](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial009)
+* [Øvelse 10 - Radiostyrt Bitbot - Sender](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial010)
+* [Øvelse 11 - Radiostyrt Bitbot - Mottager](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial011)
+* [Øvelse 12 - Servoer - Del 1 - Lage bevegelse](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial012)
+* [Øvelse 13 - Servoer - Del 2 - Radiostyrt bom -Sender](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial013)
+* [Øvelse 14 - Servoer - Del 3 - Radiostyrt bom - Mottager](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial014)
+* [Øvelse 15 - Servoer - Del 4 - Bom med avstandssensor](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial015)
 
 ## Edit this project ![Build status badge](https://github.com/yngel72/superbit/workflows/MakeCode/badge.svg)
 
