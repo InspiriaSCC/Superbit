@@ -23,7 +23,7 @@ Derfor skal du i denne gjennomgangen lære du hvordan du kan bruke servoer samme
 
 ### Tilkoblinger @unplugged
 
-Rett foran hjulet på Bitbotens ventrs side finner du to kontakter med 3 pinner.
+Rett foran hjulet på Bitbotens ventre side finner du to kontakter med 3 pinner.
 Dette er servokontaktene til Bitboten.
 Det fremste paret med pinner er merket P1 og P2.
 P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoer.
@@ -106,3 +106,5 @@ I neste instruksjon skal vi kombinere noen flere kodeferdigheter og bruke servoe
 ```package
 bitbot=github:4tronix/BitBot
 ```
+
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
