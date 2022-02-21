@@ -44,12 +44,98 @@ Hent en ``||radio.radio sett gruppe||`` og plasser den i ``||basic.ved start||``
 Sett radioen til ``||radio.gruppe 1||`` dersom du brukete det samme tallene som i eksempelet vårt da du programmerte senderen.
 
 ```blocks
+// @highlight
 radio.setGroup(1)
 ```
 
 ### Steg 4
 
+For å se at programmet kjører, er det lurt å vise et bilde eller et ikon i displayet.
+I eksemplet har vi forsøkt å tegne et bilde av en lukket bom.
 
+```blocks
+radio.setGroup(1)
+// @highlight
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    # # # # #
+    . # . . .
+    `)
+```
+
+### Steg 5
+
+Siden senderen bare sender tall, må mottagerprogrammet kjøre i en ``||radio.når radio mottar receivedNumber||``-blokk fra ``||radio.Radio||``-menyen.
+Legg en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen inn i ``||radio.når radio mottar receivedNumber||``-blokken.
+
+```blocks
+radio.onReceivedString(function (receivedNumber) {
+    // @highlight
+    if (true) {
+    	
+    } else {
+    	
+    }
+})
+```
+
+### Steg 6
+
+Siden senderen sender et tall til mottageren, må vi bruke logisk sjekk for tall i heksagonene i ``||logic.hvis sann så ellers||``-blokken.
+Hent en ``||logic.0 = 0||`` fra ``||logic.Logikk||``-menyen og dra den inn i det øverste heksagonet i ``||logic.hvis sann så ellers||``-blokken.
+
+```blocks
+radio.onReceivedString(function (receivedNumber) {
+    // @highlight
+    if (0 == 0) {
+    	
+    } else {
+    	
+    }
+})
+```
+
+### Logisk sjekk med 2 tall @unplugged
+
+Du trenger bare en logisk sjekk for det ene tallet siden senderen bare sender to forskjellige tall.
+I dette eksempelet skal bommen være lukket dersom senderen sender tallet 0. Er tallet som blir sendt 1, skal bommen åpnes.
+I den logiske sjekken antar vi at bommen er lukket i utgangspunktet.
+Vi antar også at bommen er lukket når utslaget på servoen er 0 grader, og at bommen er åpen når utslaget på servoen er 90 grader.
+Du blir nå nødt til å sjekke hvordan servoen og bommen din står når servoen står på 0 og 90 grader etter at du er ferdig med programmeringen av mottageren..
+Juster bommens posisjon ved å løfte den hvite armen forsiktig av tannhjulet på servoen når utslaget er 0 grader, og sett armen og bommen tilbake i riktig posisjon.
+Kontroller så at servoen og bommen slår ut riktig vei når posisjonen er 90 grader.
+
+### Steg 7
+
+Dra den røde variabelen ``||variables.receivedNumber||`` inn i det første hvite feltet i ``||logic.0 = 0||``-heksagonet.
+Skriv inn "1" i det andre hvite feltet i ``||logic.0 = 0||``-heksagonet.
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    // @highlight
+    if (receivedNumber == 1) {
+    	
+    } else {
+    	
+    }
+})
+```
+
+### Steg 8
+
+Hent en ``||bitbot.sett servo P1 til 90 grader||``-blokk fra ``||bitbot.Bitbot/Sensorer og styring||`` og dra den inn i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken.
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 1) {
+        bitbot.bbSetServo(BBServos.P1, 90)
+    } else {
+    	
+    }
+})
+```
 
 
 
