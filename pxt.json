@@ -38,7 +38,9 @@
         "tutorial013.md",
         "tutorial014.md",
         "_locales/no/tutorial013.md",
-        "_locales/no/tutorial014.md"
+        "_locales/no/tutorial014.md",
+        "tutorial015.md",
+        "_locales/no/tutorial015.md"
     ],
     "testFiles": [
         "test.ts"

@@ -104,7 +104,7 @@ Du trenger å gjøre en logisk sjekk for hvert av tallene radiosenderen sender u
 I dette eksempelet skal bommen være lukket dersom senderen sender tallet 0. Er tallet som blir sendt 1, skal bommen åpnes.
 I den logiske sjekken antar vi at bommen er lukket i utgangspunktet.
 Vi antar også at bommen er lukket når utslaget på servoen er 0 grader, og at bommen er åpen når utslaget på servoen er 90 grader.
-Du blir nå nødt til å sjekke hvordan servoen og bommen din står når servoen står på 0 og 90 grader etter at du er ferdig med programmeringen av mottageren..
+Du blir nødt til å sjekke hvordan servoen og bommen din står når servoen står på 0 og 90 grader etter at du er ferdig med programmeringen av mottageren.
 Juster bommens posisjon ved å løfte den hvite armen forsiktig av tannhjulet på servoen når utslaget er 0 grader, og sett armen og bommen tilbake i riktig posisjon.
 Kontroller så at servoen og bommen slår ut riktig vei når posisjonen er 90 grader.
 
@@ -243,7 +243,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 ```
 
-### Avslutning
+### Avslutning @unplugged
 
 Det var det hele. Last ned programmet til Micro:Biten som skal være mottager og plasser den i bitboten du koblet servoen til.
 Nå kan du teste den automatiske bommen din.
