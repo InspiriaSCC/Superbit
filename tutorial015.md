@@ -15,7 +15,7 @@ P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoe
 De to neste parene er merket 5V og GND.
 5V gir 5 volts positiv spenning mot GND, som er jordkontaktene.
 
-### Steg 1
+### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
 Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.
@@ -25,7 +25,7 @@ Rød er "+"-ledningen som skal kobles til 5V.
 Oransje er signalledningen som skal kobles til P1 eller P2.
 Plasser kontakten til servoen på pinnene ved P1 slik at oransje ledning treffer P1, rød ledning treffer 5V og brun ledning treffer GND.
 
-![Servokobling]()
+![Servokobling](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Servokobling.jpg)
 
 ### Steg 2
 
