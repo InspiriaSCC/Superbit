@@ -51,6 +51,7 @@ radio.setGroup(1)
 ### Steg 4
 
 For å se at programmet kjører, er det lurt å vise et bilde eller et ikon i displayet.
+Hent en ``||basic.vis skjerm||``-blokk fra ``||basic.basis||``-menyen og tegn et bilde, eller bruk blokken ``||basic.vis ikon||`` og velg et ikon du synes passer.
 I eksemplet har vi forsøkt å tegne et bilde av en lukket bom.
 
 ```blocks
@@ -99,7 +100,7 @@ radio.onReceivedString(function (receivedNumber) {
 
 ### Logisk sjekk med 2 tall @unplugged
 
-Du trenger bare en logisk sjekk for det ene tallet siden senderen bare sender to forskjellige tall.
+Du trenger å gjøre en logisk sjekk for hvert av tallene radiosenderen sender ut.
 I dette eksempelet skal bommen være lukket dersom senderen sender tallet 0. Er tallet som blir sendt 1, skal bommen åpnes.
 I den logiske sjekken antar vi at bommen er lukket i utgangspunktet.
 Vi antar også at bommen er lukket når utslaget på servoen er 0 grader, og at bommen er åpen når utslaget på servoen er 90 grader.
@@ -130,12 +131,122 @@ Hent en ``||bitbot.sett servo P1 til 90 grader||``-blokk fra ``||bitbot.Bitbot/S
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
+        // @highlight
         bitbot.bbSetServo(BBServos.P1, 90)
     } else {
     	
     }
 })
 ```
+
+### Steg 9
+
+Kopier ``||basic.vis skjerm||``-blokk fra ``||basic.ved start||``-blokken og endre den så den viser en åpen bom, eller et annet ikon om du valgte å bruke ``||basic.vis ikon||``-blokken.
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 1) {
+        bitbot.bbSetServo(BBServos.P1, 90)
+        // @highlight
+        basic.showLeds(`
+            . . . . #
+            . . . # .
+            . . # . .
+            . # . . .
+            # # . . .
+            `)
+    } else {
+    	
+    }
+})
+```
+
+
+### Steg 10
+
+Trykk på det lille ***"+"***-tegnet nederst i venstre hjørne av ``||logic.hvis sann så ellers||``-blokken.
+Det dukker nå opp et nytt heksagon og et nytt gap.
+Kopier ``||logic.receivedNumber = 1||``-heksagonet fra øverst i ``||logic.hvis sann så ellers||``-blokken og plasser det i det nye heksagonale feltet.
+Endre ``||logic.1||`` til ``||logic.0||``.
+Trykk på det lille***"-"***-tegnet til høyre i den nest nederste armen til ``||logic.hvis sann så ellers||``-blokken, slik at det nederste gapet lukker seg.
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    // @highlight
+    if (receivedNumber == 1) {
+        bitbot.bbSetServo(BBServos.P1, 90)
+        basic.showLeds(`
+            . . . . #
+            . . . # .
+            . . # . .
+            . # . . .
+            # # . . .
+            `)
+    } else if (receivedNumber == 0) {
+    	
+    }
+})
+```
+
+
+### Steg 11
+
+
+
+Kopier ``||bitbot.sett servo P1 til 90 grader||``-blokken og legg kopien i det andre gapet på ``||logic.hvis sann så ellers||``-blokken.
+Endre ``||bitbot.90 grader||`` til ``||bitbot.0 grader||``
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 1) {
+        bitbot.bbSetServo(BBServos.P1, 90)
+        basic.showLeds(`
+            . . . . #
+            . . . # .
+            . . # . .
+            . # . . .
+            # # . . .
+            `)
+    } else if (receivedNumber == 0) {
+        // @highlight
+        bitbot.bbSetServo(BBServos.P1, 0)
+    }
+})
+```
+
+### Steg 12
+
+Kopier ``||basic.vis skjerm||``-blokk fra ``||basic.ved start||``-blokken og plasser kopien under ``||bitbot.sett servo P1 til 0 grader||`` i ``||logic.hvis sann så ellers||``-blokken.
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 1) {
+        bitbot.bbSetServo(BBServos.P1, 90)
+        basic.showLeds(`
+            . . . . #
+            . . . # .
+            . . # . .
+            . # . . .
+            # # . . .
+            `)
+    } else if (receivedNumber == 0) {
+        bitbot.bbSetServo(BBServos.P1, 0)
+        // @highlight
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            # # # # #
+            . # . . .
+            `)
+    }
+})
+```
+
+### Avslutning
+
+Det var det hele. Last ned programmet til Micro:Biten som skal være mottager og plasser den i bitboten du koblet servoen til.
+Nå kan du teste den automatiske bommen din.
 
 
 
