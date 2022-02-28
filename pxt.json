@@ -40,13 +40,15 @@
         "_locales/no/tutorial013.md",
         "_locales/no/tutorial014.md",
         "tutorial015.md",
-        "_locales/no/tutorial015.md"
+        "_locales/no/tutorial015.md",
+        "tutorial016.md",
+        "_locales/no/tutorial016.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "4.0.17",
+        "target": "4.0.18",
         "targetId": "microbit"
     },
     "supportedTargets": [
