@@ -86,4 +86,41 @@ music.playTone(349, music.beat(BeatFraction.Half))
 music.playTone(294, music.beat(BeatFraction.Double))
 ```
 
+### begrensninger @unplugged
 
+Musikkredigering i MakeCode har en del begrensninger.
+Blokkene du bruker representerer egentlig JavaScript-kode.
+JavaScript er et scriptspråk som må kjøres i en nettleser eller et tilsvarende program.
+Linjer i scriptspråk leses én og én, det er ikke mulig å kjøre flere linjer samtidig i et program (det som innen programmering kalles multi-threading).
+Når man redigerer musikk betyr det at man for eksempel ikke kan kjøre toner oppå hverandre, man kan altså **ikke** lage melodier med flere stemmer eller flere loops som går oppå hverandre.
+Derfor er alle melodiene i MakeCode veldig enkle.
+
+### Steg 4
+
+Dersom du bare vil ha en liten melodi lagt inn i et program, for eksempel i slutten av et spill, kan du bruke blokken ``||music.start melodi dadada-daa gjenta en gang||`` fra ``||music.Musikk||``-menyen.
+Alt etter hvordan koden i resten av programmet er, kan det hende du må legge inn en ``||basic.pause 100 ms||``-blokk etter melodien og endre tiden slik at melodien rekker å spille ferdig før programmet går videre i koden.
+Om du legger flere ``||music.start melodi dadada-daa gjenta en gang||``-blokker med forskjellige melodier rett etter hverandre i koden, vil du bare høre den siste melodien.
+Om du legger inn lange nok pauser mellom melodiene, vil alle kunne høres.
+Prøv å legge inn tre forskjellige melodier i en ``||ved start||``-blokk, spill av og se hva som skjer.
+Forsøk så å legge inn passe lange pauser mellom blokkene så melodiene spilles av i sin helhet etter hverandre.
+
+```blocks
+music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
+basic.pause(4500)
+music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
+basic.pause(4000)
+music.startMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once)
+```
+
+### Avslutning @unplugged
+
+Nå har du lært det grunnleggende om hvordan du lager musikk med MakeCode og Micro:Bit.
+Det finnes blokker for volumjustering og tempoendring underveis også, og det finnes blokker som er laget for å utløse lyd underveis i en melodi.
+Alle disse blokkene krever en del eksperimentering og prøving og feiling for å få til å fungere med de begrensningene som finnes når det gjelder lyd på Micro:Bit.
+Det finnes også blokker som kun kan brukes av Micro:Bit V2.
+Med Micro:Bit V2 er det mulig å spille av noen lyder som overlapper med melodiblokker.
+Grunnprinsippet for musikk på Micro:Bit er likevel at du kun kan spille en tone av gangen.
+Lykke til med musikkproduksjonen!
+
+
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
