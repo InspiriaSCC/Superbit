@@ -124,83 +124,86 @@ Klarer du å kopiere koden, og klarer du å kjenne igjen stykket?
 for (let index = 0; index < 2; index++) {
     music.playTone(196, music.beat(BeatFraction.Whole))
     music.playTone(294, music.beat(BeatFraction.Half))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(440, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(440, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
     music.playTone(294, music.beat(BeatFraction.Half))
 }
 for (let index = 0; index < 2; index++) {
     music.playTone(220, music.beat(BeatFraction.Whole))
     music.playTone(330, music.beat(BeatFraction.Half))
-    music.playTone(523, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(523, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(523, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Half))
     music.playTone(330, music.beat(BeatFraction.Half))
 }
 for (let index = 0; index < 2; index++) {
     music.playTone(294, music.beat(BeatFraction.Whole))
     music.playTone(440, music.beat(BeatFraction.Half))
-    music.playTone(523, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(523, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(523, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Half))
     music.playTone(440, music.beat(BeatFraction.Half))
 }
 for (let index = 0; index < 2; index++) {
     music.playTone(196, music.beat(BeatFraction.Whole))
     music.playTone(294, music.beat(BeatFraction.Half))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(440, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(440, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(294, music.beat(BeatFraction.Half))
-}
-for (let index = 0; index < 2; index++) {
-    music.playTone(330, music.beat(BeatFraction.Whole))
     music.playTone(494, music.beat(BeatFraction.Half))
-    music.playTone(659, music.beat(BeatFraction.Quarter))
-    music.playTone(622, music.beat(BeatFraction.Quarter))
-    music.playTone(659, music.beat(BeatFraction.Quarter))
-    music.playTone(622, music.beat(BeatFraction.Quarter))
-    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Half))
     music.playTone(494, music.beat(BeatFraction.Half))
-}
-for (let index = 0; index < 2; index++) {
-    music.playTone(220, music.beat(BeatFraction.Whole))
-    music.playTone(330, music.beat(BeatFraction.Half))
-    music.playTone(554, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(554, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(554, music.beat(BeatFraction.Quarter))
     music.playTone(440, music.beat(BeatFraction.Half))
-}
-for (let index = 0; index < 2; index++) {
-    music.playTone(294, music.beat(BeatFraction.Whole))
-    music.playTone(440, music.beat(BeatFraction.Half))
-    music.playTone(587, music.beat(BeatFraction.Quarter))
-    music.playTone(554, music.beat(BeatFraction.Quarter))
-    music.playTone(587, music.beat(BeatFraction.Quarter))
-    music.playTone(554, music.beat(BeatFraction.Quarter))
-    music.playTone(587, music.beat(BeatFraction.Quarter))
-    music.playTone(440, music.beat(BeatFraction.Half))
-}
-for (let index = 0; index < 2; index++) {
-    music.playTone(196, music.beat(BeatFraction.Whole))
-    music.playTone(294, music.beat(BeatFraction.Half))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(440, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.playTone(440, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Half))
     music.playTone(294, music.beat(BeatFraction.Half))
 }
+for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < 2; index++) {
+        music.playTone(330, music.beat(BeatFraction.Whole))
+        music.playTone(494, music.beat(BeatFraction.Half))
+        music.playTone(659, music.beat(BeatFraction.Half))
+        music.playTone(622, music.beat(BeatFraction.Half))
+        music.playTone(659, music.beat(BeatFraction.Half))
+        music.playTone(622, music.beat(BeatFraction.Half))
+        music.playTone(659, music.beat(BeatFraction.Half))
+        music.playTone(494, music.beat(BeatFraction.Half))
+    }
+    for (let index = 0; index < 2; index++) {
+        music.playTone(220, music.beat(BeatFraction.Whole))
+        music.playTone(330, music.beat(BeatFraction.Half))
+        music.playTone(554, music.beat(BeatFraction.Half))
+        music.playTone(494, music.beat(BeatFraction.Half))
+        music.playTone(554, music.beat(BeatFraction.Half))
+        music.playTone(494, music.beat(BeatFraction.Half))
+        music.playTone(554, music.beat(BeatFraction.Half))
+        music.playTone(440, music.beat(BeatFraction.Half))
+    }
+    for (let index = 0; index < 2; index++) {
+        music.playTone(294, music.beat(BeatFraction.Whole))
+        music.playTone(440, music.beat(BeatFraction.Half))
+        music.playTone(587, music.beat(BeatFraction.Half))
+        music.playTone(554, music.beat(BeatFraction.Half))
+        music.playTone(587, music.beat(BeatFraction.Half))
+        music.playTone(554, music.beat(BeatFraction.Half))
+        music.playTone(587, music.beat(BeatFraction.Half))
+        music.playTone(440, music.beat(BeatFraction.Half))
+    }
+    for (let index = 0; index < 2; index++) {
+        music.playTone(196, music.beat(BeatFraction.Whole))
+        music.playTone(294, music.beat(BeatFraction.Half))
+        music.playTone(494, music.beat(BeatFraction.Half))
+        music.playTone(440, music.beat(BeatFraction.Half))
+        music.playTone(494, music.beat(BeatFraction.Half))
+        music.playTone(440, music.beat(BeatFraction.Half))
+        music.playTone(494, music.beat(BeatFraction.Half))
+        music.playTone(294, music.beat(BeatFraction.Half))
+    }
+}
+
 ```
 
 
