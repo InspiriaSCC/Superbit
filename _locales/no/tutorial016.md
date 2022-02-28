@@ -112,6 +112,98 @@ basic.pause(4000)
 music.startMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once)
 ```
 
+### Steg 5
+
+Musikk består ofte av gjentagende temaer.
+Da kan det være lurt å bruke løkker for å begrense mengden med kode.
+I hintet ser du et forsøk på å gjengi et klassisk musikkstykke som kanskje nesten er gjenkjennbart.
+Begrensningene i musikkredigeringsprogrammet gjør det litt vanskelig å få til god timing, og nesten umulig å få til synkope.
+Klarer du å kopiere koden, og klarer du å kjenne igjen stykket?
+
+```blocks
+for (let index = 0; index < 2; index++) {
+    music.playTone(196, music.beat(BeatFraction.Whole))
+    music.playTone(294, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(294, music.beat(BeatFraction.Half))
+}
+for (let index = 0; index < 2; index++) {
+    music.playTone(220, music.beat(BeatFraction.Whole))
+    music.playTone(330, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(330, music.beat(BeatFraction.Half))
+}
+for (let index = 0; index < 2; index++) {
+    music.playTone(294, music.beat(BeatFraction.Whole))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Half))
+}
+for (let index = 0; index < 2; index++) {
+    music.playTone(196, music.beat(BeatFraction.Whole))
+    music.playTone(294, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(294, music.beat(BeatFraction.Half))
+}
+for (let index = 0; index < 2; index++) {
+    music.playTone(330, music.beat(BeatFraction.Whole))
+    music.playTone(494, music.beat(BeatFraction.Half))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(622, music.beat(BeatFraction.Quarter))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(622, music.beat(BeatFraction.Quarter))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Half))
+}
+for (let index = 0; index < 2; index++) {
+    music.playTone(220, music.beat(BeatFraction.Whole))
+    music.playTone(330, music.beat(BeatFraction.Half))
+    music.playTone(554, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(554, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(554, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Half))
+}
+for (let index = 0; index < 2; index++) {
+    music.playTone(294, music.beat(BeatFraction.Whole))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.playTone(554, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.playTone(554, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Half))
+}
+for (let index = 0; index < 2; index++) {
+    music.playTone(196, music.beat(BeatFraction.Whole))
+    music.playTone(294, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(294, music.beat(BeatFraction.Half))
+}
+```
+
+
 ### Avslutning @unplugged
 
 Nå har du lært det grunnleggende om hvordan du lager musikk med MakeCode og Micro:Bit.

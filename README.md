@@ -17,6 +17,7 @@
 * [Øvelse 13 - Servoer - Del 2 - Radiostyrt bom -Sender](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial013)
 * [Øvelse 14 - Servoer - Del 3 - Radiostyrt bom - Mottager](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial014)
 * [Øvelse 15 - Servoer - Del 4 - Bom med avstandssensor](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial015)
+* [Øvelse 16 - Musikk på Micro:Bit](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial016)
 
 ## Edit this project ![Build status badge](https://github.com/yngel72/superbit/workflows/MakeCode/badge.svg)
 
