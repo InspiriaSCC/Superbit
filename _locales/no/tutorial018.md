@@ -1,7 +1,7 @@
-#### @activities true
+### @activities true
 
 # Superbit del 18: Lyssensoren
-## Introduksjon
+## Lag et automatisk nattlys med Micro:Bit
 ### Introduksjon @unplugged
 
 Diplayet på Micro:Biten består av 25 LED-pærer.

@@ -1,7 +1,7 @@
 ### @activities true
 
 # Superbit del 17: Temperaturmåleren
-## Introduksjon
+## Mål temperatur med Micro:Bit
 ### Introduksjon @unplugged
 
 Micro:Bit har et innebygget termometer som overvåker temperaturen til hovedprosessoren.

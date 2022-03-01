@@ -1,7 +1,7 @@
 ### @activities true
 
 # Superbit del 16: Koble elektronikk til Micro:Biten, del 3 Høyttaler
-## Introduksjon
+## Spill musikk med Micro:Bit
 ### Introduksjon @unplugged
 
 Micro:Biten kan spille små melodier om du kobler til en høyttaler eller en modulerbar buzzer.
