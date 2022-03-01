@@ -18,6 +18,8 @@
 * [Øvelse 14 - Servoer - Del 3 - Radiostyrt bom - Mottager](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial014)
 * [Øvelse 15 - Servoer - Del 4 - Bom med avstandssensor](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial015)
 * [Øvelse 16 - Musikk på Micro:Bit](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial016)
+* [Øvelse 17 - Temperatursensoren](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial017)
+* [Øvelse 18 - Lyssensoren](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial018)
 
 ## Edit this project ![Build status badge](https://github.com/yngel72/superbit/workflows/MakeCode/badge.svg)
 
