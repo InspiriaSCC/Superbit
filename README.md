@@ -20,6 +20,7 @@
 * [Øvelse 16 - Musikk på Micro:Bit](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial016)
 * [Øvelse 17 - Temperatursensoren](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial017)
 * [Øvelse 18 - Lyssensoren](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial018)
+* [Øvelse 19 - NeoPixlene på Bitboten](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial019)
 
 ## Edit this project ![Build status badge](https://github.com/yngel72/superbit/workflows/MakeCode/badge.svg)
 
