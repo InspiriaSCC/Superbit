@@ -124,6 +124,41 @@ basic.forever(function () {
 })
 ```
 
+### Hvordan flytt LED virker
+
+Som du så forsvinner lysene ut av rekken etter hvert når man bruker ``||bitbot.flytt LED||`` i en ``||basic.gjenta for alltid||``-blokk.
+``||bitbot.flytt LED||``-kommandoen flytter hvert lys én plass oppover i LED-rekken én gang hver gang den utføres.
+Når kommandoen står en ``||basic.gjenta for alltid||``-blokk flyttes alle lysene oppover i rekken helt til alle lysene forsvinner ut av rekken.
+Denne funksjonen kan brukes når du vil at alle lysene gradvis skal bli borte, for eksempel for å vise tiden i en nedtelling, eller antall liv som gjenstår i en robotkamp.
+
+### Steg 8
+
+En måte å bruke denne kommandoen på er å flytte den inn i en løkke som gjentas et bestemt antall ganger.
+Om ``||bitbot.flytt LED||``-blokken plasseres i en løkke som gjentas 12 ganger, forsvinner alle lysene akkurat ut av rekken når løkken er ferdig med gjentagelsene stopper.
+Hent en ``||loops.gjenta 4 ganger||``-blokk fra ``||loops.Løkker||``-menyen og sett den inn i ``||basic.gjenta for alltid||``-blokken over de andre blokkene som allerede ligger der.
+Dra de andre blokkene i ``||basic.gjenta for alltid||``-blokken inn i ``||loops.gjenta 4 ganger||``-blokken.
+
+```blocks
+basic.forever(function () {
+    for (let index = 0; index < 4; index++) {
+        bitbot.ledShift()
+        basic.pause(100)
+    }
+})
+```
+
+### Steg 9
+
+Endre **4** til **12** i ``||loops.gjenta 4 ganger||``-blokken.
+Hent en ``||bitbot.sett LED til regnbue||``-blokk fra ``||bitbot.Bitbot/Lys||``-menyen og legg den inn i ``||basic.gjenta for alltid||``-blokken over ``||loops.gjenta 12 ganger||``-blokken.
+Last ned programmet, koble fra USB-kabelen, slå på Bitboten og se hva som skjer.
+
+### Hvordan den siste koden virker @unplugged
+
+Ved å legge ``||bitbot.flytt LED||``-blokken inn i en ``||loops.gjenta 12 ganger||``-blokk sørger du for at kommandoen gjentas akkurat nok ganger til at alle lysene slukker.
+Når du plasserer ``||bitbot.sett LED til regnbue||``-blokken utenfor ``||loops.gjenta 12 ganger||``-blokken men inne i ``||basic.gjenta for alltid||``-blokken, vil regnbuen tennes på nytt hver gang alle lysene er slukket. 
+Det gir en litt annerledes animasjon enn ``||bitbot.roter LED||``.
+
 ### Avslutning @unplugged
 
 Gratulerer! Nå vet du det meste om hvordan du kan bruke lysene på Bitboten!
