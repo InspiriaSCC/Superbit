@@ -25,7 +25,9 @@ Første steg blir å gjøre nettopp det.
 ### Steg 1
 Hent en ``||basic.vis tall||``-blokk fra ``||basic.Basis||``-menyen og dra den inn i ``||basic.gjenta for alltid||``-blokken i arbeidsområdet ditt.
 Hent en oval ``||input.lysnivå||``-blokk fra ``||input.Inndata||``-menyen og dra den inn i det hvite feltet i ``||basic.vis tall||``-blokken.
-Last ned programmet til Micro:Biten og sjekk hvilke verdier du får når du lar Micro:Biten ligge med skjermen opp, og hvilke verdier du får når du skygger for skjermen med hånden.
+``||input.lysnivå||`` er en variabel som alltid inneholder verdien av lyssensoren til Micro:Biten.
+Verdien vil hele tiden variere med lyset i omgivelsene til Micro:Biten.
+Last ned programmet til Micro:Biten og sjekk hvilke verdier du får når du lar Micro:Biten ligge med skjermen opp uten at noe skygger for den, og hvilke verdier du får når du skygger for skjermen med hånden.
 I eksemplet vi bruker videre fikk vi de omtrentlige verdiene 220 med skjermen liggende åpent under en lampe og 100 når skjermen lå i skyggen av en hånd.
 
 ```blocks
@@ -96,7 +98,7 @@ basic.forever(function () {
 
 ### Steg 5
 
-Om du vil at LED-pæren skal slå seg på når du skygger for Micro:Bit-displayet med håned, bør du velge å sette inn et lysnivå i ``||logic.lysnivå < 0||``-blokken som er litt høyere enn det du målte da du skygget for med hånden.
+Om du vil at LED-pæren skal slå seg på når du skygger for Micro:Bit-displayet med hånden, bør du velge å sette inn et lysnivå i ``||logic.lysnivå < 0||``-blokken som er litt høyere enn det du målte da du skygget for med hånden.
 I eksemplet bruker vi 150, men det kan hende du må bruke et lavere eller høyere tall, alt etter belysningen der du befinner deg.
 
 ```blocks
