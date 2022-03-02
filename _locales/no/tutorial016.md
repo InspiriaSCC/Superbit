@@ -33,6 +33,7 @@ Dra blokken inn i ``||basic.ved start||``-blokken og last programmet ditt ned ti
 Hør på melodien som spilles av på Micro:Biten
 
 ```blocks
+// @highlight
 music.playMelody("C5 B A G F E D C ", 120)
 ```
 
@@ -53,6 +54,7 @@ Lag din egen melodi på 4 takter, last ned og lytt.
 
 ```blocks
 music.playMelody("C G A E F D G G ", 120)
+// @highlight
 music.playMelody("C5 B A G F D G G ", 120)
 ```
 
@@ -68,6 +70,7 @@ Klarer du å gjette melodien i hintet?
 ![Redigeringsprogram](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Musikkeditor2.jpg)
 
 ```blocks
+// @highlight
 music.playTone(262, music.beat(BeatFraction.Double))
 music.playTone(392, music.beat(BeatFraction.Double))
 music.playTone(349, music.beat(BeatFraction.Quarter))
@@ -106,6 +109,7 @@ Forsøk så å legge inn passe lange pauser mellom blokkene så melodiene spille
 
 ```blocks
 music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
+// @highlight
 basic.pause(4500)
 music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
 basic.pause(4000)
@@ -121,6 +125,7 @@ Begrensningene i musikkredigeringsprogrammet gjør det litt vanskelig å få til
 Klarer du å kopiere koden, og klarer du å kjenne igjen stykket?
 
 ```blocks
+// @highlight
 for (let index = 0; index < 2; index++) {
     music.playTone(196, music.beat(BeatFraction.Whole))
     music.playTone(294, music.beat(BeatFraction.Half))

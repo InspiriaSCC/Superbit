@@ -32,6 +32,7 @@ I eksemplet vi bruker videre fikk vi de omtrentlige verdiene 220 med skjermen li
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     basic.showNumber(input.lightLevel())
 })
 ```
@@ -41,7 +42,7 @@ Før du går videre kan det være lurt å koble til en LED-pære.
 LED-pæren kan du koble til med to ledninger med krokodilleklemmer.
 Koble det korte beinet på LED-pæren til **"GND"** og det lange beinet til **"pin 0"** på Micro:Biten.
 
-![]()
+![LEDkobling](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/LEDkobling.jpg)
 
 ### Steg 2
 
@@ -51,6 +52,7 @@ Dersom du fortsatt har en ``||basic.vis tall||``-blokk i ``||basic.gjenta for al
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (true) {
     	
     } else {
@@ -73,6 +75,7 @@ Dra den inn i heksagonet øverst i ``||logic.hvis så ellers||``-blokken.
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (0 < 0) {
     	
     } else {
@@ -88,6 +91,7 @@ Hent en og dra den inn i det første hvite feltet i ``||logic.0 < 0||``-blokken.
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (input.lightLevel() < 0) {
     	
     } else {
@@ -103,6 +107,7 @@ I eksemplet bruker vi 150, men det kan hende du må bruke et lavere eller høyer
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (input.lightLevel() < 150) {
     	
     } else {
@@ -120,6 +125,7 @@ Endre tallet **"0"** til **"1"** i det siste feltet i ``||pins.skriv digital til
 ```blocks
 basic.forever(function () {
     if (input.lightLevel() < 150) {
+        // @highlight
         pins.digitalWritePin(DigitalPin.P0, 1)
     } else {
     	
@@ -139,6 +145,7 @@ basic.forever(function () {
     if (input.lightLevel() < 150) {
         pins.digitalWritePin(DigitalPin.P0, 1)
     } else {
+        // @highlight
         pins.digitalWritePin(DigitalPin.P0, 0)
     }
 })
@@ -156,6 +163,7 @@ Last ned programmet til Micro:Biten og test koden din.
 basic.forever(function () {
     if (input.lightLevel() < 150) {
         pins.digitalWritePin(DigitalPin.P0, 1)
+        // @highlight
         basic.showNumber(input.lightLevel())
     } else {
         pins.digitalWritePin(DigitalPin.P0, 0)
@@ -185,6 +193,7 @@ basic.forever(function () {
         basic.showNumber(input.lightLevel())
     } else {
         pins.digitalWritePin(DigitalPin.P0, 0)
+        // @highlight
         basic.showNumber(input.lightLevel())
     }
 })
@@ -207,6 +216,7 @@ Tegn et månesymbol i blokken.
 basic.forever(function () {
     if (input.lightLevel() < 150) {
         pins.digitalWritePin(DigitalPin.P0, 1)
+        // @highlight
         basic.showLeds(`
             . # # # .
             . . # # #
@@ -238,6 +248,7 @@ basic.forever(function () {
             `)
     } else {
         pins.digitalWritePin(DigitalPin.P0, 0)
+        // @highlight
         basic.showLeds(`
             # . # . #
             . # # # .

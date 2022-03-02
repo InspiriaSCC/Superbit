@@ -16,6 +16,7 @@ Hent en ``||basic.vis tall||``-blokk fra ``||basic.Basis||``-menyen og plasser d
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     basic.showNumber(0)
 })
 ```
@@ -28,6 +29,7 @@ Last programmet ned til Micro:Biten og sjekk temperaturen i rommet.
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     basic.showNumber(input.temperature())
 })
 ```
@@ -48,6 +50,7 @@ Hent en oval ``||math.0 - 0||``-blokk fra ``||math.Matematikk||``-menyen og dra 
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     basic.showNumber(0 - 0)
 })
 ```
@@ -60,6 +63,7 @@ Last programmet ditt ned til Micro:Biten og sjekk at kalibreringen virker.
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     basic.showNumber(input.temperature() - 2)
 })
 ```
@@ -84,6 +88,7 @@ Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (true) {
     	
     } else {
@@ -98,6 +103,7 @@ Hent en ``||logic.0 < 0||``-blokk fra ``||logic.Logikk||``-menyen og plasser den
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (0 < 0) {
     	
     } else {
@@ -113,6 +119,7 @@ Snu **"<"** til **">"** ved å trykke på den lille, hvite pilen til høyre for 
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (input.temperature() > 0) {
     	
     } else {
@@ -130,6 +137,7 @@ Skriv inn din ønskede makstemperatur i det ledige feltet i ``||logic.temperatur
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (input.temperature() > 27) {
     	
     } else {
@@ -147,6 +155,7 @@ Hent blokken ``||music.spill tone midtre C i et taktslag||`` fra ``||music.Musik
 ```blocks
 basic.forever(function () {
     if (input.temperature() > 27) {
+        // @highlight
         music.playTone(262, music.beat(BeatFraction.Whole))
     } else {
     	
@@ -164,12 +173,21 @@ Kopier den ovale ``||input.temperatur (°C)||``-blokken og plasser kopien i det 
 basic.forever(function () {
     if (input.temperature() > 27) {
         music.playTone(262, music.beat(BeatFraction.Whole))
+        // @highlight
         basic.showNumber(input.temperature())
     } else {
     	
     }
 })
 ```
+
+### Hvor måles temperaturen? @unplugged
+
+Termometeret på Micro;Biten sitter i hovedprosessoren på baksiden av Micro:Biten.
+For å heve/senke temperaturen må du påvirke selve prosessoren.
+Om du trykker en finger mot prosessoren, vil temperaturen som regel nærme seg 28-30 grader.
+
+![Prosessor](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Prosessor2.png))
 
 ### Steg 11
 
@@ -183,6 +201,7 @@ basic.forever(function () {
         music.playTone(262, music.beat(BeatFraction.Whole))
         basic.showNumber(input.temperature())
     } else {
+        // @highlight
         basic.showNumber(input.temperature())
     }
 })
@@ -196,6 +215,7 @@ Klikk på det lille **"+"**-tegnet nederst til venstre i blokken for å utvide d
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (input.temperature() > 27) {
         music.playTone(262, music.beat(BeatFraction.Whole))
         basic.showNumber(input.temperature())
@@ -216,6 +236,7 @@ I eksemplet valgte vi 24 °C bare for lett å kunne teste at programmet fungerte
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (input.temperature() > 27) {
         music.playTone(262, music.beat(BeatFraction.Whole))
         basic.showNumber(input.temperature())
@@ -239,6 +260,7 @@ basic.forever(function () {
         music.playTone(262, music.beat(BeatFraction.Whole))
         basic.showNumber(input.temperature())
     } else if (input.temperature() < 24) {
+        // @highlight
         music.playTone(131, music.beat(BeatFraction.Whole))
     } else {
         basic.showNumber(input.temperature())
@@ -260,6 +282,7 @@ basic.forever(function () {
         basic.showNumber(input.temperature())
     } else if (input.temperature() < 20) {
         music.playTone(131, music.beat(BeatFraction.Whole))
+        // @highlight
         basic.showNumber(input.temperature())
     } else {
         basic.showNumber(input.temperature())

@@ -7,8 +7,11 @@
 Avstandssensoren som følger med i Superbitsettet skal festes i den svart kontakten framme på snuten til Bitboten.
 Den kan oppdage gjenstander foran Bitboten, slik at man kan bruke den til å unngå kollisjoner.
 I denne gjennomgangen lærer du å bruke avstandssensoren til å få Bitboten til å unngå hindre.
+Plasser sensoren i kontakten foran på Bitboten, slik at "øynene" peker forover.
 **NB: Avstandssensoren krever omtrent 5 volt og fungerer derfor dårlig med oppladbare AA-batterier i Bitboten.
 Vanlige, alkaliske, ikke-oppladbare AA-batterier gir høyere spenning enn oppladbare, derfor anbefales de på det sterkeste her.**
+
+![Avstandssensor](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Avstandssensor.jpg)
 
 ### Steg 1
 
@@ -19,9 +22,9 @@ Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen
 ```blocks
 basic.forever(function () {
     if (true) {
-    	
+        
     } else {
-    	
+        
     }
 })
 ```
@@ -34,9 +37,9 @@ Hent det lille heksagonet ``||logic.0 < 0||`` fra ``||logic.Logikk||``-menyen og
 ```blocks
 basic.forever(function () {
     if (0 < 0) {
-    	
+        
     } else {
-    	
+        
     }
 })
 ```
@@ -49,9 +52,9 @@ Fra ``||bitbot.Bitbot/Sensorer og styring||`` henter du en oval ``||bitbot.les u
 basic.forever(function () {
     // @highlight
     if (bitbot.sonar(BBPingUnit.Centimeters) < 0) {
-    	
+        
     } else {
-    	
+        
     }
 })
 ```
@@ -65,9 +68,9 @@ Endre "0" i det andre hvite feltet i ``||logic.0 < 0||``-blokken til den avstand
 basic.forever(function () {
     // @highlight
     if (bitbot.sonar(BBPingUnit.Centimeters) < 10) {
-    	
+        
     } else {
-    	
+        
     }
 })
 ```
@@ -83,7 +86,7 @@ basic.forever(function () {
         // @highlight
         bitbot.rotate(BBRobotDirection.Left, 60)
     } else {
-    	
+        
     }
 })
 ```
@@ -139,3 +142,5 @@ bitbot=github:4tronix/BitBot
 ```
 
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+

@@ -40,7 +40,7 @@ Avstanden regnes ut ved hjelp av lydhastigheten i luft.
 Ultralydsensoren plasseres i kontakten foran på Bitboten som vist på bildet.
 "Øynene" skal peke forover, bort fra Micro:Biten.
 
-![]()
+![Avstandssensor](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Avstandssensor.jpg)
 
 ### Steg 3
 

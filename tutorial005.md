@@ -31,6 +31,8 @@ Koble den andre enden av den siste ledningen til stripen der det står GND på M
 Koble Micro:Biten til PCen ved hjelp av USB-ledningen. (Koble til en batteripakke om du bruker iPad eller Android-brett)
 Nå er koblingene klare.
 
+![LEDkobling](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/LEDkobling.jpg)
+
 ### Steg 1 Få en LED til å blinke 1
 
 Om du ikke har en ``||basic.gjenta for alltid||``-blokk i arbeidsområdet, hent en fra ``||basic.Basis||``-menyen.
@@ -108,6 +110,11 @@ Koble det lange benet til den grønne LED-pæren til andre enden av ledningen.
 Koble det korte benet på LED-pæren til den andre ledningen med krokodilleklemme.
 Koble den andre enden av den siste ledningen til stripen der det står GND på Micro:Biten, eller til en av krokodilleklemmene som allerede er koblet på.
 Koble Micro:Biten til PCen ved hjelp av USB-ledningen. (Koble til en batteripakke om du bruker iPad eller Android-brett)
+
+![TrafikklysLED](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Trafikklyskobling21.jpg)
+
+![TrafikklysMicro:Bit](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Trafikklyskobling12.jpg)
+
 
 ### Steg 5 Få 3 LED-pærer til å blinke 1
 
