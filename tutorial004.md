@@ -14,11 +14,11 @@ Du må vende på hele Micro:Biten for å få brikken du styrer til å falle ned 
 
 ### Steg 1 Lag variablene
 
-Det første du må gjøre er å lage en variabel for hver brikke.
+Det første du må gjøre er å lage en variabel for hver brikke, og definere dem i ``||basic.ved start||``-blokken.
 Gå til ``||variables.Variabler||``-menyen og velg **"Lag en variabel..."**.
 Lag to variabler, en som du kaller ``||variables.jeger||`` og en som du kaller ``||variables.bytte||``.
 Hent to ``||variables.sett bytte til||``-blokker fra ``||variables.Variabler||``-menyen og dra dem inn i ``||basic.ved start||``-blokken.
-Endre en av blokkene slik at det står ``||variables.sett bytte til||`` i en blokk og ``||variables.sett jeger til||`` i den andre.
+Endre en av blokkene slik at det står ``||variables.sett bytte til||`` i den ene blokken og ``||variables.sett jeger til||`` i den andre.
 
 ```blocks
 let bytte = 0

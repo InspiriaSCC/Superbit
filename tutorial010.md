@@ -85,7 +85,7 @@ Siden du bare trenger 4 retninger; Framover, bakover, høyre og venstre, kan du 
 
 ### Steg 5
 
-Hent en ``||radio.radio send tall``|| blokk fra ``||radio.Radio||``-menyen og sett den inn i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken.
+Hent en ``||radio.radio send tall||`` blokk fra ``||radio.Radio||``-menyen og sett den inn i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken.
 Endre "0" til "1".
 
 ```blocks
@@ -147,7 +147,7 @@ basic.forever(function () {
 
 ### Steg 8
 
-Kopier ``||radio.radio send tall``|| blokken fra det øverste gapet og dra kopien inn i det neste ledige gapet.
+Kopier ``||radio.radio send tall||`` blokken fra det øverste gapet og dra kopien inn i det neste ledige gapet.
 Endret tallet i det hvite feltet fra "1" til "2".
 
 ```blocks
@@ -191,7 +191,7 @@ basic.forever(function () {
 
 ### Steg 10
 
-Kopier ``||radio.radio send tall``|| blokken fra det øverste gapet og dra kopien inn i det neste ledige gapet.
+Kopier ``||radio.radio send tall||`` blokken fra det øverste gapet og dra kopien inn i det neste ledige gapet.
 Endret tallet i det hvite feltet fra "1" til "3".
 
 ```blocks
@@ -233,9 +233,9 @@ basic.forever(function () {
 })
 ```
 
-### Steg 10
+### Steg 12
 
-Kopier ``||radio.radio send tall``|| blokken fra det øverste gapet og dra kopien inn i det neste ledige gapet.
+Kopier ``||radio.radio send tall||`` blokken fra det øverste gapet og dra kopien inn i det neste ledige gapet.
 Endret tallet i det hvite feltet fra "1" til "4".
 
 ```blocks
@@ -255,7 +255,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 11
+### Steg 13
 
 Trykk på det lille "-"-tegnet ytterst til venstre på armen over det siste ledige gapet.
 Det fjerner det ledige gapet, og så er radiosenderen klar til bruk.

@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 2: Variabler, inndata og logikkfunksjoner 
+# Superbit del 2: Terning 
 ## Introduksjon
 ### Introduksjon @unplugged
 I denne delen lærer du hvordan du lager og bruker en variabel og hvordan du får Micro:Bit til å reagere på en handling, eller inndata, som det kalles på kodespråket.

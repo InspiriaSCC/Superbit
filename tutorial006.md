@@ -72,6 +72,10 @@ let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 strip.showColor(neopixel.colors(NeoPixelColors.Red))
 ```
 
+```ghost
+strip.shift(1)
+```
+
 ### Nullstille NeoPixler @unplugged
 
 Hver NeoPixel har en liten chip som tar imot instruksjoner fra koden.
