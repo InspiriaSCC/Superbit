@@ -3,7 +3,7 @@
 
 ## Tutorial links:
 * [Øvelse 1 - Bli kjent med BBC Micro:Bit](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial001)
-* [Øvelse 2 - Variabler, inndata og logikkfunksjoner - terning](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial002)
+* [Øvelse 2 - Inndata - Enkel terning](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial002)
 * [Øvelse 3 - Lag en hopp-teller](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial003)
 * [Øvelse 4 - Lag et spill (avansert)](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial004)
 * [Øvelse 5 - Koble elektronikk til Micro:Bit - Del 1- LEDs](https://makecode.microbit.org/#tutorial:github:yngel72/Superbit/tutorial005)
@@ -21,6 +21,7 @@
 * [Øvelse 17 - Temperatursensoren](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial017)
 * [Øvelse 18 - Lyssensoren](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial018)
 * [Øvelse 19 - NeoPixlene på Bitboten](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial019)
+* [Øvelse 20 - Avansert terning](https://makecode.microbit.org/#tutorial:github:yngel72/superbit/tutorial020)
 
 ## Edit this project ![Build status badge](https://github.com/yngel72/superbit/workflows/MakeCode/badge.svg)
 
