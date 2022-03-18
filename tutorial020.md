@@ -15,10 +15,11 @@ Blokken ``||variables.sett "variabelnavn" til||`` brukes for å definere variabe
 
 ### Steg 6: Terning med variabel
 Først må du opprette den nye variabelen.
-Klikk på ``||variables.Variabler||``-menyen og velg **"Lag ny variabel..."**.
+Klikk på ``||variables.Variabler||``-menyen og velg **"Lag en variabel..."**.
 Gi variabelen et navn som sier noe om hva den er for noe.
 Denne kan du kalle "terningkast".
-Det er en god vane å definere variabler øverst i koden, så hent en ``||variables.sett terningkast til||``-blokk fra ``||variables.Variabler||``-menyen og plasser den **øverst** i ``||input.når ristes||``-blokken.
+Hent en ``||input.når ristes||``-blokk fra ``||input.Inndata||``-menyen og legg den på arbeidsflaten.
+Hent en ``||variables.sett terningkast til||``-blokk fra ``||variables.Variabler||``-menyen og plasser den **øverst** i ``||input.når ristes||``-blokken.
 
 ```blocks
 let terningkast = 0
@@ -30,11 +31,12 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 ### Steg 7: Terning med variabel
-Dra den lille blokken ``||math.velg tilfeldig 1 til 6||`` fra ``||basic.vis tall||``-blokken til det hvite feltet i ``||variables.sett terningkast til||``.
+Hent en ``||math.velg tilfeldig 0 til 10||`` fra ``||math.Matamatikk||``-menyen og dra den inn i det hvite feltet i ``||variables.sett terningkast til||``.
 Nå vil variabelen ``||variables.terningkast||`` settes til et tilfeldig tall fra 1 til 6 hver gang noen rister på Micro:Biten.
 For å vise resultatet må variabelen være tallet som skal vises i displayet.
 Klikk på ``||variables.Variabler||``-menyen, hent den lille, ovale variabelblokken ``||variables.terningkast||`` og plasser den i det hvite feltet i ``||basic.vis tall||``
-Når du rister på Micro:Biten nå, skjer akkurat det samme som ved den forrige terningen du lagde, men siden du nå bruker en variabel, kan vi endre på dette i neste steg.
+Når du rister på Micro:Biten nå, skjer akkurat det samme som ved den forrige terningen du lagde, men nå lagres det tilfeldige tallet i en variabel.
+Siden du bruker en variabel til å lagre terningkastet kan du få displayet til å vise noe annet enn tall når du går videre i veiledningen.
 
 ```blocks
 let terningkast = 0
