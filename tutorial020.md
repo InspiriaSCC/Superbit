@@ -45,6 +45,7 @@ input.onGesture(Gesture.Shake, function () {
 ```
 ### Steg 8: Terning med variabel
 Klikk på ``||variables.Variabler||``-menyen, hent den lille, ovale variabelblokken ``||variables.terningkast||`` og plasser den i det hvite feltet i ``||basic.vis tall||``
+Nå vil displayet alltid vise den siste verdien som ble lagret i variabelen ``||variables.terningkast||``.
 Når du rister på Micro:Biten nå, skjer akkurat det samme som ved den forrige terningen du lagde, men nå lagres det tilfeldige tallet i en variabel.
 Siden du bruker en variabel til å lagre terningkastet kan du få displayet til å vise noe annet enn tall når du går videre i veiledningen.
 
