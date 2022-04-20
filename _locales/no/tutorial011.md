@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 11: Radiostyring del 2: Mottageren
+# Superbit Kodeøkt 5: Radiostyring del 2: Mottageren
 ## Bruk radiosignaler til å fjernstyre en Bitbot
 ### Introduksjon @unplugged
 
@@ -47,7 +47,7 @@ radio.onReceivedString(function (receivedNumber) {
 
 ### Steg 3
 
-Siden senderen sender et tall til mottageren, må vi bruke logisk sjekk for tall i heksagonene i ``||logic.hvis sann så ellers||``-blokken.
+Siden senderen sender et tall til mottageren, må vi bruke logisk sjekk for tall i heksagonene i ``||logic.hvis sann så ellers||``-blokk.
 Hent en ``||logic.0 = 0||`` fra ``||logic.Logikk||``-menyen og dra den inn i det øverste heksagonet i ``||logic.hvis sann så ellers||``-blokken.
 
 ```blocks

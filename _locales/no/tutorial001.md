@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit: Bli kjent med MakeCode og noen av BBC Micro:Bits grunnleggende funksjoner
+# Superbit - Kodeøkt 1: Bli kjent med Micro:Bit og MakeCode
 ## Introduksjon
 ### Introduksjon @unplugged
 MakeCode-miljøet består av tre deler: Til venstre på skjermen ser du en Micro:Bit-simulator som viser hva koden din gjør med Micro:Biten.

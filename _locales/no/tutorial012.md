@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 12: Servoer del 1
+# Superbit - Kodeøkt 11: Enkel bruk av servo
 ## Bruk servoer til å lage bevegelse
 ### Introduksjon @unplugged
 
@@ -40,7 +40,7 @@ Rød er "+"-ledningen som skal kobles til 5V.
 Oransje er signalledningen som skal kobles til P1 eller P2.
 Plasser kontakten til servoen på pinnene ved P1 slik at oransje ledning treffer P1, rød ledning treffer 5V og brun ledning treffer GND.
 
-![]()
+![Servokobling](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Servokobling.jpg)
 
 ### Steg 2
 

@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 7: Bitbot
+# Superbit - Kodeøkt 3: Kjør en Bitbot
 ## Introduksjon til hvordan du kjører Bitboten
 ### Introduksjon @unplugged
 

@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 9: Hvordan bruke linjesensoren til Bitbot
+# Superbit - Kodeøkt 9: Hvordan bruke linjesensoren til Bitbot
 ## Linjesensoren til Bitbot
 ### Introduksjon @unplugged
 

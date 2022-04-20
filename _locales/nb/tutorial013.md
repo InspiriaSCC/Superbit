@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 13: Servoer del 2
+# Superbit - Kodeøkt 17: Sender til radiostyrt servo
 ## Bruk servoer til å lage radiostyrt bevegelse - sender
 ### Introduksjon @unplugged
 

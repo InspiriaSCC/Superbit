@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 20: Avansert terning
+# Superbit - Kodeøkt 7: Avansert terning
 ## Lag en terning som viser øyne
 ### Introduksjon @unplugged
 

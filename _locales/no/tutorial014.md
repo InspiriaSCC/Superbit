@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 14: Servoer del 3
+# Superbit - Kodeøkt 18: Mottaker til radiostyrt servo
 ## Bruk servoer til å lage radiostyrt bevegelse - mottager
 ### Introduksjon @unplugged
 
@@ -26,7 +26,7 @@ Rød er "+"-ledningen som skal kobles til 5V.
 Oransje er signalledningen som skal kobles til P1 eller P2.
 Plasser kontakten til servoen på pinnene ved P1 slik at oransje ledning treffer P1, rød ledning treffer 5V og brun ledning treffer GND.
 
-![]()
+![Servokobling](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Servokobling.jpg)
 
 ### Steg 2
 
@@ -243,7 +243,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 ```
 
-### Avslutning @unplugged
+### Avslutning
 
 Det var det hele. Last ned programmet til Micro:Biten som skal være mottager og plasser den i bitboten du koblet servoen til.
 Nå kan du teste den automatiske bommen din.

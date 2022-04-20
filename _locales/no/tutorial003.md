@@ -1,13 +1,14 @@
 ### @activities true
 
-# Superbit del 3: Lag en hoppeteller 
+# Superbit - Kodeøkt 6: Lag en hoppeteller 
 ## Introduksjon
 ### Introduksjon @unplugged
 
 Micro:Biten kan fint brukes i forbindelse med fysisk aktivitet.
 I denne gjennomgangen lærer du å bruke Micro:Biten som skritteller eller hoppeteller.
-Akselerometeret i Micro:Biten kan brukes på flere måter, derfor kan det lønne seg å teste ut akkurat hvilken akselerometerfunksjon som fungerer best som skritteller eller hoppeteller mer enn det vi gjør her..
-Du kan teste ut dette i løpet av denne økten.
+Akselerometeret i Micro:Biten kan brukes på flere måter.
+I økten lærer du hvordan du velger akselerometerfunksjon fra en meny.
+Du får muligheten til å teste ut hvilken funksjon du mener fungerer best som skritteller eller hoppeteller.
 
 ### Registrering av inndata krever en variabel @unplugged
 

@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 3: Lag en hoppeteller 
+# Superbit - Kodeøkt 6: Lag en hoppeteller 
 ## Introduksjon
 ### Introduksjon @unplugged
 

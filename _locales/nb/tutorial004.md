@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 4: Lag et spill - Funksjoner og spillblokker
+# Superbit - Ekstra kodeøkt: Lag et spill - Funksjoner og spillblokker
 ## Introduksjon
 ### Introduksjon @unplugged
 

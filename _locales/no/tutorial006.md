@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 6: Koble elektronikk til Micro:Biten, del 2 Neopixel
+# Superbit - Kodeøkt 16: Koble Neopixel-stripen til Micro:Bit
 ## Introduksjon
 ### Introduksjon @unplugged
 
@@ -70,6 +70,10 @@ Prøv å endre farge i ``||neopixel.strip show color red||``-blokken og se om fa
 let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 // @highlight
 strip.showColor(neopixel.colors(NeoPixelColors.Red))
+```
+
+```ghost
+strip.shift(1)
 ```
 
 ### Nullstille NeoPixler @unplugged

@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 18: Lyssensoren
+# Superbit - kodeøkt 14: Micro:Bitens lyssensor
 ## Lag et automatisk nattlys med Micro:Bit
 ### Introduksjon @unplugged
 

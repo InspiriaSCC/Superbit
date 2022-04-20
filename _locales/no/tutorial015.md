@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 15: Servoer del 4
+# Superbit - Kodeøkt 19: Bom med avstandssensor
 ## Lag en bom som styres av en avstandssensor
 ### Introduksjon @unplugged
 
@@ -83,7 +83,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 4
+### Steg 6
 
 Hent et ``||logic.0 < 0||``-heksagon og plasser det i heksagonet øverst i ``||logic.hvis sant så ellers||``-blokken.
 
@@ -98,7 +98,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 5
+### Steg 7
 
 Hent en oval ``||bitbot.les ultralydsensor som cm||``-blokk fra ``||bitbot.Bitbot/Sensorer og styring||``-menyen.
 Dra den inn i det første hvite feltet i ``||logic.0 < 0||``-heksagonet.
@@ -116,7 +116,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 6
+### Steg 8
 
 Sett en ``||bitbot.sett servo P1 90 grader||``-blokk fra ``||bitbot.Bitbot/Sensorer og styring||``-menyen inn i det øverste gapet i ``||logic.hvis sant så ellers||``-blokken.
 
@@ -131,7 +131,7 @@ basic.forever(function () {
 })
 ```
 
-### Steg 7
+### Steg 9
 
 Sett inn en ``||basic.pause 100 ms||``-blokk fra ``||basic.Basis||``-menyen under ``||bitbot.sett servo P1 90 grader||``-blokken.
 Endre ``||basic.100 ms||`` til ``||basic.200 ms||``.
@@ -156,7 +156,7 @@ Om instruksjonene kommer for tett kan det føre til at servoen bare blir ståend
 Dette sliter på servoen og gjør at programmet ikke fungerer som det skal.
 En viktig del av feilsøkingen når et program ikke virker som det skal, er å vurdere om man har koblet til noe som ikke rekker å gjennomføre en oppgave før programmet går videre.
 
-### Steg 8
+### Steg 10
 
 Trykk på det lille ***"+"***-tegnet nederst til venstre i ``||logic.hvis sant så ellers||``-blokken for å lage et nytt heksagon.
 Kopier den heksagonformede ``||logic.0 < 0||``-blokken fra øverst i ``||logic.hvis sant så ellers||`` og plasser den i det nye heksagonet.
@@ -175,10 +175,10 @@ basic.forever(function () {
 })
 ```
 
-### Steg 9
+### Steg 11
 
 Kopier ``||bitbot.sett servo P1 90 grader||``-blokken og dra kopien inn i det andre gapet på ``||logic.hvis sant så ellers||``-blokken.
-Endre ``||bitbot.90 grader||`` til `||bitbot.0 grader||``
+Endre ``||bitbot.90 grader||`` til ``||bitbot.0 grader||``
 Kopier ``||basic.pause 200 ms||``-blokken og plasser kopien rett under ``||bitbot.sett servo P1 0 grader||``-blokken.
 
 ```blocks

@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 5: Koble elektronikk til Micro:Biten, del 1 LEDs
+# Superbit - Kodeøkt 15: Koble LED-pærer til Micro:Bit
 ## Introduksjon
 ### Introduksjon @unplugged
 

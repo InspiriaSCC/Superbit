@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 17: Temperaturmåleren
+# Superbit - Kodeøkt 13: TMicro:Bitens termometer
 ## Mål temperatur med Micro:Bit
 ### Introduksjon @unplugged
 

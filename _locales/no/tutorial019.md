@@ -1,22 +1,22 @@
 ### @activities true
 
-# Superbit del 19: Bitbotens NeoPixler
+# Superbit - Kodeøkt 10: Bitbotens FireLEDs
 ## Bruk de innebygde lysene på Bitboten
 ### Introduksjon @unplugged
 
 Bitboten har to "horn" på sidene.
-På hvert av disse sidene sitter det 6 NeoPixler som kan styres ved hjelp av kode.
-I denne økten lærer du hvordan du kontrollerer NeoPixlene på Bitboten ved hjelp av et program.
+På hvert av disse sidene sitter det 6 FireLEDs, ofte kalt NeoPixler, som kan styres ved hjelp av kode.
+I denne økten lærer du hvordan du kontrollerer FireLEDene på Bitboten ved hjelp av et program.
 
 ### Steg 1
 
-Alle blokkene du trenger for å styre NeoPixlene på Bitboten finner du i menyen ``||bitbot.Bitbot/Lys||``.
-For å sette alle NeoPixlene (på Bitbot kalles de også Fireleds) til en farge kan du bruke blokken ``||bitbot.sett alle LED til||``.
+Alle blokkene du trenger for å styre FireLEDene på Bitboten finner du i menyen ``||bitbot.Bitbot/Lys||``.
+For å sette alle FireLEDene til en farge kan du bruke blokken ``||bitbot.sett alle LED til||``.
 Hent blokken fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken.
 Klikk på den røde firkanten i blokken for å velge en farge, last ned programmet og se hva som skjer med lysene på Bitboten.
 Test en gang til med en annen farge.
 *Dersom lysene ikke tennes kan det være fordi Micro:biten fortsatt er koblet til PCen med USB-kabelen.
-Fjern USB-kabelen og se om det hjelper.*
+Slå av Bitboten, fjern USB-kabelen, slå på Bitboten på nytt og se om det hjelper.*
 
 
 ```blocks
@@ -96,7 +96,7 @@ basic.forever(function () {
 
 ### Steg 6
 
-Du kan justere lysstyrken på NeoPixlene med blokken ``||bitbot.sett LED lysstyrke til 40||``.
+Du kan justere lysstyrken på FireLEDene med blokken ``||bitbot.sett LED lysstyrke til 40||``.
 Blokken kan også brukes dersom lysene av en eller annen grunn ikke slår seg på av seg selv når du kjører programmet ditt.
 Klikk på **"40"** og juster lysstyrken med slideren.
 Høyeste lysstyrkeverdi er **255**.
@@ -104,7 +104,7 @@ Er verdien **0** vil NeoPixlene være slukket.
 Hent blokken ``||bitbot.sett LED lysstyrke til 40||`` fra ``||bitbot.Bitbot/Lys||`` og sett den inn i ``||basic.ved start||``-blokken, under ``||bitbot.sett LED til regnbue||``.
 Test ut programmet ved å endre litt på lysstyrken et par-tre ganger, og last programmet ned til Micro:Biten etter hver endring.
 Velg en lysstyrke du synes er passe før du går videre.
-(PS: Høyere lysstyrke tapper batteriene til Bitboten raskere. NeoPixler krever en del strøm.)
+(PS: Høyere lysstyrke tapper batteriene til Bitboten raskere. FireLEDene krever en del strøm.)
 
 ```blocks
 bitbot.ledRainbow()
@@ -123,6 +123,41 @@ basic.forever(function () {
     basic.pause(100)
 })
 ```
+
+### Hvordan flytt LED virker
+
+Som du så forsvinner lysene ut av rekken etter hvert når man bruker ``||bitbot.flytt LED||`` i en ``||basic.gjenta for alltid||``-blokk.
+``||bitbot.flytt LED||``-kommandoen flytter hvert lys én plass oppover i LED-rekken én gang hver gang den utføres.
+Når kommandoen står en ``||basic.gjenta for alltid||``-blokk flyttes alle lysene oppover i rekken helt til alle lysene forsvinner ut av rekken.
+Denne funksjonen kan brukes når du vil at alle lysene gradvis skal bli borte, for eksempel for å vise tiden i en nedtelling, eller antall liv som gjenstår i en robotkamp.
+
+### Steg 8
+
+En måte å bruke denne kommandoen på er å flytte den inn i en løkke som gjentas et bestemt antall ganger.
+Om ``||bitbot.flytt LED||``-blokken plasseres i en løkke som gjentas 12 ganger, forsvinner alle lysene akkurat ut av rekken når løkken er ferdig med gjentagelsene stopper.
+Hent en ``||loops.gjenta 4 ganger||``-blokk fra ``||loops.Løkker||``-menyen og sett den inn i ``||basic.gjenta for alltid||``-blokken over de andre blokkene som allerede ligger der.
+Dra de andre blokkene i ``||basic.gjenta for alltid||``-blokken inn i ``||loops.gjenta 4 ganger||``-blokken.
+
+```blocks
+basic.forever(function () {
+    for (let index = 0; index < 4; index++) {
+        bitbot.ledShift()
+        basic.pause(100)
+    }
+})
+```
+
+### Steg 9
+
+Endre **4** til **12** i ``||loops.gjenta 4 ganger||``-blokken.
+Hent en ``||bitbot.sett LED til regnbue||``-blokk fra ``||bitbot.Bitbot/Lys||``-menyen og legg den inn i ``||basic.gjenta for alltid||``-blokken over ``||loops.gjenta 12 ganger||``-blokken.
+Last ned programmet, koble fra USB-kabelen, slå på Bitboten og se hva som skjer.
+
+### Hvordan den siste koden virker @unplugged
+
+Ved å legge ``||bitbot.flytt LED||``-blokken inn i en ``||loops.gjenta 12 ganger||``-blokk sørger du for at kommandoen gjentas akkurat nok ganger til at alle lysene slukker.
+Når du plasserer ``||bitbot.sett LED til regnbue||``-blokken utenfor ``||loops.gjenta 12 ganger||``-blokken men inne i ``||basic.gjenta for alltid||``-blokken, vil regnbuen tennes på nytt hver gang alle lysene er slukket. 
+Det gir en litt annerledes animasjon enn ``||bitbot.roter LED||``.
 
 ### Avslutning @unplugged
 

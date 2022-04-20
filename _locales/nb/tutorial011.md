@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 11: Radiostyring del 2: Mottageren
+# Superbit Kodeøkt 5: Radiostyring del 2: Mottageren
 ## Bruk radiosignaler til å fjernstyre en Bitbot
 ### Introduksjon @unplugged
 

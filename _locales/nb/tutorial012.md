@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 12: Servoer del 1
+# Superbit - Kodeøkt 11: Enkel bruk av servo
 ## Bruk servoer til å lage bevegelse
 ### Introduksjon @unplugged
 

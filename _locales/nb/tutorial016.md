@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 16: Koble elektronikk til Micro:Biten, del 3 Høyttaler
+# Superbit Kodeøkt 12: Micro:Bit med buzzer
 ## Spill musikk med Micro:Bit
 ### Introduksjon @unplugged
 
