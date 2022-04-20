@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 15: Servoer del 4
+# Superbit - Kodeøkt 19: Bom med avstandssensor
 ## Lag en bom som styres av en avstandssensor
 ### Introduksjon @unplugged
 

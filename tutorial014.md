@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 14: Servoer del 3
+# Superbit - Kodeøkt 18: Mottaker til radiostyrt servo
 ## Bruk servoer til å lage radiostyrt bevegelse - mottager
 ### Introduksjon @unplugged
 

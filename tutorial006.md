@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit del 6: Koble elektronikk til Micro:Biten, del 2 Neopixel
+# Superbit - Kodeøkt 16: Koble Neopixel-stripen til Micro:Bit
 ## Introduksjon
 ### Introduksjon @unplugged
 

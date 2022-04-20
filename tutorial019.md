@@ -1,17 +1,17 @@
 ### @activities true
 
-# Superbit del 19: Bitbotens NeoPixler
+# Superbit - Kodeøkt 10: Bitbotens FireLEDs
 ## Bruk de innebygde lysene på Bitboten
 ### Introduksjon @unplugged
 
 Bitboten har to "horn" på sidene.
-På hvert av disse sidene sitter det 6 NeoPixler som kan styres ved hjelp av kode.
-I denne økten lærer du hvordan du kontrollerer NeoPixlene på Bitboten ved hjelp av et program.
+På hvert av disse sidene sitter det 6 FireLEDs, ofte kalt NeoPixler, som kan styres ved hjelp av kode.
+I denne økten lærer du hvordan du kontrollerer FireLEDene på Bitboten ved hjelp av et program.
 
 ### Steg 1
 
-Alle blokkene du trenger for å styre NeoPixlene på Bitboten finner du i menyen ``||bitbot.Bitbot/Lys||``.
-For å sette alle NeoPixlene (på Bitbot kalles de også Fireleds) til en farge kan du bruke blokken ``||bitbot.sett alle LED til||``.
+Alle blokkene du trenger for å styre FireLEDene på Bitboten finner du i menyen ``||bitbot.Bitbot/Lys||``.
+For å sette alle FireLEDene til en farge kan du bruke blokken ``||bitbot.sett alle LED til||``.
 Hent blokken fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken.
 Klikk på den røde firkanten i blokken for å velge en farge, last ned programmet og se hva som skjer med lysene på Bitboten.
 Test en gang til med en annen farge.
@@ -96,7 +96,7 @@ basic.forever(function () {
 
 ### Steg 6
 
-Du kan justere lysstyrken på NeoPixlene med blokken ``||bitbot.sett LED lysstyrke til 40||``.
+Du kan justere lysstyrken på FireLEDene med blokken ``||bitbot.sett LED lysstyrke til 40||``.
 Blokken kan også brukes dersom lysene av en eller annen grunn ikke slår seg på av seg selv når du kjører programmet ditt.
 Klikk på **"40"** og juster lysstyrken med slideren.
 Høyeste lysstyrkeverdi er **255**.
@@ -104,7 +104,7 @@ Er verdien **0** vil NeoPixlene være slukket.
 Hent blokken ``||bitbot.sett LED lysstyrke til 40||`` fra ``||bitbot.Bitbot/Lys||`` og sett den inn i ``||basic.ved start||``-blokken, under ``||bitbot.sett LED til regnbue||``.
 Test ut programmet ved å endre litt på lysstyrken et par-tre ganger, og last programmet ned til Micro:Biten etter hver endring.
 Velg en lysstyrke du synes er passe før du går videre.
-(PS: Høyere lysstyrke tapper batteriene til Bitboten raskere. NeoPixler krever en del strøm.)
+(PS: Høyere lysstyrke tapper batteriene til Bitboten raskere. FireLEDene krever en del strøm.)
 
 ```blocks
 bitbot.ledRainbow()
