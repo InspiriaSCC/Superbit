@@ -66,7 +66,6 @@ radio.onReceivedString(function (receivedNumber) {
 Du trenger en slik sjekk for alle 4 retninger, så du kan like godt kopiere denne blokken og legge den inn i tilsammen 4 heksagoner i ``||logic.hvis sann så ellers||``-blokken.
 Utvid ``||logic.hvis sann så ellers||``-blokken ved å trykke på det lille "+"-tegnet nederst til venstre i blokken 3 ganger.
 Kopier ``||logic.0 = 0||``-blokken fra det øverste heksagonet i ``||logic.hvis sann så ellers||``-blokken 3 ganger og legg en kopi i hert av de andre heksagonene.
-Trykk på det lille "-"-tegnet til høyre i den nest nederste armen i ``||logic.hvis sann så ellers||``-blokken for å lukke gapet du ikke trenger.
 
 ```blocks
 radio.onReceivedString(function (receivedNumber) {
@@ -79,6 +78,8 @@ radio.onReceivedString(function (receivedNumber) {
     	
     } else if (0 == 0) {
     	
+    } else {
+    
     }
 })
 ```
@@ -99,6 +100,8 @@ radio.onReceivedNumber(function (receivedNumber) {
     	
     } else if (receivedNumber == 0) {
     	
+    } else {
+    
     }
 })
 ```
@@ -118,6 +121,8 @@ radio.onReceivedNumber(function (receivedNumber) {
     	
     } else if (receivedNumber == 4) {
     	
+    } else {
+    
     }
 })```
 
@@ -131,83 +136,113 @@ Du vil i alle fall merke om det er feil i koden når du begynner å kjøre robot
 
 ### Steg 7
 
-Hent en ``||bitbot.kjør framover med fart 60 %||`` fra ``||bitbot.Bitbot/Kjøring||``-menyen og dra den inn i det øverste gapet i `||logic.hvis sann så ellers||``-blokken.
+Hent en ``||bitbot.kjør framover med fart 60 % i 400 millisekund||`` fra ``||bitbot.Bitbot/Kjøring||``-menyen, dra den inn i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken og endre 400 til 50.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
         // @highlight
-        bitbot.go(BBDirection.Forward, 60)
+        bitbot.goms(BBDirection.Forward, 60, 50)
     } else if (receivedNumber == 2) {
     	
     } else if (receivedNumber == 3) {
     	
     } else if (receivedNumber == 4) {
     	
+    } else {
+    
     }
 })
 ```
 
 ### Steg 8
 
-Kopier ``||bitbot.kjør framover med fart 60 %||``-blokken og legg den inn i det neste ledige gapet.
-Endre ``||bitbot.framover||`` til ``||bitbot.framover||``.
+Kopier ``||bitbot.kjør framover med fart 60 % i 50 millisekund||``-blokken og legg den inn i det neste ledige gapet.
+Endre ``||bitbot.framover||`` til ``||bitbot.bakover||``.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
-        bitbot.go(BBDirection.Forward, 60)
+        bitbot.goms(BBDirection.Forward, 60, 50)
     } else if (receivedNumber == 2) {
         // @highlight
-        bitbot.go(BBDirection.Reverse, 60)
+        bitbot.goms(BBDirection.Reverse, 60, 50)
     } else if (receivedNumber == 3) {
     	
     } else if (receivedNumber == 4) {
     	
+    } else {
+    
     }
 })
 ```
 
 ### Steg 9
 
-Hent en ``||bitbot.snu til venstre med fart 60 %||`` fra ``||bitbot.Bitbot/Kjøring||``-menyen og dra den inn i det neste ledige gapet i `||logic.hvis sann så ellers||``-blokken.
+Hent en ``||bitbot.snu til venstre med fart 60 % i 400 millisekund||`` fra ``||bitbot.Bitbot/Kjøring||``-menyen, dra den inn i det neste ledige gapet i `||logic.hvis sann så ellers||``-blokken og endre 400 til 20.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
-        bitbot.go(BBDirection.Forward, 60)
+        bitbot.goms(BBDirection.Forward, 60, 50)
     } else if (receivedNumber == 2) {
-        bitbot.go(BBDirection.Reverse, 60)
+        bitbot.goms(BBDirection.Reverse, 60, 50)
     } else if (receivedNumber == 3) {
         // @highlight
-        bitbot.rotate(BBRobotDirection.Left, 60)
+        bitbot.rotatems(BBRobotDirection.Left, 60, 20)
     } else if (receivedNumber == 4) {
     	
+    } else {
+    
     }
 })
 ```
 
 ### Steg 10
 
-Kopier ``||bitbot.snu til venstre med fart 60 %||``-blokken og legg den inn i det siste ledige gapet.
+Kopier ``||bitbot.snu til venstre med fart 60 % i 20 millisekund||``-blokken og legg den inn i det siste ledige gapet.
 Endre ``||bitbot.venstre||`` til ``||bitbot.høyre||``.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
-        bitbot.go(BBDirection.Forward, 60)
+        bitbot.goms(BBDirection.Forward, 60, 50)
     } else if (receivedNumber == 2) {
-        bitbot.go(BBDirection.Reverse, 60)
+        bitbot.goms(BBDirection.Reverse, 60, 50)
     } else if (receivedNumber == 3) {
-        bitbot.rotate(BBRobotDirection.Left, 60)
+        bitbot.rotatems(BBRobotDirection.Left, 60, 20)
     } else if (receivedNumber == 4) {
         // @highlight
-        bitbot.rotate(BBRobotDirection.Right, 60)
+        bitbot.rotatems(BBRobotDirection.Right, 60, 20)
+    } else {
+    
     }
 })
 ```
 
 ### Steg 11
+
+I det siste gapet i ``||logic.hvis-så-ellers||``-blokken plasserer du en ``||bitbot.stopp med bråstopp||``-blokk fra ``||bitbot.Bitbot/Kjøring||``-menyen.
+Den får Bitboten til å stoppe opp når fjernkontrollen holdes horisontalt.
+
+```blocks
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 1) {
+        bitbot.goms(BBDirection.Forward, 60, 50)
+    } else if (receivedNumber == 2) {
+        bitbot.goms(BBDirection.Forward, 60, 50)
+    } else if (receivedNumber == 3) {
+        bitbot.rotatems(BBRobotDirection.Right, 60, 20)
+    } else if (receivedNumber == 4) {
+        bitbot.rotatems(BBRobotDirection.Left, 60, 20)
+    } else {
+        bitbot.stop(BBStopMode.Coast)
+    }
+})
+```
+
+
+### Steg 12
 
 Om du vil kan du legge til et smilefjes eller et annet bilde i ``||basic.ved start||``-blokken, slik at du kan se at koden din kjører.
 Erfaringen viser at dersom man bruker flere lysfunksjoner på den fjernstyrte roboten, som NeoPixler eller liknende, kan roboten bli litt treg i responsen.
