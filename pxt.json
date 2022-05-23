@@ -72,7 +72,8 @@
         "_locales/nb/tutorial016.md",
         "_locales/nb/tutorial017.md",
         "_locales/nb/tutorial018.md",
-        "_locales/nb/tutorial019.md"
+        "_locales/nb/tutorial019.md",
+        "tutorial-info-cache.json"
     ],
     "testFiles": [
         "test.ts"
