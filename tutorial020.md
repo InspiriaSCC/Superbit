@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit - Kodeøkt 7: Avansert terning
+# super:bit - Kodeøkt 7: Avansert terning
 ## Lag en terning som viser øyne
 ### Introduksjon @unplugged
 
@@ -63,7 +63,7 @@ input.onGesture(Gesture.Shake, function () {
 Denne delen er litt lengre enn de forrige.
 Nå skal du bruke noen av de viktigste algoritmene i programmering til å lage et ordentlig program.
 Først må du fjerne blokken ``||basic.vis tall||``fra programmet ditt. Kast den i papirkurven.
-Nå trenger du en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen.
+Så trenger du en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen.
 Dra den inn i ``||input.når ristes||``-blokken og plasser den **under** ``||variables.sett terningkast til||``-blokken.
 
 ```blocks

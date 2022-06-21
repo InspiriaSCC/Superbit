@@ -1,11 +1,11 @@
 ### @activities true
 
-# Superbit - Kodeøkt 9: Hvordan bruke linjesensoren til Bitbot
+# super:bit - Kodeøkt 9: Hvordan bruke linjesensoren til Bit:Bot
 ## Linjesensoren til Bitbot
 ### Introduksjon @unplugged
 
-På undersiden av Bitboten, på hver sin side rett bak stålkula framme i snuten, sitter det fire små, svarte knotter.
-Dette er linjesensoren til Bitboten.
+På undersiden av Bit:Boten, på hver sin side rett bak stålkula framme i snuten, sitter det fire små, svarte knotter.
+Dette er linjesensoren til Bit:Boten.
 Linjesensoren er en lyssensor som leser kontraster i underlaget, og den kan brukes til å få roboten til å følge en linje.
 I denne gjennomgangen lærer du hvordan du bruker linjesensoren.
 
@@ -119,8 +119,8 @@ basic.forever(function () {
 
 Når ingen av sensorene ser den svarte stripa, betyr det at roboten er midt over den.
 Da vil vi at roboten skal kjøre rett framover, så i det siste gapet plasserer du en ``||bitbot.kjør framover med fart 60 %||``-blokk fra ``||bitbot.Bitbot/Kjøring||``-menyen.
-Etter dette kan du laste ned koden til Micro:Biten og teste koden i Bitboten.
-Om Bitboten sporer av linjen ofte, kan det hende deet lønner seg å sette ned farten på både framoverkjøring og svinging.
+Etter dette kan du laste ned koden til Micro:Biten og teste koden i Bit:Boten.
+Om Bit:Boten sporer av linjen ofte, kan det hende deet lønner seg å sette ned farten på både framoverkjøring og svinging.
 
 ```blocks
 basic.forever(function () {
@@ -137,16 +137,16 @@ basic.forever(function () {
 ### Retningsvisere @unplugged
 
 Som en tydelig visuell kontroll på at linjesensorene gjør det de skal, kan du legge til retningsvisere på roboten.
-Bitboten har til sammen 12 NeoPixler på de to hornene på siden, 6 på hvert horn.
-NeoPixler er programmerbare RGB-LEDs, og Bitbotens NeoPixler er nummerert 0-12.
-NeoPixel nummer 5 (venstre side) og 11 (høyre side) er de to fremste av dem.
+Bit:Boten har til sammen 12 FireLEDs på de to hornene på siden, 6 på hvert horn.
+FireLEDs, eller NeoPixler som de ofte kalles, er programmerbare RGB-LEDs, og Bit:Botens FireLEDs er nummerert 0-12.
+FireLED nummer 5 (venstre side) og 11 (høyre side) er de to fremste av dem.
 Disse to er fine å bruke som retningsvisere eller indikatorer på at linjesensorene sender signal.
-I det neste steget lærer du å lage retningsvisere på Bitboten.
+I det neste steget lærer du å lage retningsvisere på Bit:Boten.
 
 ### Steg 8
 
 Hent blokken ``||bitbot.sett LED nr 0 til [rød]||`` fra menyen ``||bitbot.Bitbot/Lys||`` og plasser den over ``||bitbot.snu til venstre med fart 60 %||``-blokken i det øverste gapet på ``||logic.hvis sann så ellers||``-blokken.
-Endre "0" til "5", siden NeoPixel nummer 5 sitter fremst på venstre horn, og Bitboten skal svinge til venstre.
+Endre "0" til "5", siden FireLED nummer 5 sitter fremst på venstre horn, og Bit:Boten skal svinge til venstre.
 Du kan godt la fargen være rød, som er standardfargen for blokken.
 
 ```blocks
@@ -164,7 +164,7 @@ basic.forever(function () {
 
 ### Steg 9
 Kopier blokken ``||bitbot.sett LED nr 5 til [rød]||`` og plasser kopien rett under originalen.
-Endre "5" til "11" og rød til svart.
+Endre "5" til "11" og rød til svart. Dette sørger for at LED nummer 11 slukker.
 
 ```blocks
 basic.forever(function () {
@@ -221,7 +221,7 @@ basic.forever(function () {
 ```
 
 ### Steg 12
-Til slutt kan du la begge NeoPixlene lyse grønt nå Bitboten kjører rett fram.
+Til slutt kan du la begge FireLEDene lyse grønt nå Bit:Boten kjører rett fram.
 Kopier blokkene ``||bitbot.sett LED nr 5 til [svart]||`` og ``||bitbot.sett LED nr 11 til [rød]||`` og plasser kopiene over blokken ``||bitbot.kjør framover med fart 60 %||`` i det siste gapet.
 Endre blokkene så de viser ``||bitbot.sett LED nr 5 til [grønn]||`` og ``||bitbot.sett LED nr 11 til [grønn]||``
 

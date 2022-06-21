@@ -1,6 +1,6 @@
 ### @activities true
 
-# super:bit - Kodeøkt 1: Bli kjent med Micro:Bit og MakeCode
+# super:bit - Kodeøkt 1: Bruk displayet
 ## Introduksjon
 ### Introduksjon @unplugged
 MakeCode-miljøet består av tre deler: Til venstre ser du en Micro:Bit-simulator som viser hva koden din gjør med Micro:Biten.

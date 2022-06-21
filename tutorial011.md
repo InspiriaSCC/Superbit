@@ -1,11 +1,11 @@
 ### @activities true
 
-# Superbit Kodeøkt 5: Radiostyring del 2: Mottageren
-## Bruk radiosignaler til å fjernstyre en Bitbot
+# super:bit Kodeøkt 5: Radiomottager
+## Bruk radiosignaler til å fjernstyre en Bit:Bot
 ### Introduksjon @unplugged
 
-Forrige gjennomgang tok for seg hvordan man lager en radiosender som kan styre en Bitbot.
-Nå skal du lage mottageren som skal stå i Bitboten og ta imot signaler fra senderen.
+Forrige gjennomgang tok for seg hvordan man lager en radiosender som kan styre en Bit:Bot.
+Nå skal du lage mottageren som skal stå i Bit:Boten og ta imot signaler fra senderen.
 Legg radiosenderen på et trygt sted eller merk den med litt tape så den ikke blir brukt til noe annet i mellomtiden.
 Til mottageren trenger du en ny Micro:Bit.
 Så fort du har en klar, kan du gå videre.
@@ -128,9 +128,9 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 ### Tallkodene @unplugged
 
-Før du legger inn bevegelsene Bitboten skal gjøre for hver mottatte tallkode, kan det være lurt å sjekke tallene i programmet til senderen.
+Før du legger inn bevegelsene Bit:Boten skal gjøre for hver mottatte tallkode, kan det være lurt å sjekke tallene i programmet til senderen.
 Om du fulgte instruksjonene til senderen til punkt og prikke, skal tallene i denne gjennomgangen stemme.
-Målet er at når man tilter senderen framover går roboten framover, tilt bakover fører til at roboten rygger, tilt til venstre får roboten til å svinge til venstre og tilt til høyre får roboten til å svinge til høyre.
+Målet er at når man vipper senderen framover går roboten framover, vipp bakover fører til at roboten rygger, tvipp til venstre får roboten til å svinge til venstre og vipp til høyre får roboten til å svinge til høyre.
 Om du har brukt andre tall i koden til senderen, bør du sjekke at tallene i sender og mottager stemmer overens.
 Du vil i alle fall merke om det er feil i koden når du begynner å kjøre roboten.
 
@@ -223,7 +223,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 ### Steg 11
 
 I det siste gapet i ``||logic.hvis-så-ellers||``-blokken plasserer du en ``||bitbot.stopp med bråstopp||``-blokk fra ``||bitbot.Bitbot/Kjøring||``-menyen.
-Den får Bitboten til å stoppe opp når fjernkontrollen holdes horisontalt.
+Den får Bit:Boten til å stoppe opp når fjernkontrollen holdes horisontalt.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
@@ -245,8 +245,8 @@ radio.onReceivedNumber(function (receivedNumber) {
 ### Steg 12
 
 Om du vil kan du legge til et smilefjes eller et annet bilde i ``||basic.ved start||``-blokken, slik at du kan se at koden din kjører.
-Erfaringen viser at dersom man bruker flere lysfunksjoner på den fjernstyrte roboten, som NeoPixler eller liknende, kan roboten bli litt treg i responsen.
-Dersom du prøver å legge til retningsvisere eller liknende ved hjelp av NeoPixlene på Bitboten og den blir vanskelig å styre, vet du nå hva det kan skyldes.
+Erfaringen viser at dersom man bruker flere lysfunksjoner på den fjernstyrte roboten, som FireLEDs eller liknende, kan roboten bli litt treg i responsen.
+Dersom du prøver å legge til retningsvisere eller liknende ved hjelp av FireLEDene på Bit:Boten og den blir vanskelig å styre, vet du nå hva det kan skyldes.
 
 ```blocks
 radio.setGroup(1)
@@ -262,7 +262,7 @@ basic.showLeds(`
 
 ### Avslutning @unplugged
 
-Det var alt! Nå er mottageren ferdig. Om tallkodene i sender og mottager stemmer overens skal du nå kunne styre roboten ved å tilte på senderen.
+Det var alt! Nå er mottageren ferdig. Om tallkodene i sender og mottager stemmer overens skal du nå kunne styre roboten ved å vippe på senderen.
 Husk å koble en batteripakke til senderen eller koble den til en PC med USB-kabel før du tester roboten.
 Senderen må ha strøm for å virke.
 

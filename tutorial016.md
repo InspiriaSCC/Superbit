@@ -1,12 +1,12 @@
 ### @activities true
 
-# Superbit Kodeøkt 12: Micro:Bit med buzzer
+# super:bit Kodeøkt 12: Micro:Bit med buzzer
 ## Spill musikk med Micro:Bit
 ### Introduksjon @unplugged
 
 Micro:Biten kan spille små melodier om du kobler til en høyttaler eller en modulerbar buzzer.
 Høyttalere og buzzere kobles alltid mellom pin 0 og GND nå man skal bruke musikkfunksjonen i MakeCode.
-I esken som fulgte med Superbit er det en pose med 5 modulerbare buzzere.
+I esken som fulgte med super:bit er det en pose med 5 modulerbare buzzere.
 Buzzerne har polaritet, det vil si at de har en pluss- og en minuspol, og at de bare fungerer om de kobles riktig vei.
 Plusspolen er det lengste beinet på buzzeren, og har et ***"+"***-tegn printet over seg på det svarte plastdekslet.
 Plusspolen skal kobles til pin 0 på Micro:Biten.

@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit - Kodeøkt 16: Koble Neopixel-stripen til Micro:Bit
+# super:bit - Kodeøkt 16: Koble Neopixel-stripen til Micro:Bit
 ## Introduksjon
 ### Introduksjon @unplugged
 
@@ -337,7 +337,7 @@ basic.forever(function () {
 
 ### Steg 16 Bruke neopixel med krokodilleklemmer 16
 
-Hent en oval ``||input.akselerasjon (mG) X||``-blokk fra ``||input.Inndata||``-menyen og plasser den i det hvite feltet der det står 0 i ``||input.akselerasjon (mG) X||``-blokken.
+Hent en oval ``||input.akselerasjon (mG) X||``-blokk fra ``||input.Inndata||``-menyen og plasser den i det hvite feltet der det står 0 i ``||neopixel.strip show bargraph of 0 up to 255||``-blokken.
 
 ```blocks
 let strip = neopixel.create(DigitalPin.P2, input.acceleration(Dimension.X), NeoPixelMode.RGB)

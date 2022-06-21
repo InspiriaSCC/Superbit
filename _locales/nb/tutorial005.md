@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit - Kodeøkt 15: Koble LED-pærer til Micro:Bit
+# super:bit - Kodeøkt 15: Koble LED-pærer til Micro:Bit
 ## Introduksjon
 ### Introduksjon @unplugged
 

@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit - kodeøkt 14: Micro:Bitens lyssensor
+# super:bit - kodeøkt 14: Micro:Bitens lyssensor
 ## Lag et automatisk nattlys med Micro:Bit
 ### Introduksjon @unplugged
 

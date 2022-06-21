@@ -1,7 +1,7 @@
 ### @activities true
 
-# Superbit - Kodeøkt 4: Radiostyring del 1: Senderen
-## Bruk radiosignaler til å fjernstyre en Bitbot
+# super:bit - Kodeøkt 4: Radiosender
+## Bruk radiosignaler til å fjernstyre en Bit:Bot
 ### Introduksjon @unplugged
 
 Gjennomgangen om radiostyring må gjøres i to deler.

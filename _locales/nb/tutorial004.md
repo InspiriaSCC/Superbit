@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit - Ekstra kodeøkt: Lag et spill - Funksjoner og spillblokker
+# super:bit - Ekstra kodeøkt: Lag et spill - Funksjoner og spillblokker
 ## Introduksjon
 ### Introduksjon @unplugged
 

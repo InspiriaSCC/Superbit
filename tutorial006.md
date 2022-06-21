@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit - Kodeøkt 16: Koble Neopixel-stripen til Micro:Bit
+# super:bit - Kodeøkt 16: Koble Neopixel-stripen til Micro:Bit
 ## Introduksjon
 ### Introduksjon @unplugged
 
