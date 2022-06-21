@@ -6,15 +6,10 @@
 
 Lær hvordan du får BitBoten til å kjøre
 
-### Steg 1
+### Steg 1 @unplugged
 
-Aller først må du fortelle programmet hvilken versjon av BitBot du har.
-Hent en ``||Bitbot.velg BitBot modell||``-blokk fra ``||Bitbot.BitBot/BitBot modell||`` menyen og dra den inn i gapet på ``||Basic.on start||``-blokka.
-Sjekk hvilken BitBot du har og velg riktig modell ved å klikke der det står ``||Bitbot.Classic||``.
-
-```blocks
-bitbot.select_model(BBModel.XL)
-```
+Egentlig må blokkene som brukes av Bit:Bot importeres til MakeCode, men siden dette er en såkalt tutorial, er blokkene du trenger allerede hentet inn, så du slipper å importere blokkene til Bit:Bot.
+Når du senere skal bruke Bit:Bot vil du bli nødt til å hente inn blokker ved å hente dem inn fra "Utvidelser" i blokkemenyen.
 
 ### Steg 2
 
@@ -22,7 +17,6 @@ Nå skal du få bilen til å kjøre fremover.
 Hent en ``||Bitbot.kjør framover med fart 60 % i 400 ms||``-blokk fra ``||Bitbot.Bitbot/Kjøring||`` og plasser den under ``||Bitbot.velg BitBot modell||``-blokken.
 
 ```blocks
-bitbot.select_model(BBModel.XL)
 // @highlight
 bitbot.goms(BBDirection.Forward, 60, 400)
 ```
@@ -35,7 +29,6 @@ Test litt forskjellige tider og hastigheter for å få en følelse av hvordan in
 (Blokkene i hintene i denne gjennomgangen gir ingen fasit på hvordan man treffer på 1 meter)
 
 ```blocks
-bitbot.select_model(BBModel.XL)
 // @highlight
 bitbot.goms(BBDirection.Forward, 100, 1000)
 ```
@@ -49,7 +42,6 @@ Endre kun på ett av tallene av gangen.
 Da blir det mye enklere å vurdere hvordan endringen du gjorde påvirket kjørelengden.
 
 ```blocks
-bitbot.select_model(BBModel.XL)
 // @highlight
 bitbot.goms(BBDirection.Forward, 60, 800)
 ```
@@ -63,7 +55,6 @@ Du kan velge om du vil snu roboten mot venstre eller høyre ved å klikke på de
 Rekkefølgen på koden er viktig her. Programmet kjører instruksjonene i samme rekkefølge som blokkene ligger i ``||basic.ved start||``.
 
 ```blocks
-bitbot.select_model(BBModel.XL)
 bitbot.goms(BBDirection.Forward, 60, 400)
 // @highlight
 bitbot.rotatems(BBRobotDirection.Left, 60, 400)
@@ -83,7 +74,6 @@ Nå vet du hvordan du får Bitboten til å kjøre.
 Da er du klar for å lære deg hvordan du bruker sensorene på Bitboten.
 
 ```blocks
-bitbot.select_model(BBModel.XL)
 bitbot.goms(BBDirection.Forward, 60, 400)
 bitbot.rotatems(BBRobotDirection.Left, 60, 400)
 // @highlight
