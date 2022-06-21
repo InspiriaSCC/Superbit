@@ -1,12 +1,12 @@
 ### @activities true
 
-# Superbit - Kodeøkt 1: Bli kjent med Micro:Bit og MakeCode
+# super:bit - Kodeøkt 1: Bli kjent med Micro:Bit og MakeCode
 ## Introduksjon
 ### Introduksjon @unplugged
-MakeCode-miljøet består av tre deler: Til venstre på skjermen ser du en Micro:Bit-simulator som viser hva koden din gjør med Micro:Biten.
-I menyen midt på skjermen ser du en kolonne med fargede kategorier. Her finner du alle blokkene du trenger for å bygge koden din.
-Den store flaten til høyre på skjermen er arbeidsbordet ditt. Her plasserer du blokker fra menyen i midten for å bygge et program som kan kjøres av Micro:Biten.
-Når du flytter en blokk i arbeidsområdet, følger alle blokkene som er festet under blokken også med.
+MakeCode-miljøet består av tre deler: Til venstre ser du en Micro:Bit-simulator som viser hva koden din gjør med Micro:Biten.
+I midten er en kolonne med fargede kategorier. Her er blokkene du trenger for å bygge kode.
+Til høyre finner du arbeidsområdet. Her plasserer du blokker for å bygge programmer til Micro:Biten.
+Når du flytter en blokk i arbeidsområdet, følger blokkene under blokken du flytter også med.
 ***Du kan flytte en enkeltblokk ved å holde inn Ctrl-knappen mens du klikker og drar.***
 La oss varme opp litt lett kode til å begynne med.
 
@@ -16,9 +16,9 @@ Tradisjonen tro starter vi med skrive "Hello world" og får programmet til å vi
 Nå skal vi se på hva du trenger for å bruke displayet til Micro:Biten ved hjelp av MakeCode-blokker.
 
 ### Steg 1: Startblokkene
-De aller fleste av kodeblokkene i MakeCode må legges inn i en startblokk for at koden skal kunne kjøres.
-Når du starter MakeCode vil du alltid se to sånne startblokker på arbeidsbordet ditt. Du trenger ikke å bruke begge.
-Mange blokker vil være grå på skjermen om de legges utenfor en startblokk. Det betyr at de ikke er en del av et program, og at kommandoene i disse blokkene ikke vil utføres.
+De fleste kodeblokkene i MakeCode må legges i en startblokk for at koden skal kjøre.
+Når du starter MakeCode ser du sånne startblokker på arbeidsbordet ditt. Du trenger ikke å bruke begge.
+Mange blokker vil være grå på skjermen om de legges utenfor en startblokk. Det betyr at de ikke er en del av et program, og at kommandoene i disse blokkene ikke utføres.
 
 
 ### Steg 2: Tekst i en uendelig løkke
@@ -37,13 +37,11 @@ basic.forever(function () {
 
 ### Forskjellen på "ved start" og "gjenta for alltid" @unplugged
 
-Når du plasserer blokker inne i ``||Basic.gjenta for alltid||``-blokken vil koden gjentas så lenge Micro:Biten er tilkoblet strøm.
-Som du sikkert la merke til ligger det en blokk til på arbeidsbordet når man starter MakeCode.
-``||Basic.ved start||``-blokken kjører koden som ligger der en gang, og så stopper den.
-Likevel er ``||basic.ved start||`` en svært viktig blokk.
-Det er der du definerer variabler som skal brukes flere steder i programmet (globale variabler), og det er der man som regel setter opp startkriteriene i koden.
-``||Basic.gjenta for alltid||``-løkken er fin dersom du lager litt kode som skal kjøre igjen og igjen, som for eksempel en tekst som skal rulle over displayet gjentatte ganger.
-Variabler og andre kodeblokker som trengs mange steder i programmet plasseres i `||Basic.ved start||``-blokken
+Når du plasserer blokker i en ``||Basic.gjenta for alltid||``-blokk vil koden gjentas så lenge Micro:Biten er på.
+``||Basic.ved start||``-blokken kjører koden som ligger i den en gang, og så stopper den.
+``||basic.ved start||`` er en viktig blokk.
+I den definerer du variabler som skal brukes flere steder i programmet (globale variabler), og der setter du opp startkriteriene i koden.
+``||Basic.gjenta for alltid||``-løkken er fin for kode som skal kjøre igjen og igjen, som for eksempel tekst som skal rulle over displayet gjentatte ganger.
 
 ### Steg 3: Tekst som vises bare én gang
 
@@ -56,8 +54,7 @@ basic.showString("Hello!")
 
 ### Steg 4: Vise tall
 
-Å vise tall er like enkelt som å vise en tekststreng.
-Det er likevel viktig å huske på at MakeCode behandler tall og tekststrenger forskjellig.
+Å vise tall er like enkelt som å vise en tekststreng, men MakeCode behandler tall og tekststrenger forskjellig.
 Før du går videre må du fjerne ``||Basic.vis tekst||`` fra ``||Basic.ved start||``.
 For å vise et tall må du hente blokken ``||basic.vis tall||`` fra ``||basic.Basis||``-menyen.
 Sett blokken inn i ``||basic.ved start||``, skriv inn et tall og last ned programmet til Micro:Biten.
@@ -80,7 +77,7 @@ basic.showIcon(IconNames.Heart)
 ### Steg 6: Lage egne bilder
 
 Fjern ``||basic.vis ikon||``-blokken fra koden din før du går videre.
-I tillegg til ferdige ikoner kan du også tegne dine egne bilder på 5x5 piksler.
+Du kan også tegne dine egne bilder på 5x5 piksler.
 Da bruker du ``||basic.vis skjerm||``-blokken fra ``||basic.Basis||``-menyen.
 Hent den og sett den inn i ``||basic.ved start||``-blokken.
 Hver av de 25 rutene på denne blokken representerer en LED på displayet.
@@ -100,8 +97,8 @@ basic.showLeds(`
 ### Animasjoner @unplugged
 
 Om du vil lage animasjoner på displayet, kan du bruke det du har lært til nå.
-Det eneste du trenger i tillegg er blokken ``||pause (ms)||`` fra ``||basic.Basis||``-menyen.
-Denne blokken brukes for at man skal rekke å oppfatte et bilde i displayet før programmet går videre.
+I tillegg trenger du blokken ``||basic.pause (ms)||`` fra ``||basic.Basis||``-menyen.
+``||basic.pause (ms)||`` brukes for at du skal rekke å oppfatte et bilde i displayet før programmet går videre.
 
 ### Steg 7: Animasjoner
 
@@ -142,7 +139,7 @@ basic.forever(function () {
 
 ### Steg 9: Fullfør animasjonen
 
-Du kan lage animasjonen din så lang du vil, men i eksemplet bruker vi bare noen få bilder.
+Du kan lage animasjonen din så lang du vil.
 Husk å sette en pauseblokk mellom hvert bilde og etter det siste bildet i ``||Basic.gjenta for alltid||``-blokken.
 Du kan kopiere en blokk ved å høyreklikke på den og velge **"Lag kopi"** fra rullegardinmenyen som dukker opp.
 Dette gjør det ofte enklere når du skal foreta små endringer mellom bildene i en animasjon.

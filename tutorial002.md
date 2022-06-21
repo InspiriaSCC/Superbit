@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit - Kodeøkt 2: Terning 
+# super:bit - Kodeøkt 2: Terning 
 ## Introduksjon
 ### Introduksjon @unplugged
 I denne delen lærer du hvordan du får Micro:Bit til å reagere på en handling, eller inndata, som det kalles på kodespråket.
@@ -13,7 +13,7 @@ Når du har lært å vise en tallvariabel i displayet, kan du bruke det til å l
 En inndatafunksjon skal ta seg av hvert terningkast.
 Du kan bruke det innebygde akselerometeret i Micro:Bit til terningkastene.
 Gå til ``||input.Inndata||``-menyen og hent blokken ``||input.når ristes||``.
-Plasser blokken hvor som helst i arbeidsområdet, denne blokkene er også en slags startblokk.
+Denne blokkene er også en slags startblokk.
 Dra den gamle startblokken ut i papirkurven til venstre.
 
 ```blocks
@@ -27,8 +27,8 @@ input.onGesture(Gesture.Shake, function () {
 Det finnes flere måter å gi inndata til Micro:Bit på.
 Micro:Bit har innebygde sensorer for lys og temperatur, digitalt kompass og akselerometer.
 Alle disse kan brukes som inndata.
-Det finnes også to knapper som kan brukes hver for seg eller sammen.
-I tillegg har den radio og en rekke kontakter som kan ta imot elektroniske signaler.
+De to knappene kan brukes hver for seg eller sammen.
+I tillegg har Micro:Bit radio og en kontaktstriper som kan ta imot elektroniske signaler.
 Vi bruker ristefunksjonen her fordi det passer for en terning.
 
 ### Steg 5: Terning uten å lagre variabel
@@ -36,8 +36,8 @@ Fra ``||basic.Basis||``-menyen trenger du nå blokken ``||basic.vis tall||`` som
 Dra den inn i ``||input.når ristes||``-blokken.
 Gå til ``||math.matematikk||``-menyen og hent en ``||math.velg tilfeldig 0 til 10||``-blokk.
 Dra den inn i det hvite feltet i ``||basic.vis tall||``-blokken og endre tallene 0 og 10 til 1 og 6.
-Nå skal Micro:Biten vise et tilfeldig tall fra og med 1 til og med 6 når den ristes.
-Du kan trykke på **"Shake"**-knappen like over B-knappen på høyre side av simulatoren for å sjekke at koden fungerer. 
+Nå vil Micro:Biten vise et tilfeldig tall fra og med 1 til og med 6 når den ristes.
+Du kan trykke på **"Shake"**-knappen like over B-knappen i simulatoren for å sjekke at koden fungerer. 
 Gratulerer! Du har nå laget en terning ved hjelp av to linjer kode!
 Om du vil kan du starte terningkastet ved hjelp av andre typer inndata når du går ut av denne veilederen.
 Kanskje du får til å kaste terning med et knappetrykk?
