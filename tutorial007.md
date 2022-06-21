@@ -8,7 +8,7 @@ Lær hvordan du får BitBoten til å kjøre
 
 ### Steg 1 @unplugged
 
-Egentlig må blokkene som brukes av Bit:Bot importeres til MakeCode, men siden dette er en såkalt tutorial, er blokkene du trenger allerede hentet inn, så du slipper å importere blokkene til Bit:Bot.
+Egentlig må blokkene til Bit:Bot importeres til MakeCode, men siden dette er en såkalt tutorial, er blokkene du trenger allerede hentet inn, så du slipper å importere blokkene til Bit:Bot.
 Når du senere skal bruke Bit:Bot vil du bli nødt til å hente inn blokker ved å hente dem inn fra "Utvidelser" i blokkemenyen.
 
 ### Steg 2
