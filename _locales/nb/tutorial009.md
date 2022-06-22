@@ -1,6 +1,6 @@
 ### @activities true
 
-# super:bit - Kodeøkt 9: Hvordan bruke linjesensoren til Bit:Bot
+# super:bit - Kodeøkt 8: Hvordan bruke linjesensoren til Bit:Bot
 ## Linjesensoren til Bitbot
 ### Introduksjon @unplugged
 
