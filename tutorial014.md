@@ -16,7 +16,7 @@ P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoe
 De to neste parene er merket 5V og GND.
 5V gir 5 volts positiv spenning mot GND, som er jordkontaktene.
 
-### Steg 1
+### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
 Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.
@@ -105,7 +105,7 @@ I dette eksempelet skal bommen være lukket dersom senderen sender tallet 0. Er 
 I den logiske sjekken antar vi at bommen er lukket i utgangspunktet.
 Vi antar også at bommen er lukket når utslaget på servoen er 0 grader, og at bommen er åpen når utslaget på servoen er 90 grader.
 Du blir nødt til å sjekke hvordan servoen og bommen din står når servoen står på 0 og 90 grader etter at du er ferdig med programmeringen av mottageren.
-Juster bommens posisjon ved å løfte den hvite armen forsiktig av tannhjulet på servoen når utslaget er 0 grader, og sett armen og bommen tilbake i riktig posisjon.
+Juster bommens posisjon ved å løfte den hvite armen forsiktig av tannhjulet på servoen når utslaget er 0 grader, og sett så armen og bommen tilbake i riktig posisjon.
 Kontroller så at servoen og bommen slår ut riktig vei når posisjonen er 90 grader.
 
 ### Steg 7

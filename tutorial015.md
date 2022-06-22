@@ -6,16 +6,7 @@
 
 I denne gjennomgangen lærer du å programmere bom som åpnes ved hjelp av en avstandssensor.
 
-### Tilkoblinger @unplugged
-
-Rett foran hjulet på Bit:Botens ventre side finner du to kontakter med 3 pinner.
-Dette er servokontaktene til Bit:Boten.
-Det fremste paret med pinner er merket P1 og P2.
-P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoer.
-De to neste parene er merket 5V og GND.
-5V gir 5 volts positiv spenning mot GND, som er jordkontaktene.
-
-### Steg 1
+### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
 Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.
@@ -32,9 +23,6 @@ Plasser kontakten til servoen på pinnene ved P1 slik at oransje ledning treffer
 Til denne øvelsen trenger du avstandssensoren, eller ultralydsensoren, som den også kalles.
 Den ser nesten ut som to øyne.
 "Øynene" består i dette tilfellet av en høyttaler og en mikrofon og fungerer omtrent som ekkolokasjonen til en flaggermus.
-Høyttaleren sender ut en ultralydpuls som reflekteres tilbake til mikrofonen fra omgivelsene i form av ekko.
-Sensoren måler avstanden til objekter foran seg ved å måle tiden fra pulsen forlater høyttaleren til ekkoet når mikrofonen.
-Avstanden regnes ut ved hjelp av lydhastigheten i luft.
 
 ### Steg 2
 Ultralydsensoren plasseres i kontakten foran på Bit:Boten som vist på bildet.

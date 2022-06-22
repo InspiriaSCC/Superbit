@@ -6,12 +6,6 @@
 
 En servo er en elektrisk motor som styres av datasignaler.
 Det gjør at servoen kan lage veldig presise bevegelser, og derfor brukes de ofte til roboter og andre maskiner som krever høy presisjon.
-Det finnes to hovedkategorier av servoer.
-Den ene servotypen har begrenset utslag, ofte 180 grader.
-Denne typen servo kan ikke brukes til fulle rotasjoner, men brukes der man skal ha en begrenset fram-og-tilbakebevegelse.
-Den andre typen servo kalles gjerne 360-servo.
-360-servoer har ingen begrensning på rotasjonen, og kan gjennomføre et uendelig antall rotasjoner.
-De kan derfor brukes til hjuldrift og andre steder man trenger full rotasjon.
 
 ### Introduksjon 2 @unplugged
 
@@ -30,7 +24,7 @@ P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoe
 De to neste parene er merket 5V og GND.
 5V gir 5 volts positiv spenning mot GND, som er jordkontaktene.
 
-### Steg 1
+### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
 Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.

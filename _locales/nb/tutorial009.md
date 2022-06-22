@@ -138,7 +138,7 @@ basic.forever(function () {
 
 Som en tydelig visuell kontroll på at linjesensorene gjør det de skal, kan du legge til retningsvisere på roboten.
 Bit:Boten har til sammen 12 FireLEDs på de to hornene på siden, 6 på hvert horn.
-FireLEDs, eller NeoPixler som de ofte kalles, er programmerbare RGB-LEDs, og Bit:Botens FireLEDs er nummerert 0-12.
+FireLEDs, eller NeoPixler som de ofte kalles, er programmerbare RGB-LEDs, og Bit:Botens FireLEDs er nummerert 0-11.
 FireLED nummer 5 (venstre side) og 11 (høyre side) er de to fremste av dem.
 Disse to er fine å bruke som retningsvisere eller indikatorer på at linjesensorene sender signal.
 I det neste steget lærer du å lage retningsvisere på Bit:Boten.

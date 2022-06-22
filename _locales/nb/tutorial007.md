@@ -71,7 +71,7 @@ Tips: For å spare tid kan du legge blokkene som kjører Bit:Boten 1 meter rett 
 ### Avrunding @unplugged
 
 Nå vet du hvordan du får Bit:Boten til å kjøre.
-Da er du klar for å lære deg hvordan du bruker sensorene på Bit:Boten.
+Da er du klar for å lære noen litt mer avanserte funksjoner på Bit:Boten.
 
 ```blocks
 bitbot.goms(BBDirection.Forward, 60, 400)

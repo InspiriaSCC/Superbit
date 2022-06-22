@@ -14,7 +14,7 @@ Alle blokkene du trenger for å styre FireLEDene på Bit:Boten finner du i menye
 For å sette alle FireLEDene til en farge kan du bruke blokken ``||bitbot.sett alle LED til||``.
 Hent blokken fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken.
 Klikk på den røde firkanten i blokken for å velge en farge, last ned programmet og se hva som skjer med lysene på Bit:Boten.
-Test en gang til med en annen farge.
+Test med forskjellige farger.
 *Dersom lysene ikke tennes kan det være fordi Micro:biten fortsatt er koblet til PCen med USB-kabelen.
 Slå av Bit:Boten, fjern USB-kabelen, slå på Bit:Boten på nytt og se om det hjelper.*
 
@@ -101,7 +101,6 @@ Klikk på **"40"** og juster lysstyrken med slideren.
 Høyeste lysstyrkeverdi er **255**.
 Er verdien **0** vil NeoPixlene være slukket.
 Hent blokken ``||bitbot.sett LED lysstyrke til 40||`` fra ``||bitbot.Bitbot/Lys||`` og sett den inn i ``||basic.ved start||``-blokken, under ``||bitbot.sett LED til regnbue||``.
-Test ut programmet ved å endre litt på lysstyrken et par-tre ganger, og last programmet ned til Micro:Biten etter hver endring.
 Velg en lysstyrke du synes er passe før du går videre.
 (PS: Høyere lysstyrke tapper batteriene til Bit:Boten raskere. FireLEDene krever en del strøm.)
 

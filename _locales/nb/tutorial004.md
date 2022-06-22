@@ -7,7 +7,7 @@
 Ved hjelp av displayet og inndata kan man lage forskjellige spill til Micro:Bit.
 Alle funksjoner som har med spill å gjøre finner du under **"Avansert"** i blokkemenyen.
 Denne gjennomgangen er ganske lang, den består av 23 småkompliserte steg, så sett av litt god tid.
-Du skal nå lære å programmere spillet som ligger på alle nye Micro:Bits når de startes første gang.
+Du skal nå lage spillet som ligger på alle nye Micro:Bits når de startes første gang.
 Spillet kalles *"Chase the dot"* på engelsk. Fang brikken eller fang pixelen kan man kanskje kalle det på norsk?
 Spillet går ut på å styre en lysende spillebrikke som skal fange en annen brikke som blinker.
 Du må vende på hele Micro:Biten for å få brikken du styrer til å falle ned mot byttet den jakter på.
@@ -27,7 +27,6 @@ let jeger = 0
 
 ### Steg 2 Spillmenyen
 
-Nå trenger du to blokker fra menyen med spillblokker.
 Klikk på **"Avansert"** nederst i blokkmenyen så menyen utvides.
 Klikk på ``||game.Spill||``-menyen som dukker opp og velg blokken ``||game.lag brikke på x: 2 y: 2||``.
 Plasser en slik blokk i det hvite feltet i ``||variables.sett bytte til||``-blokken og en i ``||variables.sett jeger til||``-blokken.
@@ -42,22 +41,27 @@ let jeger = game.createSprite(2, 2)
 
 ### Micro:Bit-displayet og koordinater @unplugged
 
+Variablene er nå spillebrikker på displayet til Micro:Biten
 Displayet til Micro:Bit behandles som et koordinatsystem av programmet.
-Koordinatene går fra 0 til 4, ikke fra 1 til 5, selv om displayet har 5 x 5 pixler.
-I programmering er det vanlig å starte rekker og lister med 0.
-Koordinaten 0,0 er i det ene hjørnet av displayet.
+Koordinatene går fra 0 til 4, ikke fra 1 til 5, selv om displayet har 5 x 5 pixler, siden man gjerne starter rekker og lister med 0 i programmering.
+Positiv x-retning er fra venstre mot høyre.
+Positiv y-retning er litt uvant her.
+Den går fra øverst til nederst, så bevegelse oppover går i negativ y-retning på displayet.
+Koordinaten 0,0 er øverst i venstre hjørne av displayet.
 Koordinatene 2,2 er midt på displayet.
-Positiv x-retning er fra venstre mot høyre. Positiv y-retning er litt uvant her. Den går fra øverst til nederst, så bevegelse oppover går i negativ y-retning på displayet.
+Koordinatene 4,4 er nederst i høyre hjørne av displayet
+
 
 ### Steg 3 Lysstyrke og blinking
 
-For at spilleren skal se forskjell på jeger og bytte, må du hente to ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen.
-klikk på den lille pilen til høyre for ``||variables.sprite||`` på den første blokken og velg ``||variables.bytte||``.
+Hent to ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen.
+Klikk på den lille pilen til høyre for ``||variables.sprite||`` på den første blokken og velg ``||variables.bytte||``.
 Gjør det samme på den andre blokken, men velg ``||variables.jeger||``
 Klikk på den lille pilen til høyre for ``||game.x||`` i ``||game.bytte||``-blokken og velg ``||game.blinke||``.
 Sett tallet bak ``||game.blinke||`` til 3.
 Klikk på den lille pilen til høyre for ``||game.x||`` i ``||game.jeger||``-blokken og velg ``||game.lysstyrke||``.
 Sett tallet bak ``||game.lysstyrke||`` til 5.
+Nå vil brikken til byttet blinke, mens jegeren lyser hele tiden.
 
 ```blocks
 let bytte = game.createSprite(0, 0)
@@ -70,11 +74,14 @@ jeger.set(LedSpriteProperty.Brightness, 5)
 ### Funksjoner @unplugged
 
 I neste trinn skal du lage en funksjon.
-En funksjon er kode som kan hentes av programmet når programmet trenger den.
+En funksjon er kode som kan gjenbrukes der det trengs.
 Funksjoner bruker vi når vi trenger å kjøre den samme koden flere forskjellige steder i et program, så vi slipper å skrive den samme koden mange ganger.
-Funksjoner kan minne om løkker, men mens løkker kjører koden flere ganger rett etter hverandre, kan en funksjon kjøre koden en gang og la programmet gå videre.
+Funksjoner minner om løkker, men mens løkker kjører koden flere ganger rett etter hverandre, kan en funksjon kjøre koden en gang og la programmet gå videre.
 Neste gang programmet trenger funksjonen, kan du hente den inn igjen.
 Å hente inn en funksjon kalles vanligvis å *kalle* på den.
+
+### Navn på variabler og funksjoner @unplugged
+
 Ofte gir man funksjoner, akkurat som variabler, liten førstebokstav.
 Om en funksjon eller variabel er satt sammen av flere ord, bruker man gjerne stor førstebokstav i hvert ord bortsett fra på det første ordet.
 
@@ -92,10 +99,14 @@ function nyRunde () {
 }
 ```
 
-### Steg 5 Sett inn kode i funksjonen
+### Ny runde @unplugged
 
 Når spilleren klarer å fange byttet starter en ny runde.
 Da skal et nytt bytte dukke opp et tilfeldig sted på skjermen.
+Nå skal du lage funksjonen som starter en ny runde.
+
+### Steg 5 Sett inn kode i funksjonen
+
 Hent to nye ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen og bytt ut ``||variables.sprite||`` med ``||variables.bytte||`` i begge.
 Endre ``||game.x||`` til ``||game.y||`` i den **ene** av blokkene.
 Hent en ``||math.velg tilfeldig 0 til 10||``-blokk fra ``||math.Matematikk||``-menyen og plasser den i det hvite feltet etter ``||game.x||`` i den ene blokken.
@@ -111,9 +122,9 @@ function nyRunde () {
 }
 ```
 
-### Om tiltsensoren til Micro:Bit @unplugged
+### Om akselerometeret til Micro:Bit @unplugged
 
-Tiltsensoren til Micro:Bit kan være litt varierende sensitiv, slik at man enten ikke får jegeren til å bevege på seg, eller så beveger den seg plutselig alt for fort.
+Akselerometeret til Micro:Bit kan være litt varierende sensitivt, slik at man enten ikke får jegeren til å bevege på seg, eller så beveger den seg plutselig alt for fort.
 For å gjøre spillet enklere skal vi gjøre det sånn at byttet alltid dukker opp inntil kanten av displayet.
 Da blir det lettere for spilleren å fange byttet.
 For å få byttet til å dukke opp inntil kanten av displayet skal vi bruke en logisk løkke.
@@ -122,7 +133,7 @@ Om byttet ikke ligger inntil kanten, kjøres "nyRunde"-funksjonen på nytt, helt
 
 ### Steg 6 Begrens hvor byttet kan dukke opp
 
-Hent en ``||logic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.nyRunde||``-blokken under de forrige blokkene du la inn der.
+Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.nyRunde||``-blokken under de forrige blokkene du la inn der.
 Hent en liten heksagonal ``||logic.ikke||`` blokk fra ``||logic.Logikk||``-menyen og plasser den i heksagonet på ``||basic.hvis sann så||``-blokken.
 Hent en heksagonal ``||variables.sprite||`` ``||game.berører kant?||``-blokk fra ``||game.Spill||``-menyen og plasser den inni ``||logic.ikke||`` blokken.
 Klikk på den lille hvite pilen til høyre for ``||variables.sprite||`` og velg ``||variables.bytte||`` slik at det står``||logic.hvis ikke||`` ``||variables.bytte||`` ``||game.berører kant?||`` i blokken.
@@ -149,7 +160,7 @@ Den siste blokken du trenger i startkoden din er en nedtellingsblokk, slik at ik
 Hent en ``||game.start nedtelling 10000 ms||``-blok fra ``||game.Spill||``-menyen og plasser den under ``||functions.kjør nyRunde||``-blokken i ``||basic.ved start||``.
 Nedtellingsblokken legger automatisk til en animasjon i starten og en "GAME OVER - SCORE" tekst i slutten av spillet.
 Nå har du plassert all koden du trenger i startblokken.
-Nå skal vi få jegeren til å bevege seg når Micro:Biten tiltes.
+Nå skal vi få jegeren til å bevege seg når Micro:Biten vippes.
 
 ```blocks
 function nyRunde () {
@@ -283,9 +294,6 @@ Kopier ``||input.er helning venstre bevegelse||``-blokken fra den øverste armen
 Endre ``||input.helning venstre||`` til ``||input.logo ned||``
 Kopier ``||game.jeger endre x med -1||``-blokken og plasser kopien i gapet under heksagonet du nettopp redigerte.
 Endre ``||game.x||`` til ``||game.y||``
-Positiv y-retning er faktisk nedover på displayet, så når vi heller på Micro:biten så logoen står opp ned, vil jegeren bevege seg i negativ y-retning.
-Dette kan virke litt baklengs sammenliknet med det elevene lærer om kartesiske koordinatsystemer i mattetimene, men sånn er altså LED-matrisen definert.
-Her kan kanskje et læringspunkt være at koordinatsystemer kan defineres på flere måter.
 
 ```blocks
 let jeger: game.LedSprite = null
@@ -303,6 +311,12 @@ basic.forever(function () {
 })
 ```
 
+### Om koordinatsystemet til LED-matrisen @unplugged
+
+Positiv y-retning er nedover på displayet, så når vi heller på Micro:biten så logoen står opp ned, vil jegeren bevege seg i negativ y-retning.
+Dette kan virke litt baklengs sammenliknet med det elevene lærer om kartesiske koordinatsystemer i mattetimene, men sånn er altså LED-matrisen definert.
+Her kan kanskje et læringspunkt være at koordinatsystemer kan defineres på flere måter.
+
 ### Steg 14 Spillkontrolleren
 
 Om du ikke har et ledig heksagon over det siste gapet, kan du trykke på det lille **+**-tegnet nede til høyre i blokken og lage et ekstra gap.
@@ -312,7 +326,7 @@ Kopier ``||input.er helning venstre bevegelse||``-blokken fra den øverste armen
 Endre ``||input.helning venstre||`` til ``||input.logo opp||``
 Kopier ``||game.jeger endre x med -1||``-blokken og plasser kopien i gapet under heksagonet du nettopp redigerte.
 Endre ``||game.x||`` til ``||game.y||`` og **-1** til **1**.
-Om du nå sitter igjen med et ekstra, tomt gap i ``||logic.hvis sann så ellers||``-blokken, kan du fjerne det nå ved å trykke på det lille **-**-tegnet til venstre på armen over.
+Om du nå sitter igjen med et ekstra, tomt gap i ``||logic.hvis sann så ellers||``-blokken, kan du fjerne det ved å trykke på det lille **-**-tegnet til venstre på armen over.
 
 ```blocks
 let jeger: game.LedSprite = null
@@ -572,4 +586,5 @@ basic.forever(function () {
 
 Det var det hele! Nå kan du laste spillet opp til Micro:Biten og teste spillet. Husk at byttet blinker, mens jegeren lyser svakt hele tiden.
 
+* for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>

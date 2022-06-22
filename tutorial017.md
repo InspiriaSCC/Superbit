@@ -38,7 +38,6 @@ basic.forever(function () {
 
 Prosessoren til Micro:Bit vil normalt være en anelse varmere enn omgivelsene når den jobber.
 Som regel er det ikke snakk om mer enn 1-4 grader forskjell.
-Differansen mellom intern temperatur i prosessoren og omgivelsene er vanligvis ganske stabil.
 Om du vil, kan du bruke et nøyaktig termometer for å kalibrere temperaturmålingene.
 I eksemplet som kommer nå viste vårt nøyaktige termometer 2 grader lavere temperatur enn det microbiten viste.
 Nå skal du kalibrere Micro:Biten i koden, slik at den viser mer nøyaktig temperatur.

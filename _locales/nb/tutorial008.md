@@ -8,7 +8,7 @@ Avstandssensoren som følger med i super:bit-kassen skal festes i den svart kont
 Den kan oppdage gjenstander foran Bit:Boten, slik at man kan bruke den til å unngå kollisjoner.
 I denne gjennomgangen lærer du å bruke avstandssensoren til å få Bit:Boten til å unngå hindre.
 Plasser sensoren i kontakten foran på Bit:Boten, slik at "øynene" peker forover.
-**NB: Avstandssensoren krever omtrent 5 volt og fungerer derfor dårlig med oppladbare AA-batterier i Bit:Boten.
+**NB: Avstandssensoren krever omtrent 5 volt og fungerer derfor ofte dårlig med oppladbare AA-batterier i Bit:Boten.
 Vanlige, alkaliske, ikke-oppladbare AA-batterier gir høyere spenning enn oppladbare, derfor anbefales de på det sterkeste her.**
 
 ![Avstandssensor](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Avstandssensor.jpg)
@@ -134,8 +134,8 @@ basic.forever(function () {
 
 Verre var det ikke.
 Det er ikke så mange linjer kode som skal til for å bruke avstandssensoren, men prøving og feiling for å få koden til å virke optimalt tar gjerne litt tid.
-**Husk at oppladbare batterier ikke fungerer særlig godt med avstandssensoren.
-Bruk heller valige, ikke-oppladbare AA-batterier når du holder på med akkurat denne sensoren.**
+**Igjen: Husk at oppladbare batterier ikke fungerer særlig godt med avstandssensoren.
+Bruk heller vanlige, ikke-oppladbare AA-batterier når du holder på med akkurat denne sensoren.**
 
 ```package
 bitbot=github:4tronix/BitBot
