@@ -3,7 +3,7 @@
 # super:bit - Kodeøkt 1: Bruk displayet
 ## Introduksjon
 ### Introduksjon @unplugged
-MakeCode-miljøet består av tre deler: Til venstre ser du en Micro:Bit-simulator som viser hva koden din gjør med Micro:Biten.
+MakeCode-vinduet består av tre deler: Til venstre ser du Micro:Bit-simulatoren som viser hva koden din gjør med Micro:Biten.
 I midten er en kolonne med fargede kategorier. Her er blokkene du trenger for å bygge kode.
 Til høyre finner du arbeidsområdet. Her plasserer du blokker for å bygge programmer til Micro:Biten.
 Når du flytter en blokk i arbeidsområdet, følger blokkene under blokken du flytter også med.
@@ -12,21 +12,21 @@ La oss varme opp litt lett kode til å begynne med.
 
 ### La oss starte enkelt @unplugged
 
-Tradisjonen tro starter vi med skrive "Hello world" og får programmet til å vise teksten på Micro:Biten. 
-Nå skal vi se på hva du trenger for å bruke displayet til Micro:Biten ved hjelp av MakeCode-blokker.
+Vi starter med å vise litt tekst i displayet på Micro:Biten ved hjelp av MakeCode-blokker.
 
-### Steg 1: Startblokkene
+### Steg 1: Startblokkene @unplugged
 De fleste kodeblokkene i MakeCode må legges i en startblokk for at koden skal kjøre.
-Når du starter MakeCode ser du sånne startblokker på arbeidsbordet ditt. Du trenger ikke å bruke begge.
+Når du starter MakeCode ser du to sånne startblokker på arbeidsbordet ditt. Du trenger ikke å bruke begge.
 Mange blokker vil være grå på skjermen om de legges utenfor en startblokk. Det betyr at de ikke er en del av et program, og at kommandoene i disse blokkene ikke utføres.
 
 
 ### Steg 2: Tekst i en uendelig løkke
 Å vise tekst er en ``||Basic.Basis||``-funksjon i MakeCode.
 Klikk på ``||Basic.Basis||`` for å åpne ``||Basic.Basis||``menyen og hent ut blokken ``||Basic.vis tekst||``.
-Plasser blokken i ``||Basic.gjenta for alltid||``-blokken på arbeidsbordet. Nå kan du endre teksten inni blokken til hva du vil.
-Når du har skrevet inn teksten du vil vise, kobler du Micro:Biten til enheten du jobber på, så trykker du på **"Last ned"** nederst til venstre på skjermen og venter til lyset på baksiden av Micro:Biten har sluttet å blinke.
-Nå skal teksten din vises i displayet. Siden displayet bare er 5x5 pixler, må teksten rulle forbi i displayet.
+Plasser blokken i ``||Basic.gjenta for alltid||``-blokken på arbeidsbordet. Endre teksten inni blokken til hva du vil.
+Når du har skrevet inn litt tekst, kobler du Micro:Biten til enheten du jobber på og trykker på **"Last ned"** nederst til venstre på skjermen.
+Vent til lyset på baksiden av Micro:Biten har sluttet å blinke.
+Siden displayet bare er 5x5 pixler, vil teksten rulle forbi i displayet.
 
 ```blocks
 
@@ -54,7 +54,7 @@ basic.showString("Hello!")
 
 ### Steg 4: Vise tall
 
-Å vise tall er like enkelt som å vise en tekststreng, men MakeCode behandler tall og tekststrenger forskjellig.
+MakeCode behandler tall og tekststrenger forskjellig. Du kan vise tall som tekst, men MakeCode kan ikke bruke tall definert som tekst til matematiske operasjoner.
 Før du går videre må du fjerne ``||Basic.vis tekst||`` fra ``||Basic.ved start||``.
 For å vise et tall må du hente blokken ``||basic.vis tall||`` fra ``||basic.Basis||``-menyen.
 Sett blokken inn i ``||basic.ved start||``, skriv inn et tall og last ned programmet til Micro:Biten.
@@ -121,7 +121,7 @@ basic.forever(function () {
 
 ### Steg 8: Animasjoner
 
-Før vi setter inn neste bilde i animasjonen trenger vi å pause programmet lenge nok til at den som ser på animasjonen rekker å oppfatte bildet.
+Før du setter inn neste bilde i animasjonen bør du pause programmet lenge nok til at du rekker å oppfatte det første bildet.
 Hent en ``||pause (ms)||``-blokk fra ``||basic.Basis||``-menyen og sett den inn under ``||basic.vis skjerm||``-blokken.
 
 ```blocks
@@ -139,10 +139,10 @@ basic.forever(function () {
 
 ### Steg 9: Fullfør animasjonen
 
-Du kan lage animasjonen din så lang du vil.
-Husk å sette en pauseblokk mellom hvert bilde og etter det siste bildet i ``||Basic.gjenta for alltid||``-blokken.
+Sett inn flere ``||basic.vis skjerm||``-blokker med små endringer under den første.
+Husk å sette en pauseblokk mellom bildene og etter det siste bildet i ``||Basic.gjenta for alltid||``-blokken.
 Du kan kopiere en blokk ved å høyreklikke på den og velge **"Lag kopi"** fra rullegardinmenyen som dukker opp.
-Dette gjør det ofte enklere når du skal foreta små endringer mellom bildene i en animasjon.
+Dette gjør det enklere når du skal lage små endringer mellom bildene i animasjonen.
 Juster tiden mellom blokkene slik at animasjonen vises slik du foretrekker.
 
 ```blocks

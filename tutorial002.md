@@ -3,17 +3,13 @@
 # super:bit - Kodeøkt 2: Lag en enkel terning 
 ## Introduksjon
 ### Introduksjon @unplugged
-I denne delen lærer du hvordan du får Micro:Bit til å reagere på en handling, eller inndata, som det kalles på kodespråket.
-Du kan velge om du vil laste ned programmet til en Micro:Bit, eller spare tid ved å bruke simulatoren.
-
+I denne delen lærer du hvordan du får Micro:Bit til å reagere på en handling, eller inndata, som det gjerne kalles.
 
 
 ### Steg 4: Superenkel terning
-Når du har lært å vise en tallvariabel i displayet, kan du bruke det til å lage en elektronisk terning.
-En inndatafunksjon skal ta seg av hvert terningkast.
-Du kan bruke det innebygde akselerometeret i Micro:Bit til terningkastene.
+Du kan bruke det innebygde akselerometeret i Micro:Bit til å simulere terningkast.
 Gå til ``||input.Inndata||``-menyen og hent blokken ``||input.når ristes||``.
-Denne blokkene er også en slags startblokk.
+Denne blokkene er en slags startblokk.
 Dra den gamle startblokken ut i papirkurven til venstre.
 
 ```blocks
@@ -25,11 +21,13 @@ input.onGesture(Gesture.Shake, function () {
 ### Inndata @unplugged
 
 Det finnes flere måter å gi inndata til Micro:Bit på.
-Micro:Bit har:<br>
--innebygde sensorer for lys og temperatur<br>
--digitalt kompass<br>
--akselerometer<br>
--2 knapper som kan brukes hver for seg eller sammen<br>
+Micro:Bit har:
+<ul>
+<li>innebygde sensorer for lys og temperatur</li>
+<li>digitalt kompass</li>
+<li>akselerometer</li>
+<li>2 knapper som kan brukes hver for seg eller sammen</li>
+</ul>
 Alle disse kan brukes som inndata.
 I tillegg har Micro:Bit radio og en kontaktstriper som kan ta imot elektroniske signaler.
 
