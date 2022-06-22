@@ -21,26 +21,21 @@ input.onGesture(Gesture.Shake, function () {
 ### Inndata @unplugged
 
 Det finnes flere måter å gi inndata til Micro:Bit på.
-Micro:Bit har:
-<ul>
-<li>innebygde sensorer for lys og temperatur</li>
-<li>digitalt kompass</li>
-<li>akselerometer</li>
-<li>2 knapper som kan brukes hver for seg eller sammen</li>
-</ul>
+Micro:Bit har:<br>
+* innebygde sensorer for lys og temperatur<br>
+* digitalt kompass<br>
+* akselerometer<br>
+* 2 knapper som kan brukes hver for seg eller sammen<br>
 Alle disse kan brukes som inndata.
 I tillegg har Micro:Bit radio og en kontaktstriper som kan ta imot elektroniske signaler.
 
 ### Steg 5: Terning uten å lagre variabel
-Fra ``||basic.Basis||``-menyen trenger du nå blokken ``||basic.vis tall||`` som du brukte tidligere.
+Fra ``||basic.Basis||``-menyen trenger du nå blokken ``||basic.vis tall||``.
 Dra den inn i ``||input.når ristes||``-blokken.
-Gå til ``||math.matematikk||``-menyen og hent en ``||math.velg tilfeldig 0 til 10||``-blokk.
+Hent en ``||math.velg tilfeldig 0 til 10||``-blokk fra ``||math.matematikk||``-menyen.
 Dra den inn i det hvite feltet i ``||basic.vis tall||``-blokken og endre tallene 0 og 10 til 1 og 6.
-Nå vil Micro:Biten vise et tilfeldig tall fra og med 1 til og med 6 når den ristes.
+Micro:Biten viser nå et tilfeldig tall fra og med 1 til og med 6 når den ristes.
 Du kan trykke på **"Shake"**-knappen like over B-knappen i simulatoren for å sjekke at koden fungerer. 
-Gratulerer! Du har nå laget en terning ved hjelp av to linjer kode!
-Du kan starte terningkastet ved hjelp av andre typer inndata når du er ferdig med denne veiledningen.
-Kanskje du får til å kaste terning med et knappetrykk?
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
@@ -48,6 +43,13 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(randint(1, 6))
 })
 ```
+
+### Ferdig! @unplugged
+Gratulerer! Du har nå laget en terning ved hjelp av to linjer kode!
+Du kan starte terningkastet ved hjelp av andre typer inndata når du er ferdig med denne veiledningen.
+Kanskje du får til å kaste terning med et knappetrykk?
+
+
 
 
 
