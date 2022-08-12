@@ -9,7 +9,7 @@ Lær hvordan du får BitBoten til å kjøre
 ### Steg 1 @unplugged
 
 Egentlig må blokkene til Bit:Bot importeres til MakeCode, men siden dette er en såkalt tutorial, er blokkene du trenger allerede hentet inn, så du slipper å importere blokkene til Bit:Bot.
-Når du senere skal bruke Bit:Bot vil du bli nødt til å hente inn blokker ved å hente dem inn fra "Utvidelser" i blokkemenyen.
+Når du senere skal bruke Bit:Bot må du hente inn blokker ved å hente dem inn fra "Utvidelser" i blokkemenyen.
 
 ### Steg 2
 
@@ -50,9 +50,10 @@ bitbot.goms(BBDirection.Forward, 60, 800)
 
 Nå skal du få Bit:Boten til å kjøre fram, snu seg rundt og kjøre tilbake til start.
 For å snu roboten trenger du blokken ``||bitbot.snu til venstre med fart 60 % i 400 ms||`` fra ``||bitbot.Bitbot||``-menyen.
-Legg den under ``||Bitbot.kjør framover med fart ?? % i ?? ms||``-blokken i koden din.
-Du kan velge om du vil snu roboten mot venstre eller høyre ved å klikke på den lille pilen til høyre for ``||bitbot.venstre||`` og velge retning.
-Rekkefølgen på koden er viktig her. Programmet kjører instruksjonene i samme rekkefølge som blokkene ligger i ``||basic.ved start||``.
+Legg den under ``||Bitbot.kjør framover med fart ?? % i ?? ms||``-blokken i koden din. Test ut hvilke tall som får Bit:Boten til å snu seg 180 grader.
+Rekkefølgen på koden er viktig her. Programmet kjører instruksjonene i samme rekkefølge som blokkene ligger i ``||basic.ved start||``. 
+Tips: For å spare tid kan du legge blokkene som kjører Bit:Boten 1 meter rett fram utenfor ``||basic.ved start||``-blokken og kun teste for 180 graders sving helt til du treffer.
+
 
 ```blocks
 bitbot.goms(BBDirection.Forward, 60, 400)
@@ -62,11 +63,8 @@ bitbot.rotatems(BBRobotDirection.Left, 60, 400)
 
 ### Steg 6
 
-Du har allerede forhåpentligvis koden du trenger for å kjøre 1 meter.
-Kopier blokken ``||Bitbot.kjør framover med fart ?? % i ?? ms||``.
-La instillingene i denne blokken være som de er, dersom du har klart å få roboten til å kjøre riktig lengde.
-Her må det prøving og feiling til, så her må du bare laste ned programmet og teste det med Bit:Boten til du treffer.
-Tips: For å spare tid kan du legge blokkene som kjører Bit:Boten 1 meter rett fram utenfor ``||basic.ved start||``-blokken og kun teste for 180 graders sving helt til du treffer.
+Du har allerede koden du trenger for å kjøre 1 meter.
+Kopier blokken ``||Bitbot.kjør framover med fart ?? % i ?? ms||`` og legg den under snu-blokka, slik at bilen kjører fremover, snur og kjører tilbake.
 
 ### Avrunding @unplugged
 

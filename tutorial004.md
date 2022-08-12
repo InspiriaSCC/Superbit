@@ -1,20 +1,19 @@
 ### @activities true
 
-# super:bit - Ekstra kodeøkt: Lag et spill - Funksjoner og spillblokker
+# super:bit - Ekstra kodeøkt: Lag spill - Funksjoner og spillblokker
 ## Introduksjon
 ### Introduksjon @unplugged
 
-Ved hjelp av displayet og inndata kan man lage forskjellige spill til Micro:Bit.
+Ved hjelp av displayet og inndata kan man lage spill til Micro:Bit.
 Alle funksjoner som har med spill å gjøre finner du under **"Avansert"** i blokkemenyen.
-Denne gjennomgangen er ganske lang, den består av 23 småkompliserte steg, så sett av litt god tid.
+Denne gjennomgangen er ganske lang, den består av 23 steg, så sett av litt god tid.
 Du skal nå lage spillet som ligger på alle nye Micro:Bits når de startes første gang.
-Spillet kalles *"Chase the dot"* på engelsk. Fang brikken eller fang pixelen kan man kanskje kalle det på norsk?
-Spillet går ut på å styre en lysende spillebrikke som skal fange en annen brikke som blinker.
+Spillet kalles *"Chase the dot"* på engelsk, og går ut på å styre en lysende spillebrikke som skal fange en annen brikke som blinker.
 Du må vende på hele Micro:Biten for å få brikken du styrer til å falle ned mot byttet den jakter på.
 
 ### Steg 1 Lag variablene
 
-Det første du må gjøre er å lage en variabel for hver brikke, og definere dem i ``||basic.ved start||``-blokken.
+Først må du lage en variabel for hver brikke, og definere dem i ``||basic.ved start||``-blokken.
 Gå til ``||variables.Variabler||``-menyen og velg **"Lag en variabel..."**.
 Lag to variabler, en som du kaller ``||variables.jeger||`` og en som du kaller ``||variables.bytte||``.
 Hent to ``||variables.sett bytte til||``-blokker fra ``||variables.Variabler||``-menyen og dra dem inn i ``||basic.ved start||``-blokken.

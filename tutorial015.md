@@ -9,7 +9,7 @@ I denne gjennomgangen lærer du å programmere bom som åpnes ved hjelp av en av
 ### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
-Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.
+Koble **180-graderservoen** til rekken av kontakter som forklart og vist.
 Servoene som følger med super:bit har tre ledninger ut, en brun, en rød og en oransje.
 Brun er jordledningen, den skal kobles til GND.
 Rød er "+"-ledningen som skal kobles til 5V.
@@ -46,7 +46,7 @@ bitbot.bbSetServo(BBServos.P1, 0)
 
 Hent en ``||basic.vis ikon||``-blokk fra ``||basic.Basis||``-menyen og sett den inn under ``||bitbot.sett servo P1 til 0 grader||``-blokken.
 Ikonet gjør det lettere å se at programmet kjører.
-Velg et ikon du synes passer. Om du vil kan du bruke ``||basic.vis skjerm||`` i stedet for ``||basic.vis ikon||`` og tegne ditt eget ikon.
+Velg et ikon du synes passer. Du kan bruke ``||basic.vis skjerm||`` for å tegne et eget ikon, eller ``||basic.vis ikon||`` for å bruke et ferdiglaget ikon.
 
 ```blocks
 bitbot.bbSetServo(BBServos.P1, 0)
@@ -90,8 +90,7 @@ basic.forever(function () {
 
 Hent en oval ``||bitbot.les ultralydsensor som cm||``-blokk fra ``||bitbot.Bitbot/Sensorer og styring||``-menyen.
 Dra den inn i det første hvite feltet i ``||logic.0 < 0||``-heksagonet.
-Endre "0" i det andre hvite feltet til 10.
-Om du ønsker en annen avstand enn 10 cm, kan du velge et annet tall her.
+Endre "0" i det andre hvite feltet til den avstanden du ønsker, for eksempel 10. 
 
 ```blocks
 basic.forever(function () {

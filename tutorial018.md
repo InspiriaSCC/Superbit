@@ -5,8 +5,7 @@
 ### Introduksjon @unplugged
 
 Diplayet på Micro:Biten består av 25 LED-pærer.
-LED-pærer sender ut lys når det går strøm gjennom dem, men de lager også litt strøm når de mottar lys.
-Dette brukes av Micro:Bit til å måle lys fra omgivelsene.
+Micro:Bit kan også brukes til å måle lys fra omgivelsene.
 I denne økten lærer du hvordan du kan bruke lyssensoren til å lage en lampe som slår seg på når det blir mørkt.
 
 ### Litt praktisk om lyssensoren @unplugged
@@ -16,7 +15,7 @@ Micro:Biten måler lysnivået på en skala fra 0 (helt mørkt) til 255 (fullt ly
 To Micro:Biter ved siden av hverandre måler gjerne litt forskjellige lysnivåer.
 Dette skyldes måten elektroniske komponenter produseres på og er helt normalt.
 Før du begynner å sette inn lysmålerverdier i koden din, lønner det seg å finne ut hvilke baseverdier du får i det rommet du befinner deg i.
-Første steg blir å gjøre nettopp det.
+
 
 ### Steg 1
 Hent en ``||basic.vis tall||``-blokk fra ``||basic.Basis||``-menyen og dra den inn i ``||basic.gjenta for alltid||``-blokken i arbeidsområdet ditt.
@@ -99,7 +98,7 @@ basic.forever(function () {
 ### Steg 5
 
 Om du vil at LED-pæren skal slå seg på når du skygger for Micro:Bit-displayet med hånden, bør du velge å sette inn et lysnivå i ``||logic.lysnivå < 0||``-blokken som er litt høyere enn det du målte da du skygget for med hånden.
-I eksemplet brukes 150, men det kan hende du må bruke et lavere eller høyere tall, alt etter belysningen der du befinner deg.
+I eksemplet brukes 150, men det kan hende du må bruke et lavere eller høyere tall, avhengig av belysningen der du befinner deg.
 
 ```blocks
 basic.forever(function () {
@@ -175,7 +174,7 @@ JavaScriptet leses én og én linje.
 Når en kommando krever litt tid, tar det en liten stund før programmet ditt går videre.
 Kommandoen ``||basic.vis tall||`` er en kommando som tar litt tid.
 Programmet går ikke videre før displayet er ferdig med å vise verdien som ``||basic.vis tall||`` henter.
-Siden lysverdiene her gjerne er tresiffret, tar det noen sekunder før programmet går videre og slukker LED-pæren etter at du har fjernet hånden.
+Siden lysverdiene her gjerne er tresifret, tar det noen sekunder før programmet går videre og slukker LED-pæren etter at du har fjernet hånden.
 
 ### Steg 9
 
@@ -199,7 +198,7 @@ basic.forever(function () {
 
 Du merket sikkert at både slukking og tenning nå er litt forsinket.
 Det skyldes akkurat det samme som tidligere.
-LED-pæren må nå vente både med tenning og slokking til den tresiffrede lysverdien er ferdig med å rulle over skjermen.
+LED-pæren må nå vente både med tenning og slokking til den tresifrede lysverdien er ferdig med å rulle over skjermen.
 
 ### Steg 10
 

@@ -6,7 +6,7 @@
 
 NeoPixels er adresserbare RGB-LED-pærer som kan programmeres til å lyse i alle regnbuens farger.
 Du kan bestemme farge, lysstyrke og om den skal være av eller på eller blinke for hver enkelt NeoPixel i en NeoPixelstripe.
-NeoPixel har egne blokker som krever en egen utvidelse for MakeCode, akkurat som Bit:Bot.
+NeoPixel har egne blokker som krever en egen utvidelse for MakeCode, som du finner ved å trykke på Avansert - Utvidelser.
 
 ### Steg 1 Bruke NeoPixel med krokodilleklemmer @unplugged
 
@@ -15,15 +15,15 @@ Det er den ca 35 cm lange stripen med svart, hvit og rød ledning med krokodille
 NeoPixler trenger å kobles til 3 steder på Miro:Biten: <br>
 * Rød ledning kobles til 3V<br>
 * Svart ledning kobles til GND<br>
-* Hvit ledning kobles til en av utdatakontaktene på Micro:Biten, altså 0, 1 eller 2 når du bruker krokodilleklemmer<br>
+* Hvit ledning kobles til en av utdatakontaktene, 0, 1 eller 2 når du bruker krokodilleklemmer<br>
 Vi kobler den hvite klemmen til utgang 2 i eksempelkoden, fordi det er den nærmest utgangen til 3V og GND.
-Når du har koblet opp neopixelstripen som forklart, går du videre.
+
 
 ![NeoPixelkobling](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/NeoPixelkobling.jpg)
 
 ### Steg 2 Bruke Neopixel med krokodilleklemmer
 
-Til dette programmet trenger du aller først en ``||basic.ved start||``-blokk.
+Start med en ``||basic.ved start||``-blokk.
 Fra ``||neopixel.NeoPixel||``-menyen trenger du en ``||variables.sett strip til||`` ``||neopixel.NeoPixel at p0 with 24 leds as RGB (GRB format)||``.
 Dra den inn i ``||basic.ved start||``-blokken og endre ``||neopixel.24||`` til ``||neopixel.20||``, eller det antall NeoPixler du har på din stripe.
 Det er 20 NeoPixels på stripen som følger med Superbit.
@@ -39,7 +39,7 @@ let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 Siden hver NeoPixelstripe er definert som en variabel kan man bruke mange NeoPixelstriper i samme program og få dem til å gjøre forskjellige ting.
 Neopixler kan settes sammen i andre fasonger også. Ringer eller rektangler er populære former.
 For at koden skal virke, må programmet vite hvor mange NeoPixler det er snakk om og hvilken type NeoPixler som sitter på NeoPixelstripen eller ringen eller uansett fasong.
-På stripen som følger med super:bit er NeoPixlene av et format som kalles GRB, men det finnes andre formater.
+På stripen som følger med super:bit er NeoPixlene av et format som kalles RGB, men det finnes andre formater.
 Om du bruker en annen NeoPixelstripe og merker at fargene ikke stemmer, prøv å endre på NeoPixelformat-delen i denne blokken.
 
 ### Steg 3 Bruke neopixel med krokodilleklemmer 3
@@ -47,7 +47,7 @@ Om du bruker en annen NeoPixelstripe og merker at fargene ikke stemmer, prøv å
 Nå skal du få NeoPixlene til å lyse i en bestemt farge. Der er 9 farger å velge mellom, pluss svart (av).
 Til dette trenger du blokken ``||neopixel.strip show color red||`` fra ``||neopixel.NeoPixel||``-menyen.
 Sett den inn i koden under ``||variables.sett strip til||``-blokken.
-Nå kan du laste programmet opp til Micro:Biten og se hva som skjer.
+Last programmet opp til Micro:Biten og se hva som skjer.
 Prøv å endre farge i ``||neopixel.strip show color red||``-blokken og se om fargen stemmer med den du har lagt inn når du laster opp programmet til Micro:Biten.
 
 ```blocks
@@ -67,8 +67,7 @@ Siden hver NeoPixel har sin egen adresse, leser den kun koden som gjelder sin ad
 Akkurat nå er hver NeoPixel instruert til å lyse med den siste fargen du gav dem i forrige steg.
 I neste steg skal du få kun én NeoPixel på stripa til å lyse med én bestemt farge.
 For å få til dette må du slukke de andre NeoPixlene, slik at den du vil skal lyse er den eneste som lyser.
-En enkel måte å slukke en NeoPixel på er å be den vise fargen svart.
-En svart NeoPixel er en slukket NeoPixel.
+En enkel måte å slukke en NeoPixel på er å be den vise fargen svart, som er det samme som en slukket NeoPixel.
 
 ### Steg 4 Bruke neopixel med krokodilleklemmer 4
 
@@ -103,7 +102,7 @@ strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Red))
 ### Set color og show @unplugged
 
 Om du laster opp koden slik den er nå, vil ingen av NeoPixlene lyse.
-Det er slik at det er forskjell på å sette fargen til en NeoPixel og å få den til å lyse i den angitte fargen.
+Det er forskjell på å sette fargen til en NeoPixel og å få den til å lyse i den angitte fargen.
 ``||neopixel.Set color||`` bestemmer fargen uten å slå på NeoPixler.
 ``||neopixel.Show||`` slår pixler på, og får dem til å lyse i den fargen de har fått angitt.
 Dersom en blokk inneholder ordet **"show"** er det ganske sikkert at blokken både setter farger og slår på NeoPixlene.
@@ -177,8 +176,7 @@ Du kan også lage dine helt egen fargekombinasjoner for hver enkelt NeoPixel.
 Hent den ovale blokken ``||neopixel.red 255 green 255 blue 255||`` fra nederst på ``||neopixel.NeoPixel/...mer||``-menyen.
 Erstatt fargene i ``||neopixel.set pixel color at 0 to [farge]||``-blokkene dine med ``||neopixel.red 255 green 255 blue 255||``-ovaler.
 Tallene 0-255 bestemmer hvor kraftig hver enkelt av de tre fargene LEDene i hver NeoPixel skal lyse.
-Kombinasjonen 255-0-0 vil gi rødt, 0-255-0 gir grønt, 0-0-255 gir blått. Kombinasjonen 100-248-39 gir... Øh... En eller annen farge.
-Det blir noe sånt som 16,8 millioner mulige farger man kan lage selv ved å blande fargene på denne måten.
+Kombinasjonen 255-0-0 vil gi rødt, 0-255-0 gir grønt, 0-0-255 gir blått.
 Når det står 255 i alle de tre feltene, vil pixelen lyse hvitt.
 Prøv litt forskjellige tallkombinasjoner i de forskjellige blokkene og test resultatet ved å laste opp koden til Micro:Biten.
 
@@ -351,7 +349,7 @@ basic.forever(function () {
 ### Avrunding @unplugged
 
 Det var en kjapp gjennomgang av noen triks du kan gjøre med NeoPixels.
-Som du sikkert skjønner finnes mye mer du kan gjøre med dem som du kan utforske på egen hånd.
+Det finnes mye mer du kan utforske på egen hånd.
 
 
 

@@ -7,7 +7,7 @@
 Micro:Biten kan spille små melodier om du kobler til en høyttaler eller en modulerbar buzzer.
 Høyttalere og buzzere kobles alltid mellom pin 0 og GND nå man skal bruke musikkfunksjonen i MakeCode.
 I esken som fulgte med super:bit er det en pose med 5 modulerbare buzzere.
-Buzzerne har polaritet, det vil si at de har en pluss- og en minuspol, og at de bare fungerer om de kobles riktig vei.
+Buzzerne fungerer bare om de kobles riktig vei.
 Plusspolen er det lengste beinet på buzzeren, og har et ***"+"***-tegn printet over seg på det svarte plastdekslet.<br>
 Plusspolen skal kobles til pin 0 på Micro:Biten.<br>
 Minuspolen skal kobles til GND på Micro:Biten.<br>
@@ -32,7 +32,7 @@ music.playMelody("C5 B A G F E D C ", 120)
 ### Steg 2
 
 ``||music.play melody at 120 bpm||``-blokken gir deg en enkel, visuell form for musikkredigering der du ikke kan endre varigheten for enkeltnoter.
-Alle noter er satt til å vare et fjerdedels taktslag, og dette kan ikke endres når du bruker denne blokken.
+Alle noter er satt til å vare et fjerdedels taktslag.
 Du kan lage egne, enkle melodier ved å bruke ***"redigeringsprogram"***-valget når du klikker på firkantene i blokken.
 Den øverste linjen i matrisen gir høy C i denne skalaen, den nederste linjen gir lav C.
 Linjene imellom gir de andre notene i skalaen.
@@ -90,9 +90,8 @@ Derfor blir melodier i MakeCode ganske enkle.
 ### Flere melodier etter hver andre @unplugged
 
 Dersom du bare vil ha en liten melodi lagt inn i et program, for eksempel i slutten av et spill, kan du bruke blokken ``||music.start melodi dadada-daa gjenta en gang||`` fra ``||music.Musikk||``-menyen.
-Alt etter hvordan koden i resten av programmet er, kan det hende du må legge inn en ``||basic.pause 100 ms||``-blokk etter melodien og endre tiden slik at melodien rekker å spille ferdig før programmet går videre i koden.
-Om du legger flere ``||music.start melodi dadada-daa gjenta en gang||``-blokker med forskjellige melodier rett etter hverandre i koden, vil du bare høre den siste melodien.
-Om du legger inn lange nok pauser mellom melodiene, vil alle kunne høres.
+Det kan hende du må legge inn en ``||basic.pause 100 ms||``-blokk etter melodien og endre tiden slik at melodien rekker å spille ferdig før programmet går videre i koden.
+Om du legger flere ``||music.start melodi dadada-daa gjenta en gang||``-blokker med forskjellige melodier rett etter hverandre i koden, vil du bare høre den siste melodien, hvis det ikke er lagt inn lange nok pauser mellom.
 
 ### Steg 4
 Prøv å legge inn tre forskjellige melodier i en ``||ved start||``-blokk ved å bruke ``||music.start melodi dadada-daa gjenta en gang||``-blokker, spill av og se hva som skjer.

@@ -44,7 +44,6 @@ bitbot.setPixelColor(11, 0xFF0000)
 Som du ser er LED nummer 5 og 11 de to lysene lengst foran på Bit:Boten.
 Akkurat disse to lysene er fine å bruke som retningsvisere, eller som indikatorer for de to linjesensorene som sitter på undersiden av Bit:Boten.
 Lysene på venstre side av Bit:Boten er nummerert fra 0-5 (bakfra mot front), mens lysene på høyre side er nummerert 6-11 (bakfra mot front).
-Tallene er trykt på med silketrykk ved siden av hvert lys.
 
 ### Steg 3
 
@@ -82,9 +81,8 @@ basic.forever(function () {
 
 ### Steg 5
 
-Som du sikkert la merke til går animasjonen litt i raskeste laget.
 For en litt langsommere animasjon kan du sette inn en ``||basic.pause 100 ms||``-blokk i ``||basic.gjenta for alltid||``-blokken under ``||bitbot.roter LED||``.
-Last ned programmet og se hvordan animasjonen endres. Du kan endre tidsverdien i ``||basic.pause||``-blokken om du vil ha enda langsommere animasjon.
+Last ned programmet og se hvordan animasjonen endres. Du kan endre tidsverdien i ``||basic.pause||``-blokken og se hva du liker best.
 
 ```blocks
 basic.forever(function () {
@@ -95,7 +93,7 @@ basic.forever(function () {
 
 ### Steg 6
 
-Du kan justere lysstyrken på FireLEDene med blokken ``||bitbot.sett LED lysstyrke til 40||``.
+Du kan justere lysstyrken med blokken ``||bitbot.sett LED lysstyrke til 40||``.
 Blokken kan også brukes dersom lysene av en eller annen grunn ikke slår seg på av seg selv når du kjører programmet ditt.
 Klikk på **"40"** og juster lysstyrken med slideren.
 Høyeste lysstyrkeverdi er **255**.

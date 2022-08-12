@@ -4,7 +4,7 @@
 ## Avstandssensoren til Bit:Bot
 ### Introduksjon @unplugged
 
-Avstandssensoren som følger med i super:bit-kassen skal festes i den svart kontakten framme på snuten til Bit:Boten.
+Avstandssensoren som følger med i super:bit-kassen skal festes i den svart kontakten framme på Bit:Boten.
 Den kan oppdage gjenstander foran Bit:Boten, slik at man kan bruke den til å unngå kollisjoner.
 I denne gjennomgangen lærer du å bruke avstandssensoren til å få Bit:Boten til å unngå hindre.
 Plasser sensoren i kontakten foran på Bit:Boten, slik at "øynene" peker forover.
@@ -15,7 +15,7 @@ Vanlige, alkaliske, ikke-oppladbare AA-batterier gir høyere spenning enn opplad
 
 ### Steg 1
 
-Til dette programmet bruker vi en ``||basic.gjenta for alltid||``-løkke som utgangspunkt.
+Her bruker vi en ``||basic.gjenta for alltid||``-løkke som utgangspunkt.
 I ``||basic.gjenta for alltid||``-blokken må vi ha en logisk sjekk som hele tiden måler avstanden til objekter foran roboten, og bestemmer hva som skal skje om avstanden er for liten.
 Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen og plasser den inni ``||basic.gjenta for alltid||``-blokken.
 
@@ -132,10 +132,9 @@ basic.forever(function () {
 
 ### Avslutning @unplugged
 
-Verre var det ikke.
 Det er ikke så mange linjer kode som skal til for å bruke avstandssensoren, men prøving og feiling for å få koden til å virke optimalt tar gjerne litt tid.
 **Igjen: Husk at oppladbare batterier ikke fungerer særlig godt med avstandssensoren.
-Bruk heller vanlige, ikke-oppladbare AA-batterier når du holder på med akkurat denne sensoren.**
+Bruk heller vanlige, ikke-oppladbare AA-batterier når du holder på med akkurat denne sensoren. Hvis det ikke virker, kan det hende BitBoten krever batteribytte.**
 
 ```package
 bitbot=github:4tronix/BitBot

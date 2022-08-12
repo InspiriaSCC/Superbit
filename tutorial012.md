@@ -17,7 +17,7 @@ Derfor skal du i denne gjennomgangen lære du hvordan du kan bruke servoer samme
 
 ### Tilkoblinger @unplugged
 
-Rett foran hjulet på Bit:Botens ventre side finner du to kontakter med 3 pinner.
+Rett foran hjulet på Bit:Botens venstre side finner du to kontakter med 3 pinner.
 Dette er servokontaktene til Bit:Boten.
 Det fremste paret med pinner er merket P1 og P2.
 P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoer.
