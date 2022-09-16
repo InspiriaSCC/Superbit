@@ -14,7 +14,7 @@ Når du senere skal bruke Bit:Bot må du hente inn blokker ved å hente dem inn 
 ### Steg 2
 
 Nå skal du få bilen til å kjøre fremover.
-Hent en ``||Bitbot.kjør framover med fart 60 % i 400 ms||``-blokk fra ``||Bitbot.Bitbot/Kjøring||`` og plasser den under ``||Bitbot.velg BitBot modell||``-blokken.
+Hent en ``||Bitbot.kjør framover med fart 60 % i 400 ms||``-blokk fra ``||Bitbot.Bitbot/Kjøring||`` og plasser den i ``||basic.ved start||``-blokken.
 
 ```blocks
 // @highlight
@@ -52,7 +52,7 @@ Nå skal du få Bit:Boten til å kjøre fram, snu seg rundt og kjøre tilbake ti
 For å snu roboten trenger du blokken ``||bitbot.snu til venstre med fart 60 % i 400 ms||`` fra ``||bitbot.Bitbot||``-menyen.
 Legg den under ``||Bitbot.kjør framover med fart ?? % i ?? ms||``-blokken i koden din. Test ut hvilke tall som får Bit:Boten til å snu seg 180 grader.
 Rekkefølgen på koden er viktig her. Programmet kjører instruksjonene i samme rekkefølge som blokkene ligger i ``||basic.ved start||``. 
-Tips: For å spare tid kan du legge blokkene som kjører Bit:Boten 1 meter rett fram utenfor ``||basic.ved start||``-blokken og kun teste for 180 graders sving helt til du treffer.
+Tips: For å spare tid kan du legge blokken som kjører Bit:Boten 1 meter rett fram utenfor ``||basic.ved start||``-blokken og kun prøve ut svingingen helt til Bitboten snur nøyaktig 180 grader rundt.
 
 
 ```blocks
