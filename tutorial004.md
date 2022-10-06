@@ -40,7 +40,7 @@ let jeger = game.createSprite(2, 2)
 
 ### Micro:Bit-displayet og koordinater @unplugged
 
-Variablene er nå spillebrikker på displayet til Micro:Biten
+Variablene er nå spillebrikker på displayet til Micro:Biten.
 Displayet til Micro:Bit behandles som et koordinatsystem av programmet.
 Koordinatene går fra 0 til 4, ikke fra 1 til 5, selv om displayet har 5 x 5 pixler, siden man gjerne starter rekker og lister med 0 i programmering.
 Positiv x-retning er fra venstre mot høyre.
@@ -53,7 +53,7 @@ Koordinatene 4,4 er nederst i høyre hjørne av displayet
 
 ### Steg 3 Lysstyrke og blinking
 
-Hent to ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen.
+Hent to ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen og plasser dem under de forrige blokkene dine.
 Klikk på den lille pilen til høyre for ``||variables.sprite||`` på den første blokken og velg ``||variables.bytte||``.
 Gjør det samme på den andre blokken, men velg ``||variables.jeger||``
 Klikk på den lille pilen til høyre for ``||game.x||`` i ``||game.bytte||``-blokken og velg ``||game.blinke||``.
@@ -106,11 +106,13 @@ Nå skal du lage funksjonen som starter en ny runde.
 
 ### Steg 5 Sett inn kode i funksjonen
 
-Hent to nye ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen og bytt ut ``||variables.sprite||`` med ``||variables.bytte||`` i begge.
+Hent to nye ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen og plasser dem i funksjonsblokken du lagde.
+Bytt ut ``||variables.sprite||`` med ``||variables.bytte||`` i begge.
 Endre ``||game.x||`` til ``||game.y||`` i den **ene** av blokkene.
 Hent en ``||math.velg tilfeldig 0 til 10||``-blokk fra ``||math.Matematikk||``-menyen og plasser den i det hvite feltet etter ``||game.x||`` i den ene blokken.
 Endre 10-tallet til et 4-tall i ``||math.velg tilfeldig 0 til 10||``-blokken.
 Kopier ``||math.velg tilfeldig 0 til 4||``-blokken du nettopp redigerte over til den andre ``||game.sprite angir x til||``-blokken.
+Dette plasserer byttet på en tilfeldig (X,Y)-koordinat når en ny runde starter.
 
 ```blocks
 let bytte: game.LedSprite = null
@@ -132,7 +134,7 @@ Om byttet ikke ligger inntil kanten, kjøres "nyRunde"-funksjonen på nytt, helt
 
 ### Steg 6 Begrens hvor byttet kan dukke opp
 
-Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.nyRunde||``-blokken under de forrige blokkene du la inn der.
+Hent en ``||logic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.nyRunde||``-blokken under de forrige blokkene du la inn der.
 Hent en liten heksagonal ``||logic.ikke||`` blokk fra ``||logic.Logikk||``-menyen og plasser den i heksagonet på ``||basic.hvis sann så||``-blokken.
 Hent en heksagonal ``||variables.sprite||`` ``||game.berører kant?||``-blokk fra ``||game.Spill||``-menyen og plasser den inni ``||logic.ikke||`` blokken.
 Klikk på den lille hvite pilen til høyre for ``||variables.sprite||`` og velg ``||variables.bytte||`` slik at det står``||logic.hvis ikke||`` ``||variables.bytte||`` ``||game.berører kant?||`` i blokken.
@@ -541,7 +543,7 @@ basic.forever(function () {
 Dersom den logiske sjekken finner ut at ``||variables.jeger||`` og ``||variables.bytte||`` har samme x- og y-verdi, skal spilleren få et poeng og en ny runde begynne.
 Hent en ``||game.endre poengsum med 1||``-blokk fra ``||game.Spill||``-menyen og plasser den i gapet på ``||logic.hvis sann så||``-blokken.
 Nå får spilleren et poeng hvergang byttet blir fanget.
-Hent funksjonen ``||functions.NyRunde||`` fra ``||functions.Funksjoner||``-menyen og legg den inn i ``||logic.hvis sann så||``-blokken under ``||game.endre poengsum med 1||``-blokken.
+Hent blokken ``||functions.kjør nyRunde||`` fra ``||functions.Funksjoner||``-menyen og legg den inn i ``||logic.hvis sann så||``-blokken under ``||game.endre poengsum med 1||``-blokken.
 Den siste blokken du satte inn i koden påkaller funksjonen ``||functions.nyRunde||`` som starter en ny spillrunde.
 Spillet fortsetter å kjøre nye runder til tiden løper ut.
 
