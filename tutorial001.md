@@ -122,7 +122,7 @@ basic.forever(function () {
 ### Steg 8: Animasjoner
 
 Før du setter inn neste bilde i animasjonen bør du pause programmet lenge nok til at du rekker å oppfatte det første bildet.
-Hent en ``||pause (ms)||``-blokk fra ``||basic.Basis||``-menyen og sett den inn under ``||basic.vis skjerm||``-blokken.
+Hent en ``||basic.pause (ms)||``-blokk fra ``||basic.Basis||``-menyen og sett den inn under ``||basic.vis skjerm||``-blokken.
 
 ```blocks
 basic.forever(function () {
