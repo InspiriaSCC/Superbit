@@ -120,7 +120,8 @@ basic.forever(function () {
 Når ingen av sensorene ser den svarte stripa, betyr det at roboten er midt over den.
 Da vil vi at roboten skal kjøre rett framover, så i det siste gapet plasserer du en ``||bitbot.kjør framover med fart 60 %||``-blokk fra ``||bitbot.Bitbot/Kjøring||``-menyen.
 Etter dette kan du laste ned koden til Micro:Biten og teste koden i Bit:Boten.
-Om Bit:Boten sporer av linjen ofte, kan det hende deet lønner seg å sette ned farten på både framoverkjøring og svinging.
+60 % fart er ganske raskt, og alt for raskt for kjøring med linjesensor.
+Sett ned farten på både framoverkjøring og svinging til et sted mellom 10 og 30. Her må du prøve deg fram.
 
 ```blocks
 basic.forever(function () {
@@ -129,7 +130,7 @@ basic.forever(function () {
     } else if (bitbot.readLine(BBLineSensor.Right) == 1) {
         bitbot.rotate(BBRobotDirection.Right, 60)
     } else {
-    	
+    	bitbot.go(BBDirection.Forward, 60)
     }
 })
 ```
