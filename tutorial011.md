@@ -266,6 +266,15 @@ Det var alt! Nå er mottageren ferdig. Om tallkodene i sender og mottager stemme
 Husk å koble en batteripakke til senderen eller koble den til en PC med USB-kabel før du tester roboten.
 Senderen må ha strøm for å virke.
 
+### Importere kodeblokker fra tredjeparter @unplugged
+Etter at du har avsluttet denne gjennomgangen kan du trykke på den grå kategorien "Utvidelser" i menyen der du henter blokker.
+Da kommer du til en siden de du kan hente blokker som andre har laget.
+Om du skriver "bitbot" i søkefeltet, dukker det opp et bilde av en Bitbot.
+Klikk på bildet for å importere blokkene til Bitbot.
+Om du skal bruke NeoPixel-stripen som fulgte med super:bit er fremgangsmåten lik, men du må skrive "neopixel" i søkefeltet og klikke på bildet av NeoPixel.
+Den nye kategorien dukker så opp nederst i menyen.
+Verre er det ikke. :)
+
 
 ```package
 bitbot=github:4tronix/BitBot
