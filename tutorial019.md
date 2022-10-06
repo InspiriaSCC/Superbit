@@ -49,7 +49,7 @@ Lysene på venstre side av Bit:Boten er nummerert fra 0-5 (bakfra mot front), me
 
 En annen fin blokk å bruke er blokken ``||bitbot.sett LED til regnbue||``.
 Fjern alle blokkene i programmet ditt fra ``||basic.ved start||``-blokken.
-Hent blokken ``||bitbot.sett LED til regnbue||`` fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken under ``||bitbot.sett LED lysstyrke 40||``.
+Hent blokken ``||bitbot.sett LED til regnbue||`` fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken.
 Last ned programmet til Micro:Biten, slå på Bit:Boten og se hva som skjer.
 
 ```blocks
@@ -148,6 +148,16 @@ basic.forever(function () {
 Endre **4** til **12** i ``||loops.gjenta 4 ganger||``-blokken.
 Hent en ``||bitbot.sett LED til regnbue||``-blokk fra ``||bitbot.Bitbot/Lys||``-menyen og legg den inn i ``||basic.gjenta for alltid||``-blokken over ``||loops.gjenta 12 ganger||``-blokken.
 Last ned programmet, koble fra USB-kabelen, slå på Bit:Boten og se hva som skjer.
+
+```blocks
+basic.forever(function () {
+    bitbot.ledRainbow()
+    for (let index = 0; index < 12; index++) {
+        bitbot.ledShift()
+        basic.pause(100)
+    }
+})
+```
 
 ### Hvordan den siste koden virker @unplugged
 
