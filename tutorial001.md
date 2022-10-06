@@ -97,8 +97,8 @@ basic.showLeds(`
 ### Animasjoner @unplugged
 
 Om du vil lage animasjoner på displayet, kan du bruke det du har lært til nå.
-I tillegg trenger du blokken ``||basic.pause (ms)||`` fra ``||basic.Basis||``-menyen.
-``||basic.pause (ms)||`` brukes for at du skal rekke å oppfatte et bilde i displayet før programmet går videre.
+I tillegg kan det være lurt å ta med blokken ``||basic.pause (ms)||`` fra ``||basic.Basis||``-menyen.
+``||basic.pause (ms)||`` brukes for sikre at man rekker å oppfatte et bilde i displayet før programmet går videre.
 
 ### Steg 7: Animasjoner
 
