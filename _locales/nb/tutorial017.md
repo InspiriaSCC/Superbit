@@ -6,7 +6,7 @@
 
 Micro:Bit har et innebygget termometer som overvåker temperaturen til hovedprosessoren.
 Den har du tilgang på for å hente ut temperaturmålinger.
-Heldigvis blir prosessoren sjelden særlig varmere enn omgivelsene, derfor gir termometeret en grei ganske temperaturmåling.
+Heldigvis blir prosessoren sjelden særlig varmere enn omgivelsene, derfor gir termometeret en ganske grei temperaturmåling.
 I denne økten lærer du hvordan du kan bruke temperaturmåleren til Micro:Bit.
 
 ### Steg 1
@@ -69,8 +69,7 @@ basic.forever(function () {
 
 ### Temperaturvakt @unplugged
 
-Om du vil, kan du bruke temperaturmåleren som frostvakt eller overopphetingsvakt.
-Om du kobler til en buzzer eller en høyttaler kan du få Micro:Biten til å gi lyd dersom temperaturen går utenfor temperaturgrensene du har satt i programmet.
+Om du kobler til en buzzer eller en høyttaler kan du få Micro:Biten til å gi lyd dersom temperaturen går utenfor temperaturgrensene du setter i programmet.
 Buzzeren som fulgte med Superbitsettet må kobles i riktig retning, og skal kobles med det korte beinet til GND på Micro:Biten og det lange beinet merket med "+" til pin 0.
 Om du bruker en høyttaler, skal den kobles med en ledning til GND og en ledning til pin 0.
 Høyttalere fungerer like fint i begge retninger med Micro:Bit, så polaritet er ikke noe tema når det gjelder dem.

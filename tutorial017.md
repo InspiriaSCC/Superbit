@@ -6,7 +6,7 @@
 
 Micro:Bit har et innebygget termometer som overvåker temperaturen til hovedprosessoren.
 Den har du tilgang på for å hente ut temperaturmålinger.
-Heldigvis blir prosessoren sjelden særlig varmere enn omgivelsene, derfor gir termometeret en grei ganske temperaturmåling.
+Heldigvis blir prosessoren sjelden særlig varmere enn omgivelsene, derfor gir termometeret en ganske grei temperaturmåling.
 I denne økten lærer du hvordan du kan bruke temperaturmåleren til Micro:Bit.
 
 ### Steg 1

@@ -1,20 +1,19 @@
 ### @activities true
 
-# super:bit - Ekstra kodeøkt: Lag et spill - Funksjoner og spillblokker
+# super:bit - Ekstra kodeøkt: Lag spill - Funksjoner og spillblokker
 ## Introduksjon
 ### Introduksjon @unplugged
 
-Ved hjelp av displayet og inndata kan man lage forskjellige spill til Micro:Bit.
+Ved hjelp av displayet og inndata kan man lage spill til Micro:Bit.
 Alle funksjoner som har med spill å gjøre finner du under **"Avansert"** i blokkemenyen.
-Denne gjennomgangen er ganske lang, den består av 23 småkompliserte steg, så sett av litt god tid.
+Denne gjennomgangen er ganske lang, den består av 23 steg, så sett av litt god tid.
 Du skal nå lage spillet som ligger på alle nye Micro:Bits når de startes første gang.
-Spillet kalles *"Chase the dot"* på engelsk. Fang brikken eller fang pixelen kan man kanskje kalle det på norsk?
-Spillet går ut på å styre en lysende spillebrikke som skal fange en annen brikke som blinker.
+Spillet kalles *"Chase the dot"* på engelsk, og går ut på å styre en lysende spillebrikke som skal fange en annen brikke som blinker.
 Du må vende på hele Micro:Biten for å få brikken du styrer til å falle ned mot byttet den jakter på.
 
 ### Steg 1 Lag variablene
 
-Det første du må gjøre er å lage en variabel for hver brikke, og definere dem i ``||basic.ved start||``-blokken.
+Først må du lage en variabel for hver brikke, og definere dem i ``||basic.ved start||``-blokken.
 Gå til ``||variables.Variabler||``-menyen og velg **"Lag en variabel..."**.
 Lag to variabler, en som du kaller ``||variables.jeger||`` og en som du kaller ``||variables.bytte||``.
 Hent to ``||variables.sett bytte til||``-blokker fra ``||variables.Variabler||``-menyen og dra dem inn i ``||basic.ved start||``-blokken.
@@ -41,7 +40,7 @@ let jeger = game.createSprite(2, 2)
 
 ### Micro:Bit-displayet og koordinater @unplugged
 
-Variablene er nå spillebrikker på displayet til Micro:Biten
+Variablene er nå spillebrikker på displayet til Micro:Biten.
 Displayet til Micro:Bit behandles som et koordinatsystem av programmet.
 Koordinatene går fra 0 til 4, ikke fra 1 til 5, selv om displayet har 5 x 5 pixler, siden man gjerne starter rekker og lister med 0 i programmering.
 Positiv x-retning er fra venstre mot høyre.
@@ -54,7 +53,7 @@ Koordinatene 4,4 er nederst i høyre hjørne av displayet
 
 ### Steg 3 Lysstyrke og blinking
 
-Hent to ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen.
+Hent to ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen og plasser dem under de forrige blokkene dine.
 Klikk på den lille pilen til høyre for ``||variables.sprite||`` på den første blokken og velg ``||variables.bytte||``.
 Gjør det samme på den andre blokken, men velg ``||variables.jeger||``
 Klikk på den lille pilen til høyre for ``||game.x||`` i ``||game.bytte||``-blokken og velg ``||game.blinke||``.
@@ -107,11 +106,13 @@ Nå skal du lage funksjonen som starter en ny runde.
 
 ### Steg 5 Sett inn kode i funksjonen
 
-Hent to nye ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen og bytt ut ``||variables.sprite||`` med ``||variables.bytte||`` i begge.
+Hent to nye ``||game.sprite angir x til||``-blokker fra ``||game.Spill||``-menyen og plasser dem i funksjonsblokken du lagde.
+Bytt ut ``||variables.sprite||`` med ``||variables.bytte||`` i begge.
 Endre ``||game.x||`` til ``||game.y||`` i den **ene** av blokkene.
 Hent en ``||math.velg tilfeldig 0 til 10||``-blokk fra ``||math.Matematikk||``-menyen og plasser den i det hvite feltet etter ``||game.x||`` i den ene blokken.
 Endre 10-tallet til et 4-tall i ``||math.velg tilfeldig 0 til 10||``-blokken.
 Kopier ``||math.velg tilfeldig 0 til 4||``-blokken du nettopp redigerte over til den andre ``||game.sprite angir x til||``-blokken.
+Dette plasserer byttet på en tilfeldig (X,Y)-koordinat når en ny runde starter.
 
 ```blocks
 let bytte: game.LedSprite = null
@@ -133,7 +134,7 @@ Om byttet ikke ligger inntil kanten, kjøres "nyRunde"-funksjonen på nytt, helt
 
 ### Steg 6 Begrens hvor byttet kan dukke opp
 
-Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.nyRunde||``-blokken under de forrige blokkene du la inn der.
+Hent en ``||logic.hvis sann så||``-blokk fra ``||logic.Logikk||``-menyen og plasser den i ``||functions.nyRunde||``-blokken under de forrige blokkene du la inn der.
 Hent en liten heksagonal ``||logic.ikke||`` blokk fra ``||logic.Logikk||``-menyen og plasser den i heksagonet på ``||basic.hvis sann så||``-blokken.
 Hent en heksagonal ``||variables.sprite||`` ``||game.berører kant?||``-blokk fra ``||game.Spill||``-menyen og plasser den inni ``||logic.ikke||`` blokken.
 Klikk på den lille hvite pilen til høyre for ``||variables.sprite||`` og velg ``||variables.bytte||`` slik at det står``||logic.hvis ikke||`` ``||variables.bytte||`` ``||game.berører kant?||`` i blokken.
@@ -542,7 +543,7 @@ basic.forever(function () {
 Dersom den logiske sjekken finner ut at ``||variables.jeger||`` og ``||variables.bytte||`` har samme x- og y-verdi, skal spilleren få et poeng og en ny runde begynne.
 Hent en ``||game.endre poengsum med 1||``-blokk fra ``||game.Spill||``-menyen og plasser den i gapet på ``||logic.hvis sann så||``-blokken.
 Nå får spilleren et poeng hvergang byttet blir fanget.
-Hent funksjonen ``||functions.NyRunde||`` fra ``||functions.Funksjoner||``-menyen og legg den inn i ``||logic.hvis sann så||``-blokken under ``||game.endre poengsum med 1||``-blokken.
+Hent blokken ``||functions.kjør nyRunde||`` fra ``||functions.Funksjoner||``-menyen og legg den inn i ``||logic.hvis sann så||``-blokken under ``||game.endre poengsum med 1||``-blokken.
 Den siste blokken du satte inn i koden påkaller funksjonen ``||functions.nyRunde||`` som starter en ny spillrunde.
 Spillet fortsetter å kjøre nye runder til tiden løper ut.
 

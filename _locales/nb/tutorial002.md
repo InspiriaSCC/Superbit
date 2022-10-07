@@ -3,7 +3,7 @@
 # super:bit - Kodeøkt 2: Lag en enkel terning 
 ## Introduksjon
 ### Introduksjon @unplugged
-I denne delen lærer du hvordan du får Micro:Bit til å reagere på en handling, eller inndata, som det gjerne kalles.
+I denne delen lærer du hvordan du får Micro:Bit til å reagere på en handling, det kalles inndata.
 
 
 ### Steg 4: Superenkel terning

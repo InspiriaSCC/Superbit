@@ -5,7 +5,7 @@
 ### Introduksjon @unplugged
 
 Micro:Biten kan fint brukes i forbindelse med fysisk aktivitet.
-I denne gjennomgangen lærer du å bruke Micro:Biten som skritteller eller hoppeteller.
+Her lærer du å bruke Micro:Biten som skritteller eller hoppeteller.
 Akselerometeret i Micro:Biten kan brukes på flere måter.
 I økten lærer du hvordan du velger akselerometerfunksjon fra en meny.
 Du kan så teste ut hvilken funksjon du mener fungerer best som skritteller eller hoppeteller.

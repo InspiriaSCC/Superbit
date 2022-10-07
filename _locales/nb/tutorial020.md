@@ -30,7 +30,7 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 ### Steg 7: Terning med variabel
-Hent en ``||math.velg tilfeldig 0 til 10||`` fra ``||math.Matamatikk||``-menyen og dra den inn i det hvite feltet i ``||variables.sett terningkast til||``.
+Hent en ``||math.velg tilfeldig 0 til 10||`` fra ``||math.Matamatikk||``-menyen og dra den inn i det hvite feltet i ``||variables.sett terningkast til||``. Endre så den velger tilfeldig fra 1 til 6. 
 Nå vil variabelen ``||variables.terningkast||`` settes til et tilfeldig tall fra 1 til 6 hver gang noen rister på Micro:Biten.
 For å vise resultatet må verdien til variabelen sendes til displayet.
 Hent en ``||basic.vis tall||``-blokk fra ``||basic.Basis||``-menyen og plasser den under ``||variables.sett terningkast til||``-blokken.
@@ -145,8 +145,7 @@ Dette er fort gjort å glemme, men nå er du advart.
 
 ### Steg 12: Terning med øyne, del 4
 
-Når du nå skal gjøre flere logiske sjekker i den samme ``||logic.hvis sann så ellers||``-blokken, legger du sikker merke til at det bare finnes et heksagon du kan legge en sånn sjekk inn i, og det er jo allerede opptatt.
-For å utvide ``||logic.hvis sant så ellers||``-blokken må du trykke på det lille "+"-tegnet nederst i venstre hjørne av blokken.
+Når du nå skal gjøre flere logiske sjekker i den samme ``||logic.hvis sann så ellers||``-blokken, må du trykke på det lille "+"-tegnet nederst i venstre hjørne av blokken for å utvide.
 Da vil det dukke opp et nytt gap og et nytt heksagon.
 Du kan trykke flere ganger og få flere gap.
 Om du skulle trykke for mange ganger, kan du trykke på det lille **"-"**-tegnet på høyre side i den øverste armen av det siste gapet for å fjerne det.
@@ -184,7 +183,7 @@ input.onGesture(Gesture.Shake, function () {
 Nå kan du kopiere den lille, heksagonale ``||logic.terningkast = 1||``-blokken fra  øverst i ``||logic.hvis sann så ellers||``-blokken og plassere den i det neste ledige heksagonet.
 Endre tallet 1 til 2.
 Kopier ``||basic.vis skjerm||``-blokken fra de øverste gapet og legg kopien i gap nummer to.
-Endre fra et øye til to ved å klikke en gang på ruten som er hvit og finn to andre ruter du kan bruke for at det skal se ut som to øyne på en terning.
+Endre ikonet så det ser ut som to øyne på en terning.
 
 ```blocks
 let terningkast = 0

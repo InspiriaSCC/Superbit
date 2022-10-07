@@ -44,13 +44,12 @@ bitbot.setPixelColor(11, 0xFF0000)
 Som du ser er LED nummer 5 og 11 de to lysene lengst foran på Bit:Boten.
 Akkurat disse to lysene er fine å bruke som retningsvisere, eller som indikatorer for de to linjesensorene som sitter på undersiden av Bit:Boten.
 Lysene på venstre side av Bit:Boten er nummerert fra 0-5 (bakfra mot front), mens lysene på høyre side er nummerert 6-11 (bakfra mot front).
-Tallene er trykt på med silketrykk ved siden av hvert lys.
 
 ### Steg 3
 
 En annen fin blokk å bruke er blokken ``||bitbot.sett LED til regnbue||``.
 Fjern alle blokkene i programmet ditt fra ``||basic.ved start||``-blokken.
-Hent blokken ``||bitbot.sett LED til regnbue||`` fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken under ``||bitbot.sett LED lysstyrke 40||``.
+Hent blokken ``||bitbot.sett LED til regnbue||`` fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken.
 Last ned programmet til Micro:Biten, slå på Bit:Boten og se hva som skjer.
 
 ```blocks
@@ -82,9 +81,8 @@ basic.forever(function () {
 
 ### Steg 5
 
-Som du sikkert la merke til går animasjonen litt i raskeste laget.
 For en litt langsommere animasjon kan du sette inn en ``||basic.pause 100 ms||``-blokk i ``||basic.gjenta for alltid||``-blokken under ``||bitbot.roter LED||``.
-Last ned programmet og se hvordan animasjonen endres. Du kan endre tidsverdien i ``||basic.pause||``-blokken om du vil ha enda langsommere animasjon.
+Last ned programmet og se hvordan animasjonen endres. Du kan endre tidsverdien i ``||basic.pause||``-blokken og se hva du liker best.
 
 ```blocks
 basic.forever(function () {
@@ -95,7 +93,7 @@ basic.forever(function () {
 
 ### Steg 6
 
-Du kan justere lysstyrken på FireLEDene med blokken ``||bitbot.sett LED lysstyrke til 40||``.
+Du kan justere lysstyrken med blokken ``||bitbot.sett LED lysstyrke til 40||``.
 Blokken kan også brukes dersom lysene av en eller annen grunn ikke slår seg på av seg selv når du kjører programmet ditt.
 Klikk på **"40"** og juster lysstyrken med slideren.
 Høyeste lysstyrkeverdi er **255**.
@@ -150,6 +148,16 @@ basic.forever(function () {
 Endre **4** til **12** i ``||loops.gjenta 4 ganger||``-blokken.
 Hent en ``||bitbot.sett LED til regnbue||``-blokk fra ``||bitbot.Bitbot/Lys||``-menyen og legg den inn i ``||basic.gjenta for alltid||``-blokken over ``||loops.gjenta 12 ganger||``-blokken.
 Last ned programmet, koble fra USB-kabelen, slå på Bit:Boten og se hva som skjer.
+
+```blocks
+basic.forever(function () {
+    bitbot.ledRainbow()
+    for (let index = 0; index < 12; index++) {
+        bitbot.ledShift()
+        basic.pause(100)
+    }
+})
+```
 
 ### Hvordan den siste koden virker @unplugged
 

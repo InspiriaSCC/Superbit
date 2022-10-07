@@ -9,20 +9,27 @@ Det gjør at servoen kan lage veldig presise bevegelser, og derfor brukes de oft
 
 ### Introduksjon 2 @unplugged
 
-En ulempe med servoer og andre elektrisk motorer når de brukes sammen med Micro:Bit er at de krever ganske høy spenning og strøm.
+En ulempe med servoer og andre elektriske motorer når de brukes sammen med Micro:Bit er at de krever mye strøm.
 Micro:Biten kan bare levere 3 volt spenning og noen få milliampère strøm.
 Derfor trenger servoer og motorer en ekstern strømkilde for å brukes med Micro:Bit.
 Heldigvis har Bit:Bot en egen batteripakke som leverer de bortimot 5 volt som en servo trenger.
-Derfor skal du i denne gjennomgangen lære du hvordan du kan bruke servoer sammen med Micro:Bit **og** Bit:Bot.
+Derfor skal du i denne gjennomgangen lære hvordan du kan bruke servoer sammen med Micro:Bit **og** Bit:Bot.
 
 ### Tilkoblinger @unplugged
 
-Rett foran hjulet på Bit:Botens ventre side finner du to kontakter med 3 pinner.
+Rett foran hjulet på Bit:Botens venstre side finner du to kontakter med 3 pinner.
 Dette er servokontaktene til Bit:Boten.
 Det fremste paret med pinner er merket P1 og P2.
-P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoer.
-De to neste parene er merket 5V og GND.
-5V gir 5 volts positiv spenning mot GND, som er jordkontaktene.
+P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoene.
+De to neste parene er merket henholdsvis 5V og GND.
+5V gir 5 volts positiv spenning ut, og GND er jord (eller minus).
+
+### To typer servoer @unplugged
+
+Det følger 2 typer servo med til super:bit.
+De som er merket 180 grader har et utslag på kun 180 grader.
+De som er merket 360 grader kan rotere rundt og rundt.
+Her brukes en 180-graderservo.
 
 ### Steg 1 @unplugged
 

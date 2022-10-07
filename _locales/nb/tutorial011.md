@@ -130,9 +130,9 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 Før du legger inn bevegelsene Bit:Boten skal gjøre for hver mottatte tallkode, kan det være lurt å sjekke tallene i programmet til senderen.
 Om du fulgte instruksjonene til senderen til punkt og prikke, skal tallene i denne gjennomgangen stemme.
-Målet er at når man vipper senderen framover går roboten framover, vipp bakover fører til at roboten rygger, tvipp til venstre får roboten til å svinge til venstre og vipp til høyre får roboten til å svinge til høyre.
-Om du har brukt andre tall i koden til senderen, bør du sjekke at tallene i sender og mottager stemmer overens.
-Du vil i alle fall merke om det er feil i koden når du begynner å kjøre roboten.
+Målet er at når man vipper senderen i ulike retninger, skal bilen kjøre i den samme retningen.
+Om du har brukt andre tall i koden til senderen, må du sjekke at tallene i sender og mottager stemmer overens.
+Du vil merke om det er feil i koden når du begynner å kjøre roboten.
 
 ### Steg 7
 
@@ -265,6 +265,15 @@ basic.showLeds(`
 Det var alt! Nå er mottageren ferdig. Om tallkodene i sender og mottager stemmer overens skal du nå kunne styre roboten ved å vippe på senderen.
 Husk å koble en batteripakke til senderen eller koble den til en PC med USB-kabel før du tester roboten.
 Senderen må ha strøm for å virke.
+
+### Importere kodeblokker fra tredjeparter @unplugged
+Etter at du har avsluttet denne gjennomgangen kan du trykke på den grå kategorien "Utvidelser" i menyen der du henter blokker.
+Da kommer du til en siden de du kan hente blokker som andre har laget.
+Om du skriver "bitbot" i søkefeltet, dukker det opp et bilde av en Bitbot.
+Klikk på bildet for å importere blokkene til Bitbot.
+Om du skal bruke NeoPixel-stripen som fulgte med super:bit er fremgangsmåten lik, men du må skrive "neopixel" i søkefeltet og klikke på bildet av NeoPixel.
+Den nye kategorien dukker så opp nederst i menyen.
+Verre er det ikke. :)
 
 
 ```package

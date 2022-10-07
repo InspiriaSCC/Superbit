@@ -19,7 +19,7 @@ De to neste parene er merket 5V og GND.
 ### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
-Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.
+Koble **180-graderservoen** til rekken av kontakter som forklart og vist.
 Servoene som følger med super:bit har tre ledninger ut, en brun, en rød og en oransje.
 Brun er jordledningen, den skal kobles til GND.
 Rød er "+"-ledningen som skal kobles til 5V.
@@ -245,7 +245,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 ### Avslutning
 
-Det var det hele. Last ned programmet til Micro:Biten som skal være mottager og plasser den i Bit:Boten du koblet servoen til.
+Last ned programmet til Micro:Biten som skal være mottager og plasser den i Bit:Boten du koblet servoen til.
 Nå kan du teste den radiostyrte bommen din ved å trykke på "A"- eller "B"-knappen på radiosenderen du programmerte i forrige kodeøkt.
 
 
