@@ -1,26 +1,27 @@
 ### @activities true
 
-# Superbit - Kodeøkt 8: Hvordan bruke avstandssensoren til Bitbot
-## Avstandssensoren til Bitbot
+# super:bit - Kodeøkt 11: Hvordan bruke avstandssensoren til Bit:Bot
+## Avstandssensoren til Bit:Bot
 ### Introduksjon @unplugged
 
-Avstandssensoren som følger med i Superbitsettet skal festes i den svart kontakten framme på snuten til Bitboten.
-Den kan oppdage gjenstander foran Bitboten, slik at man kan bruke den til å unngå kollisjoner.
-I denne gjennomgangen lærer du å bruke avstandssensoren til å få Bitboten til å unngå hindre.
-Plasser sensoren i kontakten foran på Bitboten, slik at "øynene" peker forover.
-**NB: Avstandssensoren krever omtrent 5 volt og fungerer derfor dårlig med oppladbare AA-batterier i Bitboten.
+Avstandssensoren som følger med i super:bit-kassen skal festes i den svart kontakten framme på Bit:Boten.
+Den kan oppdage gjenstander foran Bit:Boten, slik at man kan bruke den til å unngå kollisjoner.
+I denne gjennomgangen lærer du å bruke avstandssensoren til å få Bit:Boten til å unngå hindre.
+Plasser sensoren i kontakten foran på Bit:Boten, slik at "øynene" peker forover.
+**NB: Avstandssensoren krever omtrent 5 volt og fungerer derfor ofte dårlig med oppladbare AA-batterier i Bit:Boten.
 Vanlige, alkaliske, ikke-oppladbare AA-batterier gir høyere spenning enn oppladbare, derfor anbefales de på det sterkeste her.**
 
 ![Avstandssensor](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Avstandssensor.jpg)
 
 ### Steg 1
 
-Til dette programmet bruker vi en ``||basic.gjenta for alltid||``-løkke som utgangspunkt.
+Her bruker vi en ``||basic.gjenta for alltid||``-løkke som utgangspunkt.
 I ``||basic.gjenta for alltid||``-blokken må vi ha en logisk sjekk som hele tiden måler avstanden til objekter foran roboten, og bestemmer hva som skal skje om avstanden er for liten.
 Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen og plasser den inni ``||basic.gjenta for alltid||``-blokken.
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (true) {
         
     } else {
@@ -36,6 +37,7 @@ Hent det lille heksagonet ``||logic.0 < 0||`` fra ``||logic.Logikk||``-menyen og
 
 ```blocks
 basic.forever(function () {
+    // @highlight
     if (0 < 0) {
         
     } else {
@@ -78,13 +80,13 @@ basic.forever(function () {
 ### Steg 5
 
 Nå skal du instruere roboten om hva den skal gjøre når den støter på et hinder.
-Hent en ``||bitbot.snu til venstre med fart 60 %||``-blokk fra ``||bitbot.Bitbot/Kjøring/||``-menyen og sett den inn i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken.
+Hent en ``||bitbot.snu til venstre med fart 60 i 400 millisekund %||``-blokk fra ``||bitbot.Bitbot/Kjøring/||``-menyen og sett den inn i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken.
 
 ```blocks
 basic.forever(function () {
     if (bitbot.sonar(BBPingUnit.Centimeters) < 10) {
         // @highlight
-        bitbot.rotate(BBRobotDirection.Left, 60)
+        bitbot.rotatems(BBRobotDirection.Left, 60, 400)
     } else {
         
     }
@@ -93,9 +95,9 @@ basic.forever(function () {
 
 ### Steg 6
 
-Når det ikke er noe hinder foran Bitboten, skal den kjøre rett fram.
+Når det ikke er noe hinder foran Bit:Boten, skal den kjøre rett fram.
 Hent en ``||bitbot.kjør framover med fart 60 %||``-blokk fra ``||bitbot.Bitbot/Kjøring/||``-menyen og plasser den i det andre gapet på ``||logic.hvis sann så ellers||``-blokken.
-Nå gjenstår det bare å teste om avstanden på sensoren, farten på Bitboten og utslaget på svingingen fungerer greit for å unngå hindre.
+Nå gjenstår det bare å teste om avstanden på sensoren, farten på Bit:Boten og utslaget på svingingen fungerer greit for å unngå hindre.
 Last ned programmet til Micro:Biten og test en liten hinderløype.
 Bruk det du måtte ha av esker, kopper o.l. som hindre.
 Det kan hende du må prøve og feile litt før koden fungerer bra.
@@ -103,7 +105,8 @@ Det kan hende du må prøve og feile litt før koden fungerer bra.
 ```blocks
 basic.forever(function () {
     if (bitbot.sonar(BBPingUnit.Centimeters) < 10) {
-        bitbot.rotate(BBRobotDirection.Left, 60)
+        // @highlight
+        bitbot.rotatems(BBRobotDirection.Left, 60, 400)
     } else {
         // @highlight
         bitbot.go(BBDirection.Forward, 60)
@@ -113,17 +116,18 @@ basic.forever(function () {
 
 ### Steg 7
 
-Dersom du opplever at Bitboten ikke helt klarer å unngå hindre slik koden er nå, kan et tips være å få den til å rygge litt når den støter på et hinder.
-Du kan bruke blokken ``||bitbot.kjør framover med fart 60 % i 400 ms||`` for å få bitboten til å rygge.
-Hent blokken ``||bitbot.kjør framover med fart 60 % i 400 ms||`` fra ``||bitbot.Bitbot/Kjøring||`` og sett den inn **over** ``||bitbot.snu til venstre med fart 60 %||``-blokken i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken.
+Dersom du opplever at Bit:Boten ikke helt klarer å unngå hindre slik koden er nå, kan et tips være å få den til å rygge litt når den støter på et hinder.
+Du kan bruke blokken ``||bitbot.kjør framover med fart 60 % i 400 ms||`` for å få Bit:Boten til å rygge.
+Hent blokken ``||bitbot.kjør framover med fart 60 % i 400 ms||`` fra ``||bitbot.Bitbot/Kjøring||`` og sett den inn **over** ``||bitbot.snu til venstre med fart 60 % i 400 millisekund||``-blokken i det øverste gapet i ``||logic.hvis sann så ellers||``-blokken.
 Endre ``||bitbot.framover||`` til ``||bitbot.bakover||`` og endre ``||bitbot.400 ms||`` til et tall du tror passer.
 Test den nye koden og se om roboten nå er blitt flinkere til å unngå hindre.
 
 ```blocks
 basic.forever(function () {
     if (bitbot.sonar(BBPingUnit.Centimeters) < 10) {
-        bitbot.rotate(BBRobotDirection.Left, 60)
+        // @highlight
         bitbot.goms(BBDirection.Reverse, 60, 400)
+        bitbot.rotatems(BBRobotDirection.Left, 60, 400)
     } else {
         bitbot.go(BBDirection.Forward, 60)
     }
@@ -132,10 +136,9 @@ basic.forever(function () {
 
 ### Avslutning @unplugged
 
-Verre var det ikke.
 Det er ikke så mange linjer kode som skal til for å bruke avstandssensoren, men prøving og feiling for å få koden til å virke optimalt tar gjerne litt tid.
-**Husk at oppladbare batterier ikke fungerer særlig godt med avstandssensoren.
-Bruk heller valige, ikke-oppladbare AA-batterier når du holder på med akkurat denne sensoren.**
+**Igjen: Husk at oppladbare batterier ikke fungerer særlig godt med avstandssensoren.
+Bruk heller vanlige, ikke-oppladbare AA-batterier når du holder på med akkurat denne sensoren. Hvis det ikke virker, kan det hende BitBoten trenger nye batterier.**
 
 ```package
 bitbot=github:4tronix/BitBot

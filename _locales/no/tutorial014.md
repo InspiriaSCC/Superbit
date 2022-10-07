@@ -1,6 +1,6 @@
 ### @activities true
 
-# Superbit - Kodeøkt 18: Mottaker til radiostyrt servo
+# super:bit - Kodeøkt 18: Mottaker til radiostyrt servo
 ## Bruk servoer til å lage radiostyrt bevegelse - mottager
 ### Introduksjon @unplugged
 
@@ -9,18 +9,18 @@ I denne gjennomgangen lærer du å programmere en radiomottager som styrer en se
 
 ### Tilkoblinger @unplugged
 
-Rett foran hjulet på Bitbotens ventre side finner du to kontakter med 3 pinner.
-Dette er servokontaktene til Bitboten.
+Rett foran hjulet på Bit:Botens ventre side finner du to kontakter med 3 pinner.
+Dette er servokontaktene til Bit:Boten.
 Det fremste paret med pinner er merket P1 og P2.
 P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoer.
 De to neste parene er merket 5V og GND.
 5V gir 5 volts positiv spenning mot GND, som er jordkontaktene.
 
-### Steg 1
+### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
-Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.
-Servoene som følger med Superbit har tre ledninger ut, en brun, en rød og en oransje.
+Koble **180-graderservoen** til rekken av kontakter som forklart og vist.
+Servoene som følger med super:bit har tre ledninger ut, en brun, en rød og en oransje.
 Brun er jordledningen, den skal kobles til GND.
 Rød er "+"-ledningen som skal kobles til 5V.
 Oransje er signalledningen som skal kobles til P1 eller P2.
@@ -34,14 +34,14 @@ Bommen du skal åpne og lukke med radiostyring må monteres på den hvite plasta
 Bruk tape eller heftemasse til å feste et stripe bølgepapp eller en ispinne til armen, eller finn noe annet i et lett materiale som kan være bom.
 Fest selve servoen til et fast underlag, en pappskive eller liknende ved hjelp av tape eller heftemasse.
 Normalt skal du kunne feste servoen liggende flatt med klistremerket opp dersom du vil at bommen skal åpnes vertikalt.
-Ønsker du at bommen skal åpnes horisontalt, fester du den slik at den står på høykant med bommen oppå servoen.
+Ønsker du at bommen skal åpnes horisontalt, fester du den slik at den står med bommen liggende oppå servoen.
 
 ### Steg 3
 
 Siden radiostyring krever at Micro:biten bruker radiosignaler, må du begynne med å aktivere radioen og velge en kanal.
 Det gør du med blokken ``||radio.radio sett gruppe||`` som du finner i ``||radio.Radio||``-menyen.
 Hent en ``||radio.radio sett gruppe||`` og plasser den i ``||basic.ved start||``-blokken.
-Sett radioen til ``||radio.gruppe 1||`` dersom du brukete det samme tallene som i eksempelet vårt da du programmerte senderen.
+Sett radioen til ``||radio.gruppe 1||`` dersom du brukte det samme tallene som i eksempelet vårt da du programmerte senderen.
 
 ```blocks
 // @highlight
@@ -105,7 +105,7 @@ I dette eksempelet skal bommen være lukket dersom senderen sender tallet 0. Er 
 I den logiske sjekken antar vi at bommen er lukket i utgangspunktet.
 Vi antar også at bommen er lukket når utslaget på servoen er 0 grader, og at bommen er åpen når utslaget på servoen er 90 grader.
 Du blir nødt til å sjekke hvordan servoen og bommen din står når servoen står på 0 og 90 grader etter at du er ferdig med programmeringen av mottageren.
-Juster bommens posisjon ved å løfte den hvite armen forsiktig av tannhjulet på servoen når utslaget er 0 grader, og sett armen og bommen tilbake i riktig posisjon.
+Juster bommens posisjon ved å løfte den hvite armen forsiktig av tannhjulet på servoen når utslaget er 0 grader, og sett så armen og bommen tilbake i riktig posisjon.
 Kontroller så at servoen og bommen slår ut riktig vei når posisjonen er 90 grader.
 
 ### Steg 7
@@ -216,7 +216,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 ### Steg 12
 
-Kopier ``||basic.vis skjerm||``-blokk fra ``||basic.ved start||``-blokken og plasser kopien under ``||bitbot.sett servo P1 til 0 grader||`` i ``||logic.hvis sann så ellers||``-blokken.
+Kopier ``||basic.vis skjerm||``-blokken fra ``||basic.ved start||``-blokken og plasser kopien under ``||bitbot.sett servo P1 til 0 grader||`` i ``||logic.hvis sann så ellers||``-blokken.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
@@ -245,8 +245,8 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 ### Avslutning
 
-Det var det hele. Last ned programmet til Micro:Biten som skal være mottager og plasser den i bitboten du koblet servoen til.
-Nå kan du teste den automatiske bommen din.
+Last ned programmet til Micro:Biten som skal være mottager og plasser den i Bit:Boten du koblet servoen til.
+Nå kan du teste den radiostyrte bommen din ved å trykke på "A"- eller "B"-knappen på radiosenderen du programmerte i forrige kodeøkt.
 
 
 

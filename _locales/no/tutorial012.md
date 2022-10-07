@@ -1,40 +1,41 @@
 ### @activities true
 
-# Superbit - Kodeøkt 11: Enkel bruk av servo
+# super:bit - Kodeøkt 10: Enkel bruk av servo
 ## Bruk servoer til å lage bevegelse
 ### Introduksjon @unplugged
 
 En servo er en elektrisk motor som styres av datasignaler.
 Det gjør at servoen kan lage veldig presise bevegelser, og derfor brukes de ofte til roboter og andre maskiner som krever høy presisjon.
-Det finnes to hovedkategorier av servoer.
-Den ene servotypen har begrenset utslag, ofte 180 grader.
-Denne typen servo kan ikke brukes til fulle rotasjoner, men brukes der man skal ha en begrenset fram-og-tilbakebevegelse.
-Den andre typen servo kalles gjerne 360-servo.
-360-servoer har ingen begrensning på rotasjonen, og kan gjennomføre et uendelig antall rotasjoner.
-De kan derfor brukes til hjuldrift og andre steder man trenger full rotasjon.
 
 ### Introduksjon 2 @unplugged
 
-En ulempe med servoer og andre elektrisk motorer når de brukes sammen med Micro:Bit er at de krever ganske høy spenning og strøm.
+En ulempe med servoer og andre elektriske motorer når de brukes sammen med Micro:Bit er at de krever mye strøm.
 Micro:Biten kan bare levere 3 volt spenning og noen få milliampère strøm.
 Derfor trenger servoer og motorer en ekstern strømkilde for å brukes med Micro:Bit.
-Heldigvis har Bitbot en egen batteripakke som leverer de bortimot 5 volt som en servo trenger.
-Derfor skal du i denne gjennomgangen lære du hvordan du kan bruke servoer sammen med Micro:Bit **og** Bitbot.
+Heldigvis har Bit:Bot en egen batteripakke som leverer de bortimot 5 volt som en servo trenger.
+Derfor skal du i denne gjennomgangen lære hvordan du kan bruke servoer sammen med Micro:Bit **og** Bit:Bot.
 
 ### Tilkoblinger @unplugged
 
-Rett foran hjulet på Bitbotens ventre side finner du to kontakter med 3 pinner.
-Dette er servokontaktene til Bitboten.
+Rett foran hjulet på Bit:Botens venstre side finner du to kontakter med 3 pinner.
+Dette er servokontaktene til Bit:Boten.
 Det fremste paret med pinner er merket P1 og P2.
-P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoer.
-De to neste parene er merket 5V og GND.
-5V gir 5 volts positiv spenning mot GND, som er jordkontaktene.
+P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoene.
+De to neste parene er merket henholdsvis 5V og GND.
+5V gir 5 volts positiv spenning ut, og GND er jord (eller minus).
 
-### Steg 1
+### To typer servoer @unplugged
+
+Det følger 2 typer servo med til super:bit.
+De som er merket 180 grader har et utslag på kun 180 grader.
+De som er merket 360 grader kan rotere rundt og rundt.
+Her brukes en 180-graderservo.
+
+### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
 Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.
-Servoene som følger med Superbit har tre ledninger ut, en brun, en rød og en oransje.
+Servoene som følger med super:bit har tre ledninger ut, en brun, en rød og en oransje.
 Brun er jordledningen, den skal kobles til GND.
 Rød er "+"-ledningen som skal kobles til 5V.
 Oransje er signalledningen som skal kobles til P1 eller P2.
@@ -58,7 +59,7 @@ input.onButtonPressed(Button.A, function () {
 
 Alle blokkene til servostyring ligger i mappen ``||bitbot.Bitbot/Sensorer og Styring||``.
 Hent en ``||bitbot.sett servo P1 til 90 grader||`` og plasser den i ``||input.når knapp A trykkes||``-blokken.
-Last ned programmet til Micro:Biten og se hva som skjer når du trykker på A-knappen ved siden av displayet.
+Last ned programmet til Micro:Biten og se hva som skjer når du setter Micro:Biten i Bit:Boten og trykker på A-knappen ved siden av displayet.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {

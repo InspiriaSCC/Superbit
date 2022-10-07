@@ -1,14 +1,14 @@
 ### @activities true
 
-# Superbit - Kodeøkt 6: Lag en hoppeteller 
+# super:bit - Kodeøkt 6: Lag en hoppeteller 
 ## Introduksjon
 ### Introduksjon @unplugged
 
 Micro:Biten kan fint brukes i forbindelse med fysisk aktivitet.
-I denne gjennomgangen lærer du å bruke Micro:Biten som skritteller eller hoppeteller.
+Her lærer du å bruke Micro:Biten som skritteller eller hoppeteller.
 Akselerometeret i Micro:Biten kan brukes på flere måter.
 I økten lærer du hvordan du velger akselerometerfunksjon fra en meny.
-Du får muligheten til å teste ut hvilken funksjon du mener fungerer best som skritteller eller hoppeteller.
+Du kan så teste ut hvilken funksjon du mener fungerer best som skritteller eller hoppeteller.
 
 ### Registrering av inndata krever en variabel @unplugged
 
@@ -16,7 +16,7 @@ For å kunne registrere inndata trenger du en variabel som kan lagre inndatahend
 I dette eksempelet vil en hendelse være ett hopp eller ett skritt, og variabelen skal lagre antall hendelser.
 For å lage en skritt- eller hoppeteller må du i tillegg lage en løkke som sjekker variabelen med jevne mellomrom og viser verdien i displayet.
 
-### Steg 1: Lag en variabel og definer den i koden
+### Steg 1: Lag en variabel og gi den en startverdi
 
 Første steg er å lage variabelen.
 Klikk på ``||variables.variabler||`` og velg "Lag en variabel". Gi variabelen navnet "hopp".
@@ -89,4 +89,5 @@ basic.forever(function () {
 Nå har du lært noen triks du kan gjøre med akselerometeret i Micro:Bit.
 Om du bruker fantasien, kan du sikkert finne mange andre spennende måter å bruke akselerometeret på.
 
+* for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>

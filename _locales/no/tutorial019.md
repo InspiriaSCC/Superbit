@@ -1,22 +1,22 @@
 ### @activities true
 
-# Superbit - Kodeøkt 10: Bitbotens FireLEDs
-## Bruk de innebygde lysene på Bitboten
+# super:bit - Kodeøkt 10: Bit:Botens FireLEDs
+## Bruk de innebygde lysene på Bit:Boten
 ### Introduksjon @unplugged
 
 Bitboten har to "horn" på sidene.
 På hvert av disse sidene sitter det 6 FireLEDs, ofte kalt NeoPixler, som kan styres ved hjelp av kode.
-I denne økten lærer du hvordan du kontrollerer FireLEDene på Bitboten ved hjelp av et program.
+I denne økten lærer du hvordan du kontrollerer FireLEDene på Bit:Boten ved hjelp av et program.
 
 ### Steg 1
 
-Alle blokkene du trenger for å styre FireLEDene på Bitboten finner du i menyen ``||bitbot.Bitbot/Lys||``.
+Alle blokkene du trenger for å styre FireLEDene på Bit:Boten finner du i menyen ``||bitbot.Bitbot/Lys||``.
 For å sette alle FireLEDene til en farge kan du bruke blokken ``||bitbot.sett alle LED til||``.
 Hent blokken fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken.
-Klikk på den røde firkanten i blokken for å velge en farge, last ned programmet og se hva som skjer med lysene på Bitboten.
-Test en gang til med en annen farge.
+Klikk på den røde firkanten i blokken for å velge en farge, last ned programmet og se hva som skjer med lysene på Bit:Boten.
+Test med forskjellige farger.
 *Dersom lysene ikke tennes kan det være fordi Micro:biten fortsatt er koblet til PCen med USB-kabelen.
-Slå av Bitboten, fjern USB-kabelen, slå på Bitboten på nytt og se om det hjelper.*
+Slå av Bit:Boten, fjern USB-kabelen, slå på Bit:Boten på nytt og se om det hjelper.*
 
 
 ```blocks
@@ -25,54 +25,52 @@ bitbot.setLedColor(0xFF0000)
 
 ### Steg 2
 
-Du kan også slå på individuelle lys på Bitboten.
+Du kan også slå på individuelle lys på Bit:Boten.
 Til det bruker du blokken ``||bitbot.sett LED nr 0 til||``.
 Fjern blokken ``||bitbot.sett alle LED til||`` fra ``||basic.ved start||``-blokken.
 Du kan flytte individuelle blokker ved å holde inne **CTRL** på tastaturet mens du klikker og drar med musen.
 Hent ``||bitbot.sett LED nr 0 til||``-blokken fra ``||bitbot.Bitbot/Lys||``-menyen og endre **0** til **5**.
 Kopier ``||bitbot.Bitbot/Lys||`` og plasser kopien rett under originalen.
 Endre **5** til **11**
-Last ned det nye programmet og se hva som skjer med lysene på Bitboten.
+Last ned det nye programmet og se hva som skjer med lysene på Bit:Boten.
 
 ```blocks
 bitbot.setPixelColor(5, 0xFF0000)
 bitbot.setPixelColor(11, 0xFF0000)
 ```
 
-### Plasseringen av de individuelle lysene på Bitbot @unplugged
+### Plasseringen av de individuelle lysene på Bit:Bot @unplugged
 
-Som du ser er LED nummer 5 og 11 de to lysene lengst foran på Bitboten.
-Akkurat disse to lysene er fine å bruke som retningsvisere, eller som indikatorer for de to linjesensorene som sitter på undersiden av Bitboten.
-Lysene på venstre side av Bitboten er nummerert fra 0-5 (bakfra mot front), mens lysene på høyre side er nummerert 6-11 (bakfra mot front).
-Tallene er trykt på med silketrykk ved siden av hvert lys.
+Som du ser er LED nummer 5 og 11 de to lysene lengst foran på Bit:Boten.
+Akkurat disse to lysene er fine å bruke som retningsvisere, eller som indikatorer for de to linjesensorene som sitter på undersiden av Bit:Boten.
+Lysene på venstre side av Bit:Boten er nummerert fra 0-5 (bakfra mot front), mens lysene på høyre side er nummerert 6-11 (bakfra mot front).
 
 ### Steg 3
 
 En annen fin blokk å bruke er blokken ``||bitbot.sett LED til regnbue||``.
 Fjern alle blokkene i programmet ditt fra ``||basic.ved start||``-blokken.
-Hent blokken ``||bitbot.sett LED til regnbue||`` fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken under ``||bitbot.sett LED lysstyrke 40||``.
-Last ned programmet til Micro:Biten, slå på Bitboten og se hva som skjer.
+Hent blokken ``||bitbot.sett LED til regnbue||`` fra ``||bitbot.Bitbot/Lys||``-menyen og dra den inn i ``||basic.ved start||``-blokken.
+Last ned programmet til Micro:Biten, slå på Bit:Boten og se hva som skjer.
 
 ```blocks
 bitbot.ledRainbow()
 ```
 
-### Endringer i lysinnstillinger på Bitboten @unplugged
+### Endringer i lysinnstillinger på Bit:Boten @unplugged
 
-I enkelte tilfeller vil lysene på Bitboten ikke slå seg på når du laster ned et program.
+I enkelte tilfeller vil lysene på Bit:Boten ikke slå seg på når du laster ned et program.
 Ofte skyldes det at Micro:Biten fortsatt er koblet til PCen med USB-kabelen.
-I utgangspunktet skal endringer i lysinnstillngene på Bitboten vises automatisk, men det kan noen ganger hende at det ikke skjer.
+I utgangspunktet skal endringer i lysinnstillngene på Bit:Boten vises automatisk, men det kan noen ganger hende at det ikke skjer.
 Om du vil overstyre hvordan lysendringer oppdateres, kan du bruke blokken ``||bitbot.sett oppdateringsmodus manual||``.
 Dersom den er satt til **Manual** vil ingen endringer som gjelder lysene vises før du setter inn blokken ``||bitbot.vis LED-endringer||``.
 Om blokken ``||bitbot.sett oppdateringsmodus manual||`` settes til **Auto** vil alle oppdateringer senere i programmet vises automatisk.
 Disse funksjonene regnes som avanserte, så om du vil holde det enkelt kan du som regel bruke blokken ``||bitbot.sett LED lysstyrke 40||`` for å sikre at lysene kommer på.
-Dersom det trikset ikke fungerer, vet du nå hva du kan prøve.
 
 ### Steg 4
 
 Du kan animere den fine regnbuen på en veldig enkel måte.
 Hent blokken ``||bitbot.roter LED||`` og sett den inn i ``||basic.gjenta for alltid||``-blokken (**ikke** i ``||basic.ved start||``-blokken).
-Last ned programmet til Micro:Biten, slå på Bitboten og se på forskjellen.
+Last ned programmet til Micro:Biten, slå på Bit:Boten og se på forskjellen.
 
 ```blocks
 bitbot.ledRainbow()
@@ -83,9 +81,8 @@ basic.forever(function () {
 
 ### Steg 5
 
-Som du sikkert la merke til går animasjonen litt i raskeste laget.
 For en litt langsommere animasjon kan du sette inn en ``||basic.pause 100 ms||``-blokk i ``||basic.gjenta for alltid||``-blokken under ``||bitbot.roter LED||``.
-Last ned programmet og se hvordan animasjonen endres. Du kan endre tidsverdien i ``||basic.pause||``-blokken om du vil ha enda langsommere animasjon.
+Last ned programmet og se hvordan animasjonen endres. Du kan endre tidsverdien i ``||basic.pause||``-blokken og se hva du liker best.
 
 ```blocks
 basic.forever(function () {
@@ -96,15 +93,14 @@ basic.forever(function () {
 
 ### Steg 6
 
-Du kan justere lysstyrken på FireLEDene med blokken ``||bitbot.sett LED lysstyrke til 40||``.
+Du kan justere lysstyrken med blokken ``||bitbot.sett LED lysstyrke til 40||``.
 Blokken kan også brukes dersom lysene av en eller annen grunn ikke slår seg på av seg selv når du kjører programmet ditt.
 Klikk på **"40"** og juster lysstyrken med slideren.
 Høyeste lysstyrkeverdi er **255**.
 Er verdien **0** vil NeoPixlene være slukket.
 Hent blokken ``||bitbot.sett LED lysstyrke til 40||`` fra ``||bitbot.Bitbot/Lys||`` og sett den inn i ``||basic.ved start||``-blokken, under ``||bitbot.sett LED til regnbue||``.
-Test ut programmet ved å endre litt på lysstyrken et par-tre ganger, og last programmet ned til Micro:Biten etter hver endring.
 Velg en lysstyrke du synes er passe før du går videre.
-(PS: Høyere lysstyrke tapper batteriene til Bitboten raskere. FireLEDene krever en del strøm.)
+(PS: Høyere lysstyrke tapper batteriene til Bit:Boten raskere. FireLEDene krever en del strøm.)
 
 ```blocks
 bitbot.ledRainbow()
@@ -124,7 +120,7 @@ basic.forever(function () {
 })
 ```
 
-### Hvordan flytt LED virker
+### Hvordan flytt LED virker @unplugged
 
 Som du så forsvinner lysene ut av rekken etter hvert når man bruker ``||bitbot.flytt LED||`` i en ``||basic.gjenta for alltid||``-blokk.
 ``||bitbot.flytt LED||``-kommandoen flytter hvert lys én plass oppover i LED-rekken én gang hver gang den utføres.
@@ -151,7 +147,17 @@ basic.forever(function () {
 
 Endre **4** til **12** i ``||loops.gjenta 4 ganger||``-blokken.
 Hent en ``||bitbot.sett LED til regnbue||``-blokk fra ``||bitbot.Bitbot/Lys||``-menyen og legg den inn i ``||basic.gjenta for alltid||``-blokken over ``||loops.gjenta 12 ganger||``-blokken.
-Last ned programmet, koble fra USB-kabelen, slå på Bitboten og se hva som skjer.
+Last ned programmet, koble fra USB-kabelen, slå på Bit:Boten og se hva som skjer.
+
+```blocks
+basic.forever(function () {
+    bitbot.ledRainbow()
+    for (let index = 0; index < 12; index++) {
+        bitbot.ledShift()
+        basic.pause(100)
+    }
+})
+```
 
 ### Hvordan den siste koden virker @unplugged
 

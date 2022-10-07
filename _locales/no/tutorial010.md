@@ -1,11 +1,11 @@
 ### @activities true
 
-# Superbit - Kodeøkt 4: Radiostyring del 1: Senderen
-## Bruk radiosignaler til å fjernstyre en Bitbot
+# super:bit - Kodeøkt 4: Radiosender
+## Bruk radiosignaler til å fjernstyre en Bit:Bot
 ### Introduksjon @unplugged
 
 Gjennomgangen om radiostyring må gjøres i to deler.
-Det er fordi det må programmeres to Micro:Biter for å lage en fjernstyrt robot: Sender og mottager.
+Det er fordi det må programmeres to Micro:Biter for å lage en fjernstyrt robot, altså en sender og en mottager.
 Senderen tar imot inndata fra den som skal styre roboten via knapper eller bevegelse og videresender dem til mottageren som formidler inndataene til roboten.
 Du begynner med å programmere senderen i denne gjennomgangen, så tar vi for oss mottageren i neste runde.
 
@@ -13,7 +13,7 @@ Du begynner med å programmere senderen i denne gjennomgangen, så tar vi for os
 
 Siden radiostyring krever at Micro:biten bruker radiosignaler, må du begynne med å aktivere radioen og velge en kanal.
 Det gør du med blokken ``||radio.radio sett gruppe||`` som du finner i ``||radio.Radio||``-menyen.
-Hent en ``||radio.radio sett gruppe||`` og plasser den i ``||basic.ved start||``-blokken.
+Siden denne koden i denne blokken må kjøres før du kan ta i bruk radioen, må den settes inn i ``||basic.ved start||``-blokken. Hent en ``||radio.radio sett gruppe||`` og plasser den i ``||basic.ved start||``-blokken.
 
 ```blocks
 radio.setGroup(1)
@@ -22,7 +22,7 @@ radio.setGroup(1)
 ### Steg 2
 
 For å vise at Micro:Biten som skal være radiosender er på og virker, kan du sette inn et ikon i displayet som vises når senderprogrammet kjører.
-Du kan tegne en liten radio, eller velge et annet ikon om du foretrekker det.
+Du kan tegne en liten radio, eller velge et annet ikon om du foretrekker det. Til det trenger du ``||basic.vis skjerm||``-blokken.
 Hent en ``||basic.vis skjerm||`` eller ``||basic.vis ikon||`` blokk fra ``||basic.Basis||``-menyen og sett den inn i ``||basic.ved start||``-blokken under ``||radio.radio sett gruppe||``-blokken.
 
 ```blocks
@@ -39,7 +39,7 @@ basic.showLeds(`
 
 ### Steg 3
 
-Resten av koden skal kjøre i en ``||basic.gjenta for alltid||``-blokk.
+Resten av koden skal kjøre i en ``||basic.gjenta for alltid||``-blokk. Koden i en ``||basic.gjenta for alltid||``-blokk gjentas igjen og igjen så lenge programmet kjører.
 Hent en i ``||basic.Basis||``-menyen om det ikke allerede ligger en i arbeidsområdet.
 Du trenger også en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen.
 Plasser ``||logic.hvis sann så ellers||``-blokken i ``||basic.gjenta for alltid||``-blokken.

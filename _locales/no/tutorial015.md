@@ -1,25 +1,16 @@
 ### @activities true
 
-# Superbit - Kodeøkt 19: Bom med avstandssensor
+# super:bit - Kodeøkt 19: Bom med avstandssensor
 ## Lag en bom som styres av en avstandssensor
 ### Introduksjon @unplugged
 
 I denne gjennomgangen lærer du å programmere bom som åpnes ved hjelp av en avstandssensor.
 
-### Tilkoblinger @unplugged
-
-Rett foran hjulet på Bitbotens ventre side finner du to kontakter med 3 pinner.
-Dette er servokontaktene til Bitboten.
-Det fremste paret med pinner er merket P1 og P2.
-P1 og P2 er signalutgangene fra Micro:Biten som brukes til å kontrollere servoer.
-De to neste parene er merket 5V og GND.
-5V gir 5 volts positiv spenning mot GND, som er jordkontaktene.
-
-### Steg 1
+### Steg 1 @unplugged
 
 Monter en hvit, enkel plastarm til en **180-graderservo** som vist på bildet.
-Koble **180-graderservoen** til P0 rekken av kontakter som forklart og vist.
-Servoene som følger med Superbit har tre ledninger ut, en brun, en rød og en oransje.
+Koble **180-graderservoen** til rekken av kontakter som forklart og vist.
+Servoene som følger med super:bit har tre ledninger ut, en brun, en rød og en oransje.
 Brun er jordledningen, den skal kobles til GND.
 Rød er "+"-ledningen som skal kobles til 5V.
 Oransje er signalledningen som skal kobles til P1 eller P2.
@@ -31,13 +22,10 @@ Plasser kontakten til servoen på pinnene ved P1 slik at oransje ledning treffer
 
 Til denne øvelsen trenger du avstandssensoren, eller ultralydsensoren, som den også kalles.
 Den ser nesten ut som to øyne.
-"Øynene" består i dette tilfellet av en høyttaler og en mikrofon og fungerer som ekkolokasjonen til en flaggermus.
-Høyttaleren sender ut en ultralydpuls som reflekteres tilbake til mikrofonen fra omgivelsene i form av ekko.
-Sensoren måler avstanden til objekter foran seg ved å måle tiden fra pulsen forlater høyttaleren til ekkoet når mikrofonen.
-Avstanden regnes ut ved hjelp av lydhastigheten i luft.
+"Øynene" består i dette tilfellet av en høyttaler og en mikrofon og fungerer omtrent som ekkolokasjonen til en flaggermus.
 
 ### Steg 2
-Ultralydsensoren plasseres i kontakten foran på Bitboten som vist på bildet.
+Ultralydsensoren plasseres i kontakten foran på Bit:Boten som vist på bildet.
 "Øynene" skal peke forover, bort fra Micro:Biten.
 
 ![Avstandssensor](https://raw.githubusercontent.com/Yngel72/Superbit/master/static/Avstandssensor.jpg)
@@ -45,7 +33,7 @@ Ultralydsensoren plasseres i kontakten foran på Bitboten som vist på bildet.
 ### Steg 3
 
 Start med å sette en grunntilstand for servoen.
-Siden dette er en bom, og bommen er lukket når servoen er på 0 grader, er det greit å starte med å si at servoen skal være i posisjonen 0 grader nåe programmet starter.
+Siden dette er en bom, og bommen er lukket når servoen er på 0 grader, er det greit å starte med å si at servoen skal være i posisjonen 0 grader når programmet starter.
 Hent en ``||bitbot.sett servo P1 til 90 grader||``-blokk fra ``||bitbot.Bitbot/Sensorer og styring||``-menyen og plasser den i ``||basic.ved start||``-blokken.
 Endre ``||bitbot.90 grader||`` til ``||bitbot.0 grader||``.
 
@@ -58,7 +46,7 @@ bitbot.bbSetServo(BBServos.P1, 0)
 
 Hent en ``||basic.vis ikon||``-blokk fra ``||basic.Basis||``-menyen og sett den inn under ``||bitbot.sett servo P1 til 0 grader||``-blokken.
 Ikonet gjør det lettere å se at programmet kjører.
-Velg et ikon du synes passer.
+Velg et ikon du synes passer. Du kan bruke ``||basic.vis skjerm||`` for å tegne et eget ikon, eller ``||basic.vis ikon||`` for å bruke et ferdiglaget ikon.
 
 ```blocks
 bitbot.bbSetServo(BBServos.P1, 0)
@@ -102,8 +90,7 @@ basic.forever(function () {
 
 Hent en oval ``||bitbot.les ultralydsensor som cm||``-blokk fra ``||bitbot.Bitbot/Sensorer og styring||``-menyen.
 Dra den inn i det første hvite feltet i ``||logic.0 < 0||``-heksagonet.
-Endre "0" i det andre hvite feltet til 10.
-Om du ønsker en annen avstand enn 10 cm, kan du velge et annet tall her.
+Endre "0" i det andre hvite feltet til den avstanden du ønsker, for eksempel 10. 
 
 ```blocks
 basic.forever(function () {

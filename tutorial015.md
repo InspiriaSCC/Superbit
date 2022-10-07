@@ -33,7 +33,7 @@ Ultralydsensoren plasseres i kontakten foran på Bit:Boten som vist på bildet.
 ### Steg 3
 
 Start med å sette en grunntilstand for servoen.
-Siden dette er en bom, og bommen er lukket når servoen er på 0 grader, er det greit å starte med å si at servoen skal være i posisjonen 0 grader nåe programmet starter.
+Siden dette er en bom, og bommen er lukket når servoen er på 0 grader, er det greit å starte med å si at servoen skal være i posisjonen 0 grader når programmet starter.
 Hent en ``||bitbot.sett servo P1 til 90 grader||``-blokk fra ``||bitbot.Bitbot/Sensorer og styring||``-menyen og plasser den i ``||basic.ved start||``-blokken.
 Endre ``||bitbot.90 grader||`` til ``||bitbot.0 grader||``.
 

@@ -1,12 +1,12 @@
 ### @activities true
 
-# Superbit - Kodeøkt 7: Avansert terning
+# super:bit - Kodeøkt 7: Avansert terning
 ## Lag en terning som viser øyne
 ### Introduksjon @unplugged
 
-I denne økten skal du lage en terning som ser litt mer realistisk ut.
+I denne økten skal du lage en mer realistisk terning.
 Terningen skal vise øyne i stedet for tall.
-Det krever at du legger inndataene inn i en variabel i stedet for å vise dem direkte.
+Du må bruke en variabel for å få til dette.
 Bruk av variabler i MakeCode krever alltid to trinn.
 Først må variabelen opprettes og gis et navn.
 Det gjør at det lages en egen blokk for denne variabelen i ``||variables.Variabler||``-menyen.
@@ -30,9 +30,9 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 ### Steg 7: Terning med variabel
-Hent en ``||math.velg tilfeldig 0 til 10||`` fra ``||math.Matamatikk||``-menyen og dra den inn i det hvite feltet i ``||variables.sett terningkast til||``.
+Hent en ``||math.velg tilfeldig 0 til 10||`` fra ``||math.Matamatikk||``-menyen og dra den inn i det hvite feltet i ``||variables.sett terningkast til||``. Endre så den velger tilfeldig fra 1 til 6. 
 Nå vil variabelen ``||variables.terningkast||`` settes til et tilfeldig tall fra 1 til 6 hver gang noen rister på Micro:Biten.
-For å vise resultatet må variabelen være tallet som skal vises i displayet.
+For å vise resultatet må verdien til variabelen sendes til displayet.
 Hent en ``||basic.vis tall||``-blokk fra ``||basic.Basis||``-menyen og plasser den under ``||variables.sett terningkast til||``-blokken.
 
 ```blocks
@@ -46,8 +46,6 @@ input.onGesture(Gesture.Shake, function () {
 ### Steg 8: Terning med variabel
 Klikk på ``||variables.Variabler||``-menyen, hent den lille, ovale variabelblokken ``||variables.terningkast||`` og plasser den i det hvite feltet i ``||basic.vis tall||``
 Nå vil displayet alltid vise den siste verdien som ble lagret i variabelen ``||variables.terningkast||``.
-Når du rister på Micro:Biten nå, skjer akkurat det samme som ved den forrige terningen du lagde, men nå lagres det tilfeldige tallet i en variabel.
-Siden du bruker en variabel til å lagre terningkastet kan du få displayet til å vise noe annet enn tall når du går videre i veiledningen.
 
 ```blocks
 let terningkast = 0
@@ -59,11 +57,15 @@ input.onGesture(Gesture.Shake, function () {
 
 ```
 
+### Variabler sammenliknet med tall @unplugged
+Når du rister på Micro:Biten nå, skjer akkurat det samme som ved den forrige terningen du lagde, men nå lagres det tilfeldige tallet i en variabel.
+Siden du bruker en variabel til å lagre terningkastet kan du få displayet til å vise noe annet enn tall når du går videre i veiledningen.
+
 ### Steg 9: Terning med øyne, del 1
-Denne delen er litt lengre enn de forrige.
+Dette steget er litt lengre enn de forrige.
 Nå skal du bruke noen av de viktigste algoritmene i programmering til å lage et ordentlig program.
 Først må du fjerne blokken ``||basic.vis tall||``fra programmet ditt. Kast den i papirkurven.
-Nå trenger du en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen.
+Så trenger du en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen.
 Dra den inn i ``||input.når ristes||``-blokken og plasser den **under** ``||variables.sett terningkast til||``-blokken.
 
 ```blocks
@@ -137,14 +139,13 @@ input.onGesture(Gesture.Shake, function () {
 Nå skal du gjøre den samme logiske sjekken for alle de mulige terningkastresultatene.
 Du kan kopiere en blokk ved å høyreklikke på blokken og velge **"Lag kopi"** fra rullegardinmenyen som dukker opp.
 Det sparer deg litt tid når du nå skal bruke de samme blokkene flere ganger med små endringer.
-Du kan også kopiere en blokk ved å klikke på den og så trykke Ctrl-C etterfulgt av Ctrl-V på tastaturet, om du foretrekker å bruke hurtigtaster.
+Du kan også kopiere en blokk ved å klikke på den og så trykke **Ctrl-C** etterfulgt av **Ctrl-V** på tastaturet, om du foretrekker å bruke hurtigtaster.
 Når du har kopiert en blokk må du ofte gjøre små endringer i blokken der du skal bruke den på nytt.
 Dette er fort gjort å glemme, men nå er du advart.
 
 ### Steg 12: Terning med øyne, del 4
 
-Når du nå skal gjøre flere logiske sjekker i den samme ``||logic.hvis sann så ellers||``-blokken, legger du sikker merke til at det bare finnes et heksagon du kan legge en sånn sjekk inn i, og det er jo allerede opptatt.
-For å utvide ``||logic.hvis sant så ellers||``-blokken må du trykke på det lille "+"-tegnet nederst i venstre hjørne av blokken.
+Når du nå skal gjøre flere logiske sjekker i den samme ``||logic.hvis sann så ellers||``-blokken, må du trykke på det lille "+"-tegnet nederst i venstre hjørne av blokken for å utvide.
 Da vil det dukke opp et nytt gap og et nytt heksagon.
 Du kan trykke flere ganger og få flere gap.
 Om du skulle trykke for mange ganger, kan du trykke på det lille **"-"**-tegnet på høyre side i den øverste armen av det siste gapet for å fjerne det.
@@ -182,7 +183,7 @@ input.onGesture(Gesture.Shake, function () {
 Nå kan du kopiere den lille, heksagonale ``||logic.terningkast = 1||``-blokken fra  øverst i ``||logic.hvis sann så ellers||``-blokken og plassere den i det neste ledige heksagonet.
 Endre tallet 1 til 2.
 Kopier ``||basic.vis skjerm||``-blokken fra de øverste gapet og legg kopien i gap nummer to.
-Endre fra et øye til to ved å klikke en gang på ruten som er hvit og finn to andre ruter du kan bruke for at det skal se ut som to øyne på en terning.
+Endre ikonet så det ser ut som to øyne på en terning.
 
 ```blocks
 let terningkast = 0
@@ -275,8 +276,8 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 ### Steg 15: Terning med øyne, del 7
-Over det siste gapet trenger du ingen ``||logic.terningkast = 6||``-blokk, for 6 trenger du ikke sjekke for.
-Alle resultatene er sjekket, bortsett fra 6, så da er det jo bare en mulighet igjen.
+Over det siste gapet trenger du ingen ``||logic.terningkast = 6||``-blokk.
+Alle resultatene er sjekket, bortsett fra 6, så da er det den eneste gjenværende muligheten.
 Alt du trenger å gjøre nå er å lage den siste ``||basic.vis skjerm||``-blokken i det siste gapet, og så er terningen klar.
 Vi anbefaler å laste ned programmet til Micro:Biten. Det er noe eget ved å riste på en digital terning man har laget selv.
 Det var det hele! Gratulerer! Du har nettopp programmert en kul elektronisk terning!

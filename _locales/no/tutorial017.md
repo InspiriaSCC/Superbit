@@ -1,11 +1,11 @@
 ### @activities true
 
-# Superbit - Kodeøkt 13: TMicro:Bitens termometer
+# super:bit - Kodeøkt 13: Micro:Bitens termometer
 ## Mål temperatur med Micro:Bit
 ### Introduksjon @unplugged
 
 Micro:Bit har et innebygget termometer som overvåker temperaturen til hovedprosessoren.
-Den har du tilgang på for å hente ut temperaturmålinger.
+Det har du tilgang på for å hente ut temperaturmålinger.
 Heldigvis blir prosessoren sjelden særlig varmere enn omgivelsene, derfor gir termometeret en grei ganske temperaturmåling.
 I denne økten lærer du hvordan du kan bruke temperaturmåleren til Micro:Bit.
 
@@ -37,8 +37,7 @@ basic.forever(function () {
 ### Kalibrering av termometeret @unplugged
 
 Prosessoren til Micro:Bit vil normalt være en anelse varmere enn omgivelsene når den jobber.
-Som regel er det ikke snakk om mer enn 1-3 grader forskjell.
-Differansen mellom intern temperatur i prosessoren og omgivelsene er ganske stabil ved normal romtemperatur.
+Som regel er det ikke snakk om mer enn 1-4 grader forskjell.
 Om du vil, kan du bruke et nøyaktig termometer for å kalibrere temperaturmålingene.
 I eksemplet som kommer nå viste vårt nøyaktige termometer 2 grader lavere temperatur enn det microbiten viste.
 Nå skal du kalibrere Micro:Biten i koden, slik at den viser mer nøyaktig temperatur.
@@ -70,8 +69,7 @@ basic.forever(function () {
 
 ### Temperaturvakt @unplugged
 
-Om du vil, kan du bruke temperaturmåleren som frostvakt eller overopphetingsvakt.
-Om du kobler til en buzzer eller en høyttaler kan du få Micro:Biten til å gi lyd dersom temperaturen går utenfor temperaturgrensene du har satt i programmet.
+Om du kobler til en buzzer eller en høyttaler kan du få Micro:Biten til å gi lyd dersom temperaturen går utenfor temperaturgrensene du setter i programmet.
 Buzzeren som fulgte med Superbitsettet må kobles i riktig retning, og skal kobles med det korte beinet til GND på Micro:Biten og det lange beinet merket med "+" til pin 0.
 Om du bruker en høyttaler, skal den kobles med en ledning til GND og en ledning til pin 0.
 Høyttalere fungerer like fint i begge retninger med Micro:Bit, så polaritet er ikke noe tema når det gjelder dem.
@@ -82,7 +80,8 @@ Nå skal du lage en temperaturvakt.
 
 ### Steg 5
 
-Koble til buzzeren som forklart i forrige trinn, om du ikke allerede har gjort det.
+Fjern ``||basic.vis tall||``-blokken fra forrige steg fra ``||basic.gjenta for alltid||``-blokken i koden din.
+Koble til buzzeren som forklart på bildet i forrige trinn, om du ikke allerede har gjort det.
 For å lage en temperaturvakt trenger du aller først en logisk sjekk.
 Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen og dra den inn i ``||basic.gjenta for alltid||``-blokken.
 
@@ -271,6 +270,7 @@ basic.forever(function () {
 ### Steg 15
 
 Kopier en ``||basic.vis tall||`` ``||input.temperatur (°C)||``-blokk og plasser kopien i det midtre gapet på ``||logic.hvis sann så ellers||``-blokken, under ``||music.spill tone lav C i et taktslag||``, slik at temperaturen vises når alarmen for nedre temperaturgrense går.
+Sett nedre temperaturgrense til noe litt under romtemperatur, i dette tilfellet bruker vi 20°C. 
 Nå kan laste ned programmet til Micro:Biten og teste at det fungerer.
 Bruk gjerne en finger på hovedprosessoren for å teste at alarmen slår ut ved makstemperatur.
 Minimumstemperaturen kan du teste ved å holde hovedprosessoren mot siden av et glass med kaldt vann, eller mot en tett plastpose med isbiter.
