@@ -216,7 +216,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 ### Steg 12
 
-Kopier ``||basic.vis skjerm||``-blokk fra ``||basic.ved start||``-blokken og plasser kopien under ``||bitbot.sett servo P1 til 0 grader||`` i ``||logic.hvis sann så ellers||``-blokken.
+Kopier ``||basic.vis skjerm||``-blokken fra ``||basic.ved start||``-blokken og plasser kopien under ``||bitbot.sett servo P1 til 0 grader||`` i ``||logic.hvis sann så ellers||``-blokken.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
