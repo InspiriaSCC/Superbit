@@ -41,7 +41,7 @@ Normalt skal du kunne feste servoen liggende flatt med klistremerket opp dersom 
 Siden radiostyring krever at Micro:biten bruker radiosignaler, må du begynne med å aktivere radioen og velge en kanal.
 Det gør du med blokken ``||radio.radio sett gruppe||`` som du finner i ``||radio.Radio||``-menyen.
 Hent en ``||radio.radio sett gruppe||`` og plasser den i ``||basic.ved start||``-blokken.
-Sett radioen til ``||radio.gruppe 1||`` dersom du brukete det samme tallene som i eksempelet vårt da du programmerte senderen.
+Sett radioen til ``||radio.gruppe 1||`` dersom du brukte det samme tallene som i eksempelet vårt da du programmerte senderen.
 
 ```blocks
 // @highlight

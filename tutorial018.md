@@ -114,7 +114,7 @@ basic.forever(function () {
 ### Steg 6
 
 Når lysnivået går under verdien du satte inn i ``||logic.lysnivå < 0||``-blokken, skal LED-pæren tennes.
-Hent en ``||pins.skriv digital digital til P0 verdi 0||``-blokk fra ``||pins.Tilkoblinger||`` under **"Avansert"** og dra den inn i det første gapet i ``||logic.hvis så ellers||``-blokken.
+Hent en ``||pins.skriv digital til P0 verdi 0||``-blokk fra ``||pins.Tilkoblinger||`` under **"Avansert"** og dra den inn i det første gapet i ``||logic.hvis så ellers||``-blokken.
 Endre tallet **"0"** til **"1"** i det siste feltet i ``||pins.skriv digital til P0 verdi 0||``-blokken.
 
 ```blocks
@@ -127,6 +127,14 @@ basic.forever(function () {
     }
 })
 ```
+
+### Hva ``||pins.skriv digital til P0 verdi 0||`` gjør @unplugged
+
+Blokken ``||pins.skriv digital til P0 verdi 0||`` setter 3 Volt spenning mellom en pin med nummeret du velger og GND dersom verdien er 1,
+og ingen spenning mellom samme pin og GND når verdien er 0.
+Dette kan du bruke til f.eks. å slå en LED-pære av eller på med.
+Vær oppmerksom på at Micro:Biten ikke takler mye strøm, så ikke prøv å kjøre en motor eller noe annet strømkrevende på denne måten.
+Da risikerer du å svi kretsene i Micro:Biten og ødelegge den.
 
 ### Steg 7
 

@@ -27,6 +27,8 @@ Start med en ``||basic.ved start||``-blokk.
 Fra ``||neopixel.NeoPixel||``-menyen trenger du en ``||variables.sett strip til||`` ``||neopixel.NeoPixel at p0 with 24 leds as RGB (GRB format)||``.
 Dra den inn i ``||basic.ved start||``-blokken og endre ``||neopixel.24||`` til ``||neopixel.20||``, eller det antall NeoPixler du har på din stripe.
 Det er 20 NeoPixels på stripen som følger med Superbit.
+Husk å endre p0 til riktig pin.
+I eksempelet er pin 2 brukt, derfor er p0 endret til p2.
 
 ```blocks
 // @highlight
@@ -203,6 +205,7 @@ I dette steget skal du animere en regnbue.
 Fjern alle ``||neopixel.set pixel color at 0 to [farge]||`` fra ``||basic.ved start||``-blokken din.
 Fjern også ``||neopixel.set strip show color black||``-blokken.
 Hent blokken ``||neopixel.strip show rainbow from 0 to 360||`` fra ``||neopixel.NeoPixel||``-menyen og sett den inn mellom ``||variables.sett strip til||``-blokken og ``||neopixel.strip show||``-blokken.
+(Siden regnbueblokken inneholder ordet **show** trenger du egentlig ikke ``||neopixel.strip show||``-blokken, men den gjør heller ingen skade.)
 La ``||basic.gjenta for alltid||``-blokken være som den er.
 Last ned programmet til Micro:Biten og se på lysshowet.
 
@@ -322,7 +325,7 @@ basic.forever(function () {
 Hent en oval ``||input.akselerasjon (mG) X||``-blokk fra ``||input.Inndata||``-menyen og plasser den i det hvite feltet der det står 0 i ``||neopixel.strip show bargraph of 0 up to 255||``-blokken.
 
 ```blocks
-let strip = neopixel.create(DigitalPin.P2, input.acceleration(Dimension.X), NeoPixelMode.RGB)
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 basic.forever(function () {
     // @highlight
     strip.showBarGraph(input.acceleration(Dimension.X), 255)
@@ -337,7 +340,7 @@ Når Micro:Biten står på høykant vil påvirkningen være 1000 mG, altså 1 G,
 Så lenge Micro:Biten ikke står på høykant vil gravitasjonspåvirkningen være mindre enn 1 G i X-retningen av planet Micro:Biten utgjør.
 
 ```blocks
-let strip = neopixel.create(DigitalPin.P2, input.acceleration(Dimension.X), NeoPixelMode.RGB)
+let strip = neopixel.create(DigitalPin.P2, 20, NeoPixelMode.RGB)
 basic.forever(function () {
     // @highlight
     strip.showBarGraph(input.acceleration(Dimension.X), 1000)

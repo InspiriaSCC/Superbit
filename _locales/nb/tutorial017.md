@@ -5,8 +5,8 @@
 ### Introduksjon @unplugged
 
 Micro:Bit har et innebygget termometer som overvåker temperaturen til hovedprosessoren.
-Den har du tilgang på for å hente ut temperaturmålinger.
-Heldigvis blir prosessoren sjelden særlig varmere enn omgivelsene, derfor gir termometeret en ganske grei temperaturmåling.
+Det har du tilgang på for å hente ut temperaturmålinger.
+Heldigvis blir prosessoren sjelden særlig varmere enn omgivelsene, derfor gir termometeret en grei ganske temperaturmåling.
 I denne økten lærer du hvordan du kan bruke temperaturmåleren til Micro:Bit.
 
 ### Steg 1
@@ -80,6 +80,7 @@ Nå skal du lage en temperaturvakt.
 
 ### Steg 5
 
+Fjern ``||basic.vis tall||``-blokken fra forrige steg fra ``||basic.gjenta for alltid||``-blokken i koden din.
 Koble til buzzeren som forklart på bildet i forrige trinn, om du ikke allerede har gjort det.
 For å lage en temperaturvakt trenger du aller først en logisk sjekk.
 Hent en ``||logic.hvis sann så ellers||``-blokk fra ``||logic.Logikk||``-menyen og dra den inn i ``||basic.gjenta for alltid||``-blokken.
